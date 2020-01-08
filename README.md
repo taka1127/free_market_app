@@ -18,50 +18,55 @@
 |point|integer|
 |proceeds|integer|
 ### Association
-- has_many :like
-  has_many :product
-  has_many :comment
+- has_many :Like
+  has_many :Product
+  has_many :Comment
 
 
 ## Commentテーブル
 |Column|Type|Options|
 |------|----|-------|
-|content|text|
-|user_id|integer|
-|product_id|integer|
+|content|text|null: false,|
+|user_id|integer|null: false,|
+|product_id|integer|null: false,|
 ### Association
-- belong_to :product
-  belong_to :user
+- belong_to :Product
+  belong_to :User
 
 
 ## Goodテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|
-|product_id|integer|
+|user_id|integer|null: false,|
+|product_id|integer|null: false,|
 ### Association
-- belong_to :product
-  belong_to :user
+- belong_to :Product
+  belong_to :User
 
 
 ## Productテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image_id|integer|
-|name|string|
-|content|text|
-|category_id|integer|
+|image_id|integer|null: false,|
+|name|string|null: false,|
+|content|text|null: false,|
+|category_id|integer|null: false,|
 |size|string|
 |brand_id|integer|
-|status|integer|
-|delivery_charge|integer|
+|status|integer|null: false,|
+|delivery_charge|integer|null: false,|
 |shipping_methood|integer|
-|date_of_shipment|integer|
-|price|integer|
-|user_id|integer|
+|date_of_shipment|integer|null: false,|
+|price|integer|null: false,|
+|user_id|integer|null: false,|
 ### Association
-- has many :
-  has_many :
+- belong_to :Brand
+  belong_to :Category
+  belong_to :User
+  has_many :Image
+  has_many :Comment
+  has_many :Good
+
 
 ## Imageテーブル
 |Column|Type|Options|
