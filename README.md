@@ -5,7 +5,7 @@
 |------|----|-------|
 |name|string|null: false|
 |name_kana|string|null: false|
-|mail_adress|string|null: false|
+|mail_adress|string|null: false, unique: true|
 |password|string|null: false|
 |tel|integer|null: false|
 |birthday|date|null: false|
@@ -98,9 +98,9 @@
 ## Categoryテーブル
 |Column|Type|Options|
 |------|----|-------|
-|category_L|string|
-|category_M|string|
-|category_S|string|
+|category_L|string||
+|category_M|string||
+|category_S|string||
 |brand-category_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :Products
