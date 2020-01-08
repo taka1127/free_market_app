@@ -47,7 +47,7 @@
 ## Productテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image_id|integer|null: false,|
+<!-- |image_id|integer|null: false,| -->
 |name|string|null: false,|
 |content|text|null: false,|
 |category_id|integer|null: false,|
@@ -103,8 +103,9 @@
 |category_S|string|
 |brand-category_id|integer|
 ### Association
-- has_many :brand, through: :brand_category
-  belong_to :Brand
+- has_many :Product
+  has_many :Brand, through: :Brand_Category
+  
 
 ## Brand_Categoyテーブル
 |Column|Type|Options|
