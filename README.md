@@ -85,24 +85,32 @@
 - belong_to :Product
 
 
-
-
-
 ## Brandテーブル
 |Column|Type|Options|
 |------|----|-------|
-
+|brand|string|
+|brand-category_id|integer|
 ### Association
+  - has_many :Product
+    has_many :Category, through :brand_category
+
 
 ## Categoryテーブル
 |Column|Type|Options|
 |------|----|-------|
-
+|category_L|string|
+|category_M|string|
+|category_S|string|
+|brand-category_id|integer|
 ### Association
 - has_many :brand, through: :brand_category
+  belong_to :Brand
 
 ## Brand_Categoyテーブル
 |Column|Type|Options|
 |------|----|-------|
-
+|brand_id|integer|
+|category_id|integer|
 ### Association
+  belong_to :Brand
+  belong_to :Category
