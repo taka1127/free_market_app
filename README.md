@@ -12,15 +12,15 @@
 |postal_code|integer|null: false|
 |area_1|integer|null: false|
 |area_2|integer|null: false|
-|area_3|integer|
-|area_4|integer|
+|area_3|integer||
+|area_4|integer||
 |self-introduction|text|
-|point|integer|
-|proceeds|integer|
+|point|integer||
+|proceeds|integer||
 ### Association
-- has_many :Like
-  has_many :Product
-  has_many :Comment
+- has_many :Likes
+  has_many :Products
+  has_many :Comments
 
 
 ## Commentテーブル
@@ -51,11 +51,11 @@
 |name|string|null: false|
 |content|text|null: false|
 |category_id|integer|null: false, foreign_key: true|
-|size|string|
+|size|string||
 |brand_id|integer|null: false, foreign_key: true|
 |status|integer|null: false|
 |delivery_charge|integer|null: false|
-|shipping_methood|integer|
+|shipping_methood|integer||
 |date_of_shipment|integer|null: false|
 |price|integer|null: false|
 |user_id|integer|null: false, foreign_key: true|
@@ -63,24 +63,24 @@
 - belong_to :Brand
   belong_to :Category
   belong_to :User
-  has_many :Image
-  has_many :Comment
-  has_many :Good
+  has_many :Images
+  has_many :Comments
+  has_many :Goods
 
 
 ## Imageテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image_1|string|
-|image_2|string|
-|image_3|string|
-|image_4|string|
-|image_5|string|
-|image_6|string|
-|image_7|string|
-|image_8|string|
-|image_9|string|
-|image_10|string|
+|image_1|string||
+|image_2|string||
+|image_3|string||
+|image_4|string||
+|image_5|string||
+|image_6|string||
+|image_7|string||
+|image_8|string||
+|image_9|string||
+|image_10|string||
 ### Association
 - belong_to :Product
 
@@ -88,11 +88,11 @@
 ## Brandテーブル
 |Column|Type|Options|
 |------|----|-------|
-|brand|string|
+|brand|string||
 |brand-category_id|integer|null: false, foreign_key: true|
 ### Association
-  - has_many :Product
-    has_many :Category, through :brand_category
+  - has_many :Products
+    has_many :Categorys, through :brand_category
 
 
 ## Categoryテーブル
@@ -103,8 +103,8 @@
 |category_S|string|
 |brand-category_id|integer|null: false, foreign_key: true|
 ### Association
-- has_many :Product
-  has_many :Brand, through: :Brand_Category
+- has_many :Products
+  has_many :Brands, through:Brand_Category
   
 
 ## Brand_Categoyテーブル
