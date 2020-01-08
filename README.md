@@ -71,8 +71,22 @@
 ## Imageテーブル
 |Column|Type|Options|
 |------|----|-------|
-
+|image_1|string|
+|image_2|string|
+|image_3|string|
+|image_4|string|
+|image_5|string|
+|image_6|string|
+|image_7|string|
+|image_8|string|
+|image_9|string|
+|image_10|string|
 ### Association
+- belong_to :Product
+
+
+
+
 
 ## Brandテーブル
 |Column|Type|Options|
