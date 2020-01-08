@@ -22,28 +22,46 @@
   has_many :product
   has_many :comment
 
+
 ## Commentテーブル
 |Column|Type|Options|
 |------|----|-------|
-
-
+|content|text|
+|user_id|integer|
+|product_id|integer|
 ### Association
+- belong_to :product
+  belong_to :user
 
 
 ## Goodテーブル
 |Column|Type|Options|
 |------|----|-------|
-
+|user_id|integer|
+|product_id|integer|
 ### Association
+- belong_to :product
+  belong_to :user
+
 
 ## Productテーブル
 |Column|Type|Options|
 |------|----|-------|
-
+|image_id|integer|
+|name|string|
+|content|text|
+|category_id|integer|
+|size|string|
+|brand_id|integer|
+|status|integer|
+|delivery_charge|integer|
+|shipping_methood|integer|
+|date_of_shipment|integer|
+|price|integer|
+|user_id|integer|
 ### Association
-- has many :messages
-- has_many :users, through: :groups_users
-  has_many :groups_users
+- has many :
+  has_many :
 
 ## Imageテーブル
 |Column|Type|Options|
@@ -62,6 +80,7 @@
 |------|----|-------|
 
 ### Association
+- has_many :brand, through: :brand_category
 
 ## Brand_Categoyテーブル
 |Column|Type|Options|
