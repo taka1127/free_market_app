@@ -3,15 +3,15 @@
 ## Userテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false,|
-|name_kana|string|null: false,|
-|mail_adress|string|null: false,|
-|password|string|null: false,|
-|tel|integer|null: false,|
-|birthday|date|null: false,|
-|postal_code|integer|null: false,|
-|area_1|integer|null: false,|
-|area_2|integer|null: false,|
+|name|string|null: false|
+|name_kana|string|null: false|
+|mail_adress|string|null: false|
+|password|string|null: false|
+|tel|integer|null: false|
+|birthday|date|null: false|
+|postal_code|integer|null: false|
+|area_1|integer|null: false|
+|area_2|integer|null: false|
 |area_3|integer|
 |area_4|integer|
 |self-introduction|text|
@@ -26,9 +26,9 @@
 ## Commentテーブル
 |Column|Type|Options|
 |------|----|-------|
-|content|text|null: false,|
-|user_id|integer|null: false,|
-|product_id|integer|null: false,|
+|content|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|product_id|integer|null: false, foreign_key: true|
 ### Association
 - belong_to :Product
   belong_to :User
@@ -37,8 +37,8 @@
 ## Goodテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false,|
-|product_id|integer|null: false,|
+|user_id|integer|null: false, foreign_key: true|
+|product_id|integer|null: false, foreign_key: true|
 ### Association
 - belong_to :Product
   belong_to :User
@@ -48,17 +48,17 @@
 |Column|Type|Options|
 |------|----|-------|
 <!-- |image_id|integer|null: false,| -->
-|name|string|null: false,|
-|content|text|null: false,|
-|category_id|integer|null: false,|
+|name|string|null: false|
+|content|text|null: false|
+|category_id|integer|null: false, foreign_key: true|
 |size|string|
-|brand_id|integer|
-|status|integer|null: false,|
-|delivery_charge|integer|null: false,|
+|brand_id|integer|null: false, foreign_key: true|
+|status|integer|null: false|
+|delivery_charge|integer|null: false|
 |shipping_methood|integer|
-|date_of_shipment|integer|null: false,|
-|price|integer|null: false,|
-|user_id|integer|null: false,|
+|date_of_shipment|integer|null: false|
+|price|integer|null: false|
+|user_id|integer|null: false, foreign_key: true|
 ### Association
 - belong_to :Brand
   belong_to :Category
@@ -89,7 +89,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |brand|string|
-|brand-category_id|integer|
+|brand-category_id|integer|null: false, foreign_key: true|
 ### Association
   - has_many :Product
     has_many :Category, through :brand_category
@@ -101,7 +101,7 @@
 |category_L|string|
 |category_M|string|
 |category_S|string|
-|brand-category_id|integer|
+|brand-category_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :Product
   has_many :Brand, through: :Brand_Category
@@ -110,8 +110,8 @@
 ## Brand_Categoyテーブル
 |Column|Type|Options|
 |------|----|-------|
-|brand_id|integer|
-|category_id|integer|
+|brand_id|integer|null: false, foreign_key: true|
+|category_id|integer|null: false, foreign_key: true|
 ### Association
   belong_to :Brand
   belong_to :Category
