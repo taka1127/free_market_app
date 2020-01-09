@@ -9,7 +9,6 @@
 |password|string|null: false|
 |tel|integer|null: false|
 |birthday|date|null: false|
-|address_id|integer|null: false, forign_key: true|
 |self-introduction|text||
 |point|integer|default: 0|
 |proceeds|integer|default: 0|
@@ -22,6 +21,7 @@
 ## Addressテーブル
 |Column|Type|Options|
 |------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
 |postal_code|integer|null: false|
 |prefectures|integer|null: false|
 |city|integer|null: false|
