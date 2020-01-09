@@ -93,7 +93,7 @@
 ### Association
   - has_many :Products
     has_many :Categorys, through :Brand_Category
-
+    has_many :Brand_Category
 
 ## Categoryテーブル
 |Column|Type|Options|
@@ -105,6 +105,7 @@
 ### Association
 - has_many :Products
   has_many :Brands, through :Brand_Category
+  has_many :Brand_Category
   
 
 ## Brand_Categoyテーブル
