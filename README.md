@@ -9,11 +9,7 @@
 |password|string|null: false|
 |tel|integer|null: false|
 |birthday|date|null: false|
-|postal_code|integer|null: false|
-|prefectures|integer|null: false|
-|city|integer|null: false|
-|house_number|integer|null: false|
-|building|integer||
+|address_id|integer|null: false, forign_key: true|
 |self-introduction|text||
 |point|integer|default: 0|
 |proceeds|integer|default: 0|
@@ -21,8 +17,19 @@
 - has_many :goods
   has_many :products
   has_many :comments
+  has_one :address
 
-
+## Addressテーブル
+|Column|Type|Options|
+|------|----|-------|
+|postal_code|integer|null: false|
+|prefectures|integer|null: false|
+|city|integer|null: false|
+|house_number|integer|null: false|
+|building|integer||
+### Association
+  belongs_to :user
+  
 ## Commentテーブル
 |Column|Type|Options|
 |------|----|-------|
