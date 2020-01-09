@@ -92,7 +92,7 @@
 |brand-category_id|integer|null: false, foreign_key: true|
 ### Association
   - has_many :Products
-    has_many :Categorys, through :brand_category
+    has_many :Categorys, through :Brand_Category
 
 
 ## Categoryテーブル
