@@ -80,11 +80,11 @@
 |Column|Type|Options|
 |------|----|-------|
 |brand|string||
-|brand-category_id|integer|null: false, foreign_key: true|
+|brand_category_id|integer|null: false, foreign_key: true|
 ### Association
   - has_many :products
     has_many :categorys, through :brand_category
-    has_many :brand_category
+    has_many :brand_categorys
 
 ## Categoryテーブル
 |Column|Type|Options|
@@ -96,7 +96,7 @@
 ### Association
 - has_many :products
   has_many :brands, through :brand_category
-  has_many :brand_category
+  has_many :brand_categorys
   
 
 ## Brand_Categoyテーブル
