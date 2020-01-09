@@ -5,18 +5,18 @@
 |------|----|-------|
 |name|string|null: false|
 |name_kana|string|null: false|
-|mail_adress|string|null: false, unique: true|
+|mail_address|string|null: false, unique: true|
 |password|string|null: false|
 |tel|integer|null: false|
 |birthday|date|null: false|
 |postal_code|integer|null: false|
 |area_1|integer|null: false|
 |area_2|integer|null: false|
-|area_3|integer||
+|area_3|integer|null: false|
 |area_4|integer||
-|self-introduction|text|
-|point|integer||
-|proceeds|integer||
+|self-introduction|text||
+|point|integer|default: 0|
+|proceeds|integer|default: 0|
 ### Association
 - has_many :Likes
   has_many :Products
@@ -30,8 +30,8 @@
 |user_id|integer|null: false, foreign_key: true|
 |product_id|integer|null: false, foreign_key: true|
 ### Association
-- belong_to :Product
-  belong_to :User
+- belongs_to :Product
+  belongs_to :User
 
 
 ## Goodテーブル
@@ -40,30 +40,30 @@
 |user_id|integer|null: false, foreign_key: true|
 |product_id|integer|null: false, foreign_key: true|
 ### Association
-- belong_to :Product
-  belong_to :User
+- belongs_to :Product
+  belongs_to :User
 
 
 ## Productテーブル
 |Column|Type|Options|
 |------|----|-------|
-<!-- |image_id|integer|null: false,| -->
+|image_id|integer|null: false,|
 |name|string|null: false|
 |content|text|null: false|
 |category_id|integer|null: false, foreign_key: true|
 |size|string||
-|brand_id|integer|null: false, foreign_key: true|
+|brand_id|integer|foreign_key: true|
 |status|integer|null: false|
 |delivery_charge|integer|null: false|
-|shipping_methood|integer||
+|shipping_methood|integer|null: false|
 |date_of_shipment|integer|null: false|
 |price|integer|null: false|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
-- belong_to :Brand
-  belong_to :Category
-  belong_to :User
-  has_many :Images
+- belongs_to :Brand
+  belongs_to :Category
+  belongs_to :User
+  has_one :Images
   has_many :Comments
   has_many :Goods
 
@@ -82,7 +82,7 @@
 |image_9|string||
 |image_10|string||
 ### Association
-- belong_to :Product
+- belongs_to :Product
 
 
 ## Brandテーブル
@@ -104,7 +104,7 @@
 |brand-category_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :Products
-  has_many :Brands, through:Brand_Category
+  has_many :Brands, through :Brand_Category
   
 
 ## Brand_Categoyテーブル
