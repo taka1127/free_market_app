@@ -47,7 +47,6 @@
 ## Productテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image_id|integer|null: false|
 |name|string|null: false|
 |content|text|null: false|
 |category_id|integer|null: false, foreign_key: true|
@@ -63,7 +62,7 @@
 - belongs_to :Brand
   belongs_to :Category
   belongs_to :User
-  has_one :Image
+  has_many :Images
   has_many :Comments
   has_many :Goods
 
@@ -71,16 +70,8 @@
 ## Imageテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image_1|string||
-|image_2|string||
-|image_3|string||
-|image_4|string||
-|image_5|string||
-|image_6|string||
-|image_7|string||
-|image_8|string||
-|image_9|string||
-|image_10|string||
+|image|string||
+|product_id|integer|null: false|
 ### Association
 - belongs_to :Product
 
