@@ -47,7 +47,7 @@
 ## Productテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image_id|integer|null: false,|
+|image_id|integer|null: false|
 |name|string|null: false|
 |content|text|null: false|
 |category_id|integer|null: false, foreign_key: true|
