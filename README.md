@@ -112,5 +112,5 @@
 |brand_id|integer|null: false, foreign_key: true|
 |category_id|integer|null: false, foreign_key: true|
 ### Association
-  belong_to :brand
-  belong_to :category
+  belongs_to :brand
+  belongs_to :category
