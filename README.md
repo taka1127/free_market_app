@@ -63,7 +63,7 @@
 - belongs_to :Brand
   belongs_to :Category
   belongs_to :User
-  has_one :Images
+  has_one :Image
   has_many :Comments
   has_many :Goods
 
