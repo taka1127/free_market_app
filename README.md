@@ -10,10 +10,10 @@
 |tel|integer|null: false|
 |birthday|date|null: false|
 |postal_code|integer|null: false|
-|area_1|integer|null: false|
-|area_2|integer|null: false|
-|area_3|integer|null: false|
-|area_4|integer||
+|prefectures|integer|null: false|
+|city|integer|null: false|
+|house_number|integer|null: false|
+|building|integer||
 |self-introduction|text||
 |point|integer|default: 0|
 |proceeds|integer|default: 0|
