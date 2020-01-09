@@ -18,9 +18,9 @@
 |point|integer|default: 0|
 |proceeds|integer|default: 0|
 ### Association
-- has_many :Likes
-  has_many :Products
-  has_many :Comments
+- has_many :goods
+  has_many :products
+  has_many :comments
 
 
 ## Commentテーブル
@@ -30,8 +30,8 @@
 |user_id|integer|null: false, foreign_key: true|
 |product_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :Product
-  belongs_to :User
+- belongs_to :product
+  belongs_to :user
 
 
 ## Goodテーブル
@@ -40,8 +40,8 @@
 |user_id|integer|null: false, foreign_key: true|
 |product_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :Product
-  belongs_to :User
+- belongs_to :product
+  belongs_to :user
 
 
 ## Productテーブル
@@ -59,12 +59,12 @@
 |price|integer|null: false|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :Brand
-  belongs_to :Category
-  belongs_to :User
-  has_many :Images
-  has_many :Comments
-  has_many :Goods
+- belongs_to :brand
+  belongs_to :category
+  belongs_to :user
+  has_many :images
+  has_many :comments
+  has_many :goods
 
 
 ## Imageテーブル
@@ -73,7 +73,7 @@
 |image|string||
 |product_id|integer|null: false|
 ### Association
-- belongs_to :Product
+- belongs_to :product
 
 
 ## Brandテーブル
@@ -82,9 +82,9 @@
 |brand|string||
 |brand-category_id|integer|null: false, foreign_key: true|
 ### Association
-  - has_many :Products
-    has_many :Categorys, through :Brand_Category
-    has_many :Brand_Category
+  - has_many :products
+    has_many :categorys, through :brand_category
+    has_many :brand_category
 
 ## Categoryテーブル
 |Column|Type|Options|
@@ -94,9 +94,9 @@
 |category_S|string||
 |brand-category_id|integer|null: false, foreign_key: true|
 ### Association
-- has_many :Products
-  has_many :Brands, through :Brand_Category
-  has_many :Brand_Category
+- has_many :products
+  has_many :brands, through :brand_category
+  has_many :brand_category
   
 
 ## Brand_Categoyテーブル
@@ -105,5 +105,5 @@
 |brand_id|integer|null: false, foreign_key: true|
 |category_id|integer|null: false, foreign_key: true|
 ### Association
-  belong_to :Brand
-  belong_to :Category
+  belong_to :brand
+  belong_to :category
