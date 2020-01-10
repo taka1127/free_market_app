@@ -4,7 +4,7 @@ class CreateCategories < ActiveRecord::Migration[5.0]
       t.string  :category_L
       t.string  :category_M
       t.string  :category_S
-      t.integer :brand_category_id, null: false, foreign_key: true
+      t.references :product,   foreign_key: true
 
       t.timestamps
     end
