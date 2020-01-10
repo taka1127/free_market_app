@@ -1,6 +1,4 @@
 .header {
-  margin: 0 auto;
-  height: 200px;
   background-color: red;
   padding-top: 8px;
   &__search-bar {
@@ -20,14 +18,25 @@
     justify-content: space-around;
     margin-top: 8px;
     padding: 0 10px;
+    height: 44px;
+    line-height: 44px;
+    cursor: pointer;
+    
     &__search-tags {
       display: flex;
       font-weight: bold;
+      .tag {
+        padding-right: 10px;
+      }
 
     }
     &__utilities {
-      display: flex;
-
+      ul {
+        display: flex;
+        li {
+          padding: 0 7px;
+        }
+      }
     }
   }
 }
