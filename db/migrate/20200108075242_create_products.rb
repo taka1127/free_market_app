@@ -12,7 +12,6 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.integer :date_of_shipment, null: false
       t.integer :price,            null: false
       t.references :user,          foreign_key: true
-      
       t.timestamps
     end
   end
