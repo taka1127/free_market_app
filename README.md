@@ -1,10 +1,12 @@
 # README
 
-## Userテーブル
+## Userテーブル 
+<!-- 1/10現在デバイス生成のため、nickname,mail.passwordの3種のみで作成 -->
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 |name_kana|string|null: false|
+|nickname|string|null: false|
 |mail_address|string|null: false, unique: true|
 |password|string|null: false|
 |tel|integer|null: false|
