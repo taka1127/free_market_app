@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root "samples#index"
+  devise_for :users
+  root to:"samples#index"
 end
