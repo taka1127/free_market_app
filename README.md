@@ -88,11 +88,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |brand|string||
-|brand_category_id|integer|null: false, foreign_key: true|
 ### Association
   - has_many :products
-    has_many :categorys, through :brand_categorys
-    has_many :brand_categorys
 
 ## Categoryテーブル
 |Column|Type|Options|
@@ -100,18 +97,6 @@
 |category_L|string||
 |category_M|string||
 |category_S|string||
-|brand-category_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :products
-  has_many :brands, through :brand_categorys
-  has_many :brand_categorys
   
-
-## Brand_Categoyテーブル
-|Column|Type|Options|
-|------|----|-------|
-|brand_id|integer|null: false, foreign_key: true|
-|category_id|integer|null: false, foreign_key: true|
-### Association
-  belongs_to :brand
-  belongs_to :category
