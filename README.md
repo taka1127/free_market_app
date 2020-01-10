@@ -1,6 +1,7 @@
 # README
 
-## Userテーブル
+## Userテーブル 
+<!-- 1/10現在デバイス生成のため、nickname,mail.passwordの3種のみで作成 -->
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
