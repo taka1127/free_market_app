@@ -1,5 +1,4 @@
 # config valid only for current version of Capistrano
-set :linked_files, %w{ config/secrets.yml }
 # capistranoのバージョンを記載。固定のバージョンを利用し続け、バージョン変更によるトラブルを防止する
 lock '3.11.2'
 
