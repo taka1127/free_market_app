@@ -5,6 +5,7 @@
 |------|----|-------|
 |name|string|null: false|
 |name_kana|string|null: false|
+|nickname|string|null: false|
 |mail_address|string|null: false, unique: true|
 |password|string|null: false|
 |tel|integer|null: false|
@@ -23,10 +24,10 @@
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |postal_code|integer|null: false|
-|prefectures|integer|null: false|
-|city|integer|null: false|
-|house_number|integer|null: false|
-|building|integer||
+|prefecture|integer|null: false|
+|city|string|null: false|
+|house_number|string|null: false|
+|building|string||
 ### Association
   belongs_to :user
   
@@ -87,11 +88,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |brand|string||
-|brand_category_id|integer|null: false, foreign_key: true|
 ### Association
   - has_many :products
-    has_many :categorys, through :brand_category
-    has_many :brand_categorys
 
 ## Categoryテーブル
 |Column|Type|Options|
@@ -99,18 +97,6 @@
 |category_L|string||
 |category_M|string||
 |category_S|string||
-|brand-category_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :products
-  has_many :brands, through :brand_category
-  has_many :brand_categorys
   
-
-## Brand_Categoyテーブル
-|Column|Type|Options|
-|------|----|-------|
-|brand_id|integer|null: false, foreign_key: true|
-|category_id|integer|null: false, foreign_key: true|
-### Association
-  belong_to :brand
-  belong_to :category
