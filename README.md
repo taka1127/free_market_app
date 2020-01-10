@@ -23,7 +23,7 @@
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |postal_code|integer|null: false|
-|prefectures|integer|null: false|
+|prefecture|integer|null: false|
 |city|string|null: false|
 |house_number|string|null: false|
 |building|string||
@@ -90,7 +90,7 @@
 |brand_category_id|integer|null: false, foreign_key: true|
 ### Association
   - has_many :products
-    has_many :categorys, through :brand_category
+    has_many :categorys, through :brand_categorys
     has_many :brand_categorys
 
 ## Categoryテーブル
@@ -102,7 +102,7 @@
 |brand-category_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :products
-  has_many :brands, through :brand_category
+  has_many :brands, through :brand_categorys
   has_many :brand_categorys
   
 
