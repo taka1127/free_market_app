@@ -1,0 +1,13 @@
+.exhibition {
+  background-color: red;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  z-index: 1;
+  .btn {
+    margin: 0 auto;
+  }
+}
