@@ -11,19 +11,23 @@
     padding: 8px 0;
   }
   &__banner {
-    height: 260px;
+    &__contents {
+      width: 750px;
+      height: 260px;
+      margin: 0 auto;
+
+      h2 {
+        font-size: 24px;
+        padding-top: 40px;
+      }
+      h1 {
+        font-size: 35px;
+        margin-bottom: 20px;
+      }
+    }
     #bg {
       background-color: gray;
       position: relative;
-    }
-    &__contents {
-      position: absolute;
-      top: 50px;
-      left: 100px;
-
-      &__banner-icons {
-        display: flex;
-      }
     }
   }
   &__lists {
