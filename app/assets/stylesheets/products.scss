@@ -1,3 +1,41 @@
-// Place all the styles related to the products controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// ---------- index ---------------
+.index {
+  &__slick {
+    background-color: orange;
+    width: 100%;
+    height: 390px;
+  }
+  &__category {
+    width: 100vw;
+    &__title {
+      width: 100%;
+      height: 85px;
+      text-align: center;
+      padding-top: 56px;
+      h2 {
+        font-size: 28px;
+      }
+      ul {
+        display: flex;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+        li {
+          background-color: rgb(239, 239, 239);
+          cursor: pointer;
+          display: inline-block;
+          font-size: 14px;
+          font-weight: 600;
+          border-radius: 15px;
+          padding: 8px 16px;
+          margin: 10px;
+        }
+      }
+
+    }
+
+  }
+  &__brand {
+
+  }
+}
