@@ -68,3 +68,4 @@ end
 gem 'carrierwave'
 gem 'fog-aws'
 gem 'mini_magick'
+gem 'i18n'
