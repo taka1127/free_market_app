@@ -1,5 +1,80 @@
-// 以下にヘッダーSCSSを記載
 .footer {
   background-color: black;
   color: white;
+  h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  li, p {
+    font-size: 12px;
+    padding: 8px 0;
+  }
+  &__banner {
+    height: 260px;
+    #bg {
+      background-color: gray;
+      position: relative;
+    }
+    &__contents {
+      position: absolute;
+      top: 50px;
+      left: 100px;
+
+      &__banner-icons {
+        display: flex;
+      }
+    }
+  }
+  &__lists {
+    width: 1020px;
+    display: flex;
+    margin: 18px auto 0;
+    &__about {
+      width: 240px;
+      padding-right: 40px;
+      .logo-TWFB {
+        display: flex;
+        li {
+          margin: 30px 30px 0 0;
+        }
+      }
+    }
+    &__helps {
+      width: 240px;
+      padding-right: 40px;
+    }
+    &__privacy {
+      &__flexbox {
+        display: flex;
+        ul {
+          width: 240px;
+          padding-right: 10px;
+        }
+      }
+    }
+    &__country {
+      width: 85px;
+      padding-right: 40px;
+    }
+  }
+  &__bottom {
+    width: 1020px;
+    margin: 30px auto 20px;
+    display: flex;
+    &__logo {
+      float: left;
+      width: 125px;
+    }
+    &__copyright {
+      &__copyright {
+        width: 770px;
+        text-align: center;
+        font-size: 8px;
+        padding-bottom: 30px;
+      }
+    }
+  }
 }
+
+
