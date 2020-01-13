@@ -1,4 +1,6 @@
-$color_B :rgb(51, 51, 51);
+$color_Black :rgb(51, 51, 51);
+$color_Aqua :rgb(62, 181, 255);
+
 
 .header {
   padding-top: 8px;
@@ -7,7 +9,7 @@ $color_B :rgb(51, 51, 51);
   margin: 0 auto;
   a {
     text-decoration: none;
-    color: $color_B;
+    color: $color_Black;
     &:hover {
       color: rgb(62, 181, 255);
     }
@@ -20,6 +22,7 @@ $color_B :rgb(51, 51, 51);
       height: 36px;
     }
     &__form {
+      position: relative;
       input {
         font-size: 16px;
         padding-left: 10px;
@@ -29,6 +32,12 @@ $color_B :rgb(51, 51, 51);
         border-radius: 4px;
         background-color: rgb(245, 245, 245);
         border: solid 1px gray;
+      }
+      i {
+        position: absolute;
+        right: 20px;
+        top: 12px;
+        font-size: 12px;
       }
     }
   }
@@ -44,7 +53,7 @@ $color_B :rgb(51, 51, 51);
       display: flex;
       font-weight: bold;
       .tag {
-        padding-right: 20px;
+        padding-right: 30px;
         display: block;
         font-size: 14px;
       }
@@ -63,4 +72,5 @@ $color_B :rgb(51, 51, 51);
     }
   }
 }
+
 
