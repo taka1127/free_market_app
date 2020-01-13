@@ -6,7 +6,7 @@
         %h1 今すぐ無料ダウンロード
         .footer__banner__contents__banner-icons
           .footer__banner__contents__banner-icons__mercari
-            ■メルカリ
+            = image_tag "logo_white.svg" ,size: '68x68'
           .footer__banner__contents__banner-icons__stores__app
             ■APPLE
           .footer__banner__contents__banner-icons__stores__google
@@ -23,8 +23,8 @@
         %li 公式ブログ
         %li メルカリロゴ利用ガイドライン
         %ul.logo-TWFB
-          %li ■TW
-          %li ■FB
+          %li= icon('fab', 'twitter')
+          %li= icon('fab', 'facebook-square')
 
     .footer__lists__helps
       %h2 ヘルプ＆ガイド
@@ -59,6 +59,6 @@
   
   .footer__bottom
     .footer__bottom__copyright__logo
-      メルカリロゴ
+      = image_tag "fmarket_logo_white.svg"
     .footer__bottom__copyright__copyright
       © 66期team-A
