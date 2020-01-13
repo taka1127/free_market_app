@@ -38,3 +38,35 @@
   height: 100px;
   border-style: ridge;
 }
+
+.buy__box__detail__pay__price{
+  display: flex;
+  padding: 20px 20px 20px 20px;
+}
+
+.buy__box__detail__pay__price__titile{
+  padding: 10px 10px 10px 300px;
+  font-weight: bold;
+  font-size: 25pt;
+}
+
+.buy__box__detail__pay__price__price{
+  padding: 10px 10px 10px 100px;
+  font-weight: bold;
+  font-size: 25pt;
+}
+
+
+
+.buy__box__detail__pay__point{
+  font-size: large;
+  color: grey;
+  text-align: center;
+  
+}
+
+.buy__box__detail__pay{
+  height: 300px;
+
+
+}
