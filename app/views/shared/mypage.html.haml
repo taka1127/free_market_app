@@ -1,9 +1,116 @@
-.container
-  .container__content
-    .container__content__user-icon
-    .container__content__todo
-    .container__content__bottom
+-#-----------マイページ----------------------------
+.main
+  .main__container
+    .main__container__content
+      .main__container__content__user
+        .main__container__content__user__erea
+          .main__container__content__user__erea__icon
+          .main__container__content__user__erea__name
+            名前  
+          .main__container__content__user__erea__count
+            .main__container__content__user__erea__count__evaluation
+              評価
+            .main__container__content__user__erea__count__number
+              13
+            .main__container__content__user__erea__count__sell
+              出品数
+            .main__container__content__user__erea__count__number
+              21
+      .main__container__content__tabs
+        .main__container__content__tabs__info
+          お知らせ
+        .main__container__content__tabs__todo
+          やることリスト
+      .main__container__content__message
+        お知らせメッセージ（投稿により大きさ変わる）
+      .main__container__content__lists
+        一覧に戻る
+      .main__container__content__bottom
+        購入した商品
+      .main__container__content__purchased
+        .main__container__content__purchased__now-trade
+          取引中
+        .main__container__content__purchased__past-trade
+          過去の取引
+      .main__container__content__message
+        お知らせメッセージ（投稿により大きさ変わる）    
+      .main__container__content__lists
+        一覧に戻る
 
-  .container__side
-    .container__side__nav
-      .container__side__nav
+        
+    -#------左のサイドバーーーーーー---------
+    .main__container__side
+      .main__container__side__nav
+        .main__container__side__nav__list
+          = link_to '#' do
+            マイページ
+        .main__container__side__nav__list
+          = link_to '#' do
+            お知らせ
+        .main__container__side__nav__list
+          = link_to '#' do
+            やることリスト
+        .main__container__side__nav__list
+          = link_to '#' do
+            いいね！一覧
+        .main__container__side__nav__list
+          = link_to '#' do
+            出品する
+        .main__container__side__nav__list
+          = link_to '#' do
+            出品した商品-出品中
+        .main__container__side__nav__list
+          = link_to '#' do
+            出品した商品-取引中
+        .main__container__side__nav__list
+          = link_to '#' do
+            出品した商品-売却済み
+        .main__container__side__nav__list
+          = link_to '#' do
+            購入した商品-取引中
+        .main__container__side__nav__list
+          = link_to '#' do
+            購入した商品-過去の取引
+        .main__container__side__nav__list
+          = link_to '#' do
+            ニュース一覧
+        .main__container__side__nav__list
+          = link_to '#' do
+            評価一覧
+        .main__container__side__nav__list
+          = link_to '#' do
+            ガイド
+        .main__container__side__nav__list
+          = link_to '#' do
+            お問い合わせ
+        .main__container__side__nav__header
+          %h3 メルペイ
+        .main__container__side__nav__list
+          = link_to '#' do
+            残高・振込申請
+        .main__container__side__nav__list
+          = link_to '#' do
+            ポイント
+        .main__container__side__nav__header
+          %h3 設定
+        .main__container__side__nav__list
+          = link_to '#' do
+            プロフィール
+        .main__container__side__nav__list
+          = link_to '#' do
+            発送元・お届け先住所変更
+        .main__container__side__nav__list
+          = link_to '#' do
+            支払い方法
+        .main__container__side__nav__list
+          = link_to '#' do
+            メール/パスワード
+        .main__container__side__nav__list
+          = link_to '#' do
+            本人情報
+        .main__container__side__nav__list
+          = link_to '#' do
+            電話番号の確認
+        .main__container__side__nav__list
+          = link_to '#' do
+            ログアウト

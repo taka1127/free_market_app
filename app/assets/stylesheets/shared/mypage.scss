@@ -1,5 +1,181 @@
-.container{
-  width: 100px;
-  height: 100px;
-  background-color: red($color: #000000);
+//------------マイページ-------------------------
+*{
+  box-sizing: border-box;
+}
+.main{
+  background-color: rgb(187, 184, 184);
+  overflow: scroll;
+  &__container{
+    width: 1020px;
+    // height: 100vh;
+    margin: 40px auto 0 ;
+    background-color: ghostwhite;
+    &__content{
+      width: 700px;
+      float: right;
+      // border: solid 0.5px gray;
+      cursor: pointer;
+      &__user{
+        height: 200px;
+        // background-image:image-url('images.jpeg');
+        // background-size:  cover;
+        background-color: ghostwhite;
+        padding: 20px;
+        border: solid 0.5px gray;
+        &__erea{
+          top:50px;
+          text-align: center;
+          height: 100px;
+          background-color: rgba(240, 255, 240,0.3);
+          &__icon{
+            background-color: khaki;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            margin: 0 auto;
+          }
+          &__name{
+
+          }
+          &__count{
+            display: flex;
+            justify-content: center;
+            height: 60px;
+            &__evaluation{
+              margin-right: 10px;
+              width: 100px;
+              padding: 20px;
+              // background-color: lawngreen;
+            }
+            &__number{
+              margin-right: 10px;
+              width: 100px;
+              font-size: 14px;
+              padding: 20px;
+              // background-color: lemonchiffon;
+            }
+            &__sell{
+              margin-right: 10px;
+              width: 100px;
+              padding: 20px;
+              // background-color: lightcoral;
+            }
+            &__number{
+              margin-right: 10px;
+              width: 100px;
+              padding: 20px;
+              // background-color: lightsalmon;
+            }
+          }
+        }
+      }
+      &__tabs{
+        &__info{
+          width: 50%;
+          height: 72px;
+          text-align: center;
+          font-size: 22px;
+          line-height: 72px;
+          background-color:#f5f5f5;
+          border: solid 0.5px gray;
+          // position: relative;
+          float: left;
+        }
+        &__todo{
+          width: 50%;
+          height: 72px;
+          text-align: center;
+          font-size: 22px;
+          line-height: 72px;
+          background-color:#f5f5f5;
+          border: solid 0.5px gray;
+          // position: relative;
+          float: right;
+        }
+      }
+  //-------上下共通部分----------------
+      &__message{
+        height: 100px;
+        padding: 16px;
+        color: #333;
+        clear: both;
+        border: solid 0.5px gray;
+        &:hover{
+          background-color:blue;
+        }
+      }
+      &__lists{
+        height: 100px;
+        padding: 16px;
+        color: #333;
+        text-align: center;
+        line-height: 50px;
+        border: solid 0.5px gray;
+        background-color: rgba(182, 179, 166, 1);
+        &:hover{
+          background-color: rgba(182, 179, 166, 0.5);
+        }
+      }
+
+  //-------上下共通部分----------------
+
+      &__bottom{
+        height:56px;
+        padding: 16px;
+        margin: 40px 0 0;
+        border: solid 0.5px gray;
+      }
+      &__purchased{
+        &__now-trade{
+          width: 50%;
+          height: 72px;
+          text-align: center;
+          font-size: 22px;
+          line-height: 72px;
+          border: solid 0.5px gray;
+          background-color:#f5f5f5;
+          // position: relative;
+          float: left;
+        }
+        &__past-trade{
+          width: 50%;
+          height: 72px;
+          text-align: center;
+          font-size: 22px;
+          line-height: 72px;
+          border: solid 0.5px gray;
+          background-color:#f5f5f5;
+          // position: relative;
+          float: right;
+        }
+      }
+    }
+  //--------左のサイドバーーーーーー-------------
+    &__side{
+      // height: 400px;
+      width: 280px;
+      background-color: ghostwhite;
+      float: left;
+      margin: 0 40px 0 0;
+      &__nav{
+        &__list{
+          height: 48px;
+          width: 280;
+          border-style: solid;
+          border-width: 0;
+          padding: 16px;
+          color: #333;
+          cursor: pointer;
+          border: solid 0.5px gray;
+          // background-color: seashell;
+        }
+        &__header{
+          margin: 40px 0 0;
+          h3{
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
 }
