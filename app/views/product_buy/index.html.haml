@@ -5,6 +5,7 @@
       購入内容の確認
     .buy__box__detail
       .buy__box__detail__image
+        = image_tag "coach.jpg", size: "100x100", alt: "顔写真1"
       .buy__box__detail__title
         COACH コーチ ショルダーバッグ
         .buy__box__detail__title__price
@@ -35,9 +36,17 @@
         %p 田中 二郎
       .buy__box__address__right
         %p 変更する
-
-
     .buy__box__content
+      %p この商品はゆうゆうメルカリ便を利用しているため、
+      %p アプリからのみ購入できます。
     .buy__box__bottom
+      %p 購入する
     .buy__box__app__content
-    .buy__box__app__bottom
+      %p アプリをお持ちでない方は以下よりインストールして
+      %p ご利用いただけます。
+    .buy__box__app__bottom 
+      .buy__box__app__bottom__applestore
+        applestore
+      .buy__box__app__bottom__googleplay
+        googleplay
+  

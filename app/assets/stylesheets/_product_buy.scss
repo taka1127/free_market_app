@@ -1,7 +1,7 @@
 .buy{
   background-color: #F2F2F2;
   width: 100vw;
-  height: 100vh;
+  height: 1300px;
   padding: 50px 200px 50px 200px;
 
 }
@@ -18,7 +18,7 @@
 .buy__box{
   background-color: white;
   width: 1000px;
-  height: 3000px;
+  height: 1100px;
 
 }
 
@@ -34,7 +34,7 @@
 .buy__box__detail{
   display: flex;
   text-align: center;
-  padding: 50px 50px 50px 600px;
+  padding: 50px 50px 50px 270px;
   height: 100px;
   border-style: ridge;
 }
@@ -92,7 +92,7 @@
 }
 
 .buy__box__address{
-  height: 350px;
+  height: 160px;
   background-color: mediumspringgreen;
   text-align: center;
   display: flex;
@@ -105,7 +105,66 @@
 }
 
 .buy__box__address__right{
-  padding-left: 100px;
+  padding-left: 150px;
   padding-top: 20px;
+
+}
+
+.buy__box__content{
+  height: 60px;
+  margin: 0 auto;
+  color: red;
+  text-align: center;
+  margin: 20px 20px 20px 20px;
+  background-color: aqua;
+}
+
+.buy__box__bottom{
+  height: 60px;
+  width: 400px;
+  background-color: grey;
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 60px;
+}
+
+.buy__box__app__content{
+  text-align: center;
+  margin: 20px 20px 20px 20px;
+
+}
+
+.item-comment__box{
+  display: flex;
+
+}
+
+.buy__box__app__bottom{
+
+  display: flex;
+}
+
+
+
+.buy__box__app__bottom__applestore{
+  background-color: grey;
+  margin: 10px 10px 10px 380px;
+  height: 30px;
+  width: 100px;
+  text-align: center;
+}
+
+.buy__box__app__bottom__googleplay{
+  background-color: grey;
+  margin: 10px 10px 10px 10px;
+  height: 30px;
+  width: 100px;
+  text-align: center;
+
+}
+
+.buy__box__detail__title{
+  padding-left: 30px;
 
 }
