@@ -1,3 +1,93 @@
-// Place all the styles related to the products controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// ---------- index ---------------
+.products {
+  height: 100%;
+  width: 100%;
+  &__index {
+    &__slick {
+      background-color: orange;
+      width: 100%;
+      height: 390px;
+    }
+    &__category, &__brand {
+      margin: 0 auto;
+      background-color: rgb(239, 239, 239);
+      color: $color_Black;
+      &__title {
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        padding: 56px auto 30px;
+        display: block;
+        background-color: #FFF;
+        
+        h2 {
+          padding-top: 56px;
+          font-size: 28px;
+          font-weight: bold;
+        }
+        ul {
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          margin-bottom: 30px;
+          li {
+            background-color: rgb(239, 239, 239);
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 15px;
+            padding: 8px 16px;
+            margin: 10px;
+          }
+        }
+      }
+      &__contents {
+        width: 1020px;
+        margin: 0 auto;
+        padding-top: 20px;
+        padding-bottom: 100px;
+        &__container {
+          background-color: rgb(239, 239, 239);
+
+          &__title {
+            margin-top: 42px;
+            display: flex;
+            justify-content: space-between;
+            h3 {
+              font-size: 24px;
+              font-weight: bold;
+            }
+            a {
+              text-decoration: none;
+              color: $color_Aqua;
+              font-weight: bold;
+            }
+          }
+          &__thumbnails {
+            width: 1020px;
+            ul {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.thumbnail {
+  padding: 10px;
+  width: 188px;
+  &__image {
+    height: 188px;
+    background-color: lightyellow;
+    &__price {
+
+    }
+  }
+  &__title {
+    background-color: white;
+    height: 64px;
+
+  }
+}
