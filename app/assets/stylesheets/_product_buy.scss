@@ -18,7 +18,7 @@
 .buy__box{
   background-color: white;
   width: 1000px;
-  height: 1000px;
+  height: 3000px;
 
 }
 
@@ -62,11 +62,50 @@
   font-size: large;
   color: grey;
   text-align: center;
-  
+  background-color: lavender;
+  height: 40px;
 }
 
 .buy__box__detail__pay{
-  height: 300px;
+  // height: 100px;
+  background-color: khaki;
+}
 
+.buy__box__how{
+  height: 150px;
+  text-align: center;
+  display: flex;
+  background-color: palevioletred;
+}
+
+.buy__box__how__left{
+  padding-left: 360px;
+  padding-top: 20px;
+
+
+}
+
+.buy__box__how__right{
+  padding-left: 100px;
+  padding-top: 20px;
+
+}
+
+.buy__box__address{
+  height: 350px;
+  background-color: mediumspringgreen;
+  text-align: center;
+  display: flex;
+}
+
+.buy__box__address__left{
+  padding-left: 360px;
+  padding-top: 20px;
+
+}
+
+.buy__box__address__right{
+  padding-left: 100px;
+  padding-top: 20px;
 
 }
