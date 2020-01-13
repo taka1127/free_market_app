@@ -96,4 +96,53 @@
 // ------------------- new -------------------
 
 .products__new{
+  width: 100vw;
+  
+  &__logo {
+    height: 50px;
+    width: 185px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0 auto;
+  }
+  &__form {
+    margin: 0 auto;
+    width: 668px;
+    background-color: white;
+    &__title {
+      text-align: center;
+      h2 {
+        font-size: 22px;
+        font-weight: bold;
+        padding: 32px 16px;
+      }
+    }
+    &__image {
+      padding: 40px;
+    }
+    &__basic {
+      padding: 40px;
+    }
+    &__details {
+      padding: 40px;
+    }
+    &__delivery {
+      padding: 40px;
+    }
+    &__price {
+      padding: 40px;
+    }
+    &__other {
+      padding: 40px;
+    }
+  }
+  &__bottom {
+    text-align: center;
+    ul {
+      display: flex;
+      li {
+        text-align: center;
+      }
+    }
+  }
 }
