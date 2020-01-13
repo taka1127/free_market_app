@@ -1,8 +1,8 @@
 .header
   .header__search-bar
     .header__search-bar__logo
-      = link_to root_path do
-        メルカリロゴ
+      -# = link_to root_path do
+      = image_tag "fmarket_logo_red.svg"
     .header__search-bar__form
       %input{type: "search", name: "keyword", size: "80", placeholder: "何かお探しですか？"}/
   .header__contents
