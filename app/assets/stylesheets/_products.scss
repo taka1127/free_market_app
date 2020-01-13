@@ -72,27 +72,35 @@
 .item-buy__content{
   text-align: center;
   margin-top: 15px;
-
+  color: red;
 }
 
 .item-buy__notes{
+  text-align: center;
+  padding: 20px 20px 20px 20px;
+  font-size: large;
+}
+
+.item-buy__buttom{
   display: flex;
+  padding: 20px 20px 20px 20px;
 }
 
-.item-buy__notes__good-buttom{
+
+.item-buy__buttom__good-buttom{
   padding-left: 50px;
   color: grey;
   width: 200px;
 
 }
 
-.item-buy__notes__repoprt{
+.item-buy__buttom__repoprt{
   padding-left: 50px;
   color: grey;
   width: 200px;
 }
 
-.item-buy__notes__security{
+.item-buy__buttom__security{
   padding-left: 250px;
   color: blue;
 }
@@ -118,4 +126,12 @@
   text-align: center;
   line-height: 60px;
   margin-top: 20px;
+}
+
+.item-detail-table{
+  margin-left: 60px;
+  width: 500px;
+  height: 500px;
+
+
 }

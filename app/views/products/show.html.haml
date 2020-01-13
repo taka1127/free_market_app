@@ -4,7 +4,36 @@
       最新作COACHショルダーバッグ新品花柄フラワー
     .item-detail
       .item-detail__photo
-      .item-detail__box
+        = image_tag "coach.jpg", size: "400x400", alt: "顔写真1"
+      %table.item-detail-table{:border => "1",}
+        %tr{:align => "center"}
+          %th 出品者
+          %th mu☆mu
+        %tr{:align => "center"}
+          %td カテゴリー
+          %td レディス
+        %tr{:align => "center"}
+          %td ブランド
+          %td コーチ
+        %tr{:align => "center"}
+          %td 商品の状態
+          %td 傷や汚れあり
+        %tr{:align => "center"}
+          %td 配送料の負担
+          %td 送料込み（出品者負担）
+        %tr{:align => "center"}
+          %td 配送の方法
+          %td ゆうゆうメルカリ便
+        %tr{:align => "center"}
+          %td 配送元地域
+          %td 沖縄県
+        %tr{:align => "center"}
+          %td 発送日の目安
+          %td ４〜７日で発送
+        %tr{:align => "center"}
+        
+
+
     .item-buy
       .item-buy__price
         .item-buy__price__title
@@ -14,17 +43,28 @@
       .item-buy__bottom
         購入画面に進む
       .item-buy__content
-        この商品はゆうゆうメルカリ便を利用しているため、アプリからのみ購入できます。
+        %p 商品はゆうゆうメルカリ便を利用しているため、アプリからのみ購入できます。
       .item-buy__notes
-        .item-buy__notes__good-buttom
-          いいね
-        .item-buy__notes__repoprt
-          不適切な商品の報告
-        .item-buy__notes__security
-          あんしん・あんぜんへの取り組み
+        %p COACH/コーチ   ショート丈ショルダーバッグ
+        %p 10年前程に購入使用していたものですが
+        %p 使用しなくなって自宅保管していました。
+        %p ☆全体的に使用感あり理解のある方宜しく
+        %p お願い致します。(※汚れ、傷あり写真掲載）
+        %p ※USDの為、掲載写真等で確認し、ご納得された上でのご購入宜しくお願い致します。
+        %p 離島からの発送にて天候や地域により
+        %p 到着までに多少のお時間を要することも
+        %p 加えた上でご理解頂ける方のご購入
+        %p 宜しくお願い致します。m(_ _)m
+      .item-buy__buttom
+        .item-buy__buttom__good-buttom
+          %p いいね
+        .item-buy__buttom__repoprt
+          %p 不適切な商品の報告
+        .item-buy__buttom__security
+          %p あんしん・あんぜんへの取り組み
     .item-comment
       .item-comment__content
-        相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+        %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
       .item-comment__box
       .item-comment__buttom
         コメントする
