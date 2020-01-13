@@ -1,0 +1,121 @@
+.top{
+  background-color:#999999;
+  width: 100vw;
+  height: 2000px;
+  padding: 50px 40px 50px 40px;
+}
+
+.item-name{
+  text-align: center;
+  font-size: 20pt;
+}
+
+
+.item{
+  background-color:white;
+  width: calc(100vw - 400px);
+  height: 1500px;
+  
+  margin: 0 auto;
+}
+
+.item-detail{
+  background-color: #999999;
+  width: calc(100vw - 500px);
+  height: 500px;
+  margin: 0 auto;
+  padding: 20px 20px 20px 20px;
+  display: flex;
+}
+
+.item-detail__photo{
+  background-color: black;
+  width: 400px;
+  height: 400px;
+
+
+}
+
+.item-detail__box{
+  background-color: blue;
+  width: 500px;
+  height: 450px;
+  margin: 0px 30px 0px 30px;
+}
+
+.item-buy__price{
+  display: flex;
+}
+
+.item-buy__price__title{
+  font-size: 50px;
+  padding-top: 30px;
+  padding-left: 300px;
+}
+
+.item-buy__price__detail{
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+.item-buy__bottom{
+  background-color: red;
+  height: 75px;
+  width: 550px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 75px;
+  font-weight: bold;
+  font-size: 175%;
+}
+
+.item-buy__content{
+  text-align: center;
+  margin-top: 15px;
+
+}
+
+.item-buy__notes{
+  display: flex;
+}
+
+.item-buy__notes__good-buttom{
+  padding-left: 50px;
+  color: grey;
+  width: 200px;
+
+}
+
+.item-buy__notes__repoprt{
+  padding-left: 50px;
+  color: grey;
+  width: 200px;
+}
+
+.item-buy__notes__security{
+  padding-left: 250px;
+  color: blue;
+}
+
+.item-comment__content{
+  text-align: center;
+  margin: 0 auto;
+  width: 600px;
+}
+
+.item-comment__box{
+  width: 800px;
+  height: 100px;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+}
+
+.item-comment__buttom{
+  margin: 0 auto;
+  height: 60px;
+  width: 800px;
+  background-color: grey;
+  text-align: center;
+  line-height: 60px;
+  margin-top: 20px;
+}
