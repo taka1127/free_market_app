@@ -2,6 +2,7 @@
   .products__new__logo
     = image_tag "fmarket_logo_red.svg"
   .products__new__form
+    = form_for @product do |f|
     .products__new__form__title
       %h2 商品の情報を入力
     .products__new__form__image
@@ -21,7 +22,8 @@
           商品名
           %span 必須
         .form
-          %input{ placeholder: "商品名（必須40文字まで）"}
+          -# %input{ placeholder: "商品名（必須40文字まで）"}
+
       .products__new__form__basic__text
         %label 
           商品の説明
