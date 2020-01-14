@@ -1,15 +1,15 @@
 .buy
   .buy__title
+  = image_tag "mercari.jpg", size: "180x100", alt: "メルカリ"
   .buy__box
     .buy__box__title
       購入内容の確認
     .buy__box__detail
       .buy__box__detail__image
-        = image_tag "coach.jpg", size: "100x100", alt: "顔写真1"
+        = image_tag "coach.jpg", size: "120x120", alt: "商品1"
       .buy__box__detail__title
-        COACH コーチ ショルダーバッグ
-        .buy__box__detail__title__price
-          ¥4,350 （税込）送料込み
+        %p COACH コーチ ショルダーバッグ
+        %p ¥4,350 （税込）送料込み
     .buy__box__pay
       .buy__box__pay__price
         .buy__box__pay__price__titile
@@ -41,12 +41,12 @@
       %p アプリからのみ購入できます。
     .buy__box__bottom
       %p 購入する
-    .buy__box__appcontent
-      %p アプリをお持ちでない方は以下よりインストールして
-      %p ご利用いただけます。
-    .buy__box__appbottom 
-      .buy__box__appbottom__applestore
-        applestore
-      .buy__box__appbottom__googleplay
-        googleplay
+    -# .buy__box__appcontent
+    -#   %p アプリをお持ちでない方は以下よりインストールして
+    -#   %p ご利用いただけます。
+    -# .buy__box__appbottom 
+    -#   .buy__box__appbottom__applestore
+    -#     applestore
+    -#   .buy__box__appbottom__googleplay
+    -#     googleplay
   
