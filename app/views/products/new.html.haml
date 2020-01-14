@@ -11,8 +11,8 @@
       %p 最大10枚までアップロードできます
       .products__new__form__image__file
         %input
-          %pre ドラッグアンドドロップ/
-            またはクリックしてファイルをダウンロード
+          %p ドラッグアンドドロップ
+          %p またはクリックしてファイルをダウンロード
     .products__new__form__basic
       %label 
         商品名
@@ -28,6 +28,8 @@
         ?
     .products__new__form__price
       %h3 販売価格
+      = link_to '#',{class: "question"} do
+        ?
     .products__new__form__other
       %p
         = link_to '#' do
