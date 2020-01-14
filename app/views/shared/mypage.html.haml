@@ -1,0 +1,53 @@
+.main
+  .main__container
+    .main__container__content
+      .main__container__content__user
+        .main__container__content__user__erea
+          .main__container__content__user__erea__icon
+          .main__container__content__user__erea__name
+            name  
+          .main__container__content__user__erea__count
+            .main__container__content__user__erea__count__evaluation
+              評価
+              %li
+                13
+            .main__container__content__user__erea__count__sell
+              出品数
+              %li
+                14
+      .main__container__content__tabs
+        .main__container__content__tabs__info
+          お知らせ
+        .main__container__content__tabs__todo
+          やることリスト
+      .main__container__content__message
+        .main__container__content__message__logo
+          =image_tag "logo_gray.svg" 
+        .main__container__content__message__nomessage
+          現在、やることリストはありません
+
+      -#---リストがある場合の「一覧を見る」の表示-------
+      -#.main__container__content__message
+        （お知らせリスト表示がされる）
+      -# .main__container__content__lists
+      -#   一覧に戻る
+
+      .main__container__content__bottom
+        購入した商品
+      .main__container__content__purchased
+        .main__container__content__purchased__now-trade
+          取引中
+        .main__container__content__purchased__past-trade
+          過去の取引
+      .main__container__content__message
+        .main__container__content__message__logo
+          =image_tag "logo_gray.svg" 
+        .main__container__content__message__nomessage
+          現在、やることリストはありません
+
+
+      -#---リストがある場合の「一覧を見る」の表示-------  
+      -# .main__container__content__lists
+      -#   一覧に戻る
+      
+    = render 'shared/side_bar'
