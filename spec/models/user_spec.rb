@@ -8,15 +8,9 @@ describe User do
     end
 
     it "is invalid without a mail_address" do
-      user = build(:user, mail_address: nil)
+      user = build(:user, email: nil)
       user.valid?
-      expect(user.errors[:mail_address]).to include("can't be blank")
-    end
-
-    it "is invalid without a nickname" do
-      user = build(:user, nickname: nil)
-      user.valid?
-      expect(user.errors[:nickname]).to include("can't be blank")
+      expect(user.errors[:email]).to include("can't be blank")
     end
 
     it "is invalid without a name" do
@@ -41,6 +35,11 @@ describe User do
       user = build(:user, birthday: nil)
       user.valid?
       expect(user.errors[:birthday]).to include("can't be blank")
+    end
+    it "is invalid without a password" do
+      user = build(:user, password: nil)
+      user.valid?
+      expect(user.errors[:password]).to include("can't be blank")
     end
   end
 end
