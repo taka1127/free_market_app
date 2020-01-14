@@ -97,7 +97,6 @@
 
 .products__new{
   width: 100vw;
-  
   &__logo {
     height: 50px;
     width: 185px;
@@ -109,16 +108,48 @@
     margin: 0 auto;
     width: 668px;
     background-color: white;
+    h3 {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    span {
+      margin-left: 8px;
+      padding: 4px;
+      border-radius: 2px;
+      color: #fff;
+      font-size: 12px;
+      background-color: $color_red;
+      font-weight: bold;
+    }
+    label {
+      font-weight: bold;
+    } 
     &__title {
       text-align: center;
+      border-bottom: 1px solid $color_gray;
       h2 {
         font-size: 22px;
         font-weight: bold;
         padding: 32px 16px;
       }
     }
+
     &__image {
       padding: 40px;
+      &__file {
+        position: relative;
+        input {
+          padding: 40px;
+          width: 430px;
+          border: dashed 1px gray;
+          background-color: $color_gray;
+          pre {
+            position: absolute;
+            top: 80px;
+            text-align: center;
+          }
+        }
+      }
     }
     &__basic {
       padding: 40px;
@@ -134,15 +165,55 @@
     }
     &__other {
       padding: 40px;
+      font-size: 14px;
+      p a {
+        text-decoration: none;
+        color: $color_Aqua;
+      }
+      
+      button {
+        background-color: $color_red;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        margin-top: 40px;
+        color: white;
+      }
+      .back-btn {
+        margin: 24px auto 0;
+        display: block;
+        text-decoration: none;
+        width: 45%;
+        background-color: #aaaaaa;
+        color: white;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+      }
     }
   }
   &__bottom {
     text-align: center;
+    width: 668px;
+    margin: 0 auto;
     ul {
       display: flex;
+      justify-content: center;
+      width: 100%;
       li {
-        text-align: center;
+        font-size: 12.5px;
+        padding: 40px 10px;
       }
+    }
+    &__logo {
+      height: 65px;
+      width: 80px;
+      margin: 0 auto ;
+    }
+    &__copyright {
+      font-size: 13px;
+      padding-top: 20px;
+      padding-bottom: 40px;
     }
   }
 }
