@@ -1,31 +1,33 @@
 .footer
   .footer__banner
-    .footer__banner__bg
-    .footer__banner__contents
-      %p スマホでかんたんフリマアプリ
-      %p 今すぐ無料ダウンロード
-      .footer__banner__contents__banner-icons
-        .footer__banner__contents__banner-icons__mercari
-        .footer__banner__contents__banner-icons__stores
+    .footer__banner#bg
+      .footer__banner__contents
+        %h2 スマホでかんたんフリマアプリ
+        %h1 今すぐ無料ダウンロード
+        .footer__banner__contents__banner-icons
+          .footer__banner__contents__banner-icons__mercari
+            = image_tag "logo_white.svg" ,size: '68x68'
           .footer__banner__contents__banner-icons__stores__app
+            ■APPLE
           .footer__banner__contents__banner-icons__stores__google
+            ■Google
     .footer__banner__figure
+
   .footer__lists
     .footer__lists__about
-      .footer__lists__about__head
-        メルカリについて
+      %h2 メルカリについて
       %ul
         %li 会社概要（運営会社）
         %li 採用情報
         %li プレスリリース
         %li 公式ブログ
         %li メルカリロゴ利用ガイドライン
-        %li （ツイッター）
-        %li （フェイスブック）
+        %ul.logo-TWFB
+          %li= icon('fab', 'twitter')
+          %li= icon('fab', 'facebook-square')
 
     .footer__lists__helps
-      .footer__lists__helps__head
-        ヘルプ＆ガイド
+      %h2 ヘルプ＆ガイド
       %ul
         %li メルカリガイド
         %li らくらくメルカリ便
@@ -37,8 +39,7 @@
         %li メルカリボックス
 
     .footer__lists__privacy
-      .footer__lists__privacy__head
-        プライバシーと利用規約
+      %h2 プライバシーと利用規約
       .footer__lists__privacy__flexbox
         %ul
           %li プライバシーポリシー
@@ -51,12 +52,13 @@
           %li 資金決済法に基づく表示
           %li 法令遵守法令遵守と犯罪防止のために
     .footer__lists__country
-      .footer__lists__country__head
-        国
+      %h2 国
       %ul
         %li 日本
         %li United States
   
   .footer__bottom
-    .footer__copyright__logo
-    .footer__copyright__copyright
+    .footer__bottom__copyright__logo
+      = image_tag "fmarket_logo_white.svg"
+    .footer__bottom__copyright__copyright
+      © 66期team-A

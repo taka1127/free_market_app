@@ -1,6 +1,15 @@
 @import "./reset";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+@import "shared/header";
+@import "shared/footer";
+@import "shared/exhibition-btn";
+
+@import "./products";
 
 @import "shared/header";
 @import "shared/footer";
 @import "shared/exhibition-btn";
 @import "shared/mypage";
+@import "shared/side_bar";
