@@ -3,161 +3,146 @@
   width: 100vw;
   height: 1400px;
   padding: 50px 80px 50px 80px;
-}
+  .item{
+    background-color:white;
+    width: calc(100vw - 650px);
+    height: 1400px;
+    margin: 0 auto;
+    .item{
+      &__name{
+        text-align: center;
+        font-size: 20pt;
+        padding: 20px;
+       }
+  &__detail{
+    background-color: white;
+    width: calc(100vw - 750px);
+    height: 360px;
+    margin: 0 auto;
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    &__photo{
+      background-color: black;
+      width: 300px;
+      height: 300px;
+    }
+    &__table{
+      margin-left: 60px;
+      width: 350px;
+      height: 400px;
+      font-size: small;
+    }
+  &__buy{
+    &__price{
+      display: flex;
+      &__title{
+        font-size: 50px;
+        padding-top: 30px;
+        padding-left: 300px;
+      }
+      &__detail{
+        padding-top: 50px;
+        padding-left: 50px;
+      }
+    }
+    &__bottom{
+      background-color: red;
+      height: 75px;
+      width: 550px;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 75px;
+      font-weight: bold;
+      font-size: 175%;
+    }
+    &__content{
+      text-align: center;
+      margin-top: 15px;
+      color: red;
+    }
+    &__notes{
+      padding-left: 150px;
+      padding-top: 40px;
+      font-size: large;
+    }
+    &__buttom{
+      display: flex;
+      padding: 20px 20px 20px 20px;
+      &__goodbuttom{
+        padding-left: 20px;
+        color: grey;
+        width: 100px;
+      }
+      &__repoprt{
+        padding-left: 5px;
+        color: grey;
+        width: 160px;
+      }
+      &__security{
+        padding-left: 160px;
+        color: blue;
+      }
+    &__comment{
+      &__content{
+        background-color: #fff6de;
+        height: 50px;
+        text-align: center;
+        margin: 0 auto;
+        width: 600px;
+        padding: 20px 20px 20px 20px;
+      }
+      &__box{
+        width: 600px;
+        height: 100px;
+        border: 1px solid #ccc;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: flex;
+        margin-bottom: 20px;
+      }
+      &__buttom{
+        margin: 0 auto;
+        height: 60px;
+        width: 800px;
+        background-color: grey;
+        text-align: center;
+        line-height: 60px;
+        margin-top: 20px;
 
-.item{
-  background-color:white;
-  width: calc(100vw - 650px);
-  height: 1400px;
-  margin: 0 auto;
-}
+        
+      }
 
 
 
 
 
-.item-name{
-  text-align: center;
-  font-size: 20pt;
-  padding: 20px;
-}
+
+    }
+  }
 
 
 
 
-.item-detail{
-  background-color: white;
-  width: calc(100vw - 750px);
-  height: 360px;
-  margin: 0 auto;
-  padding: 20px 20px 20px 20px;
-  display: flex;
-}
-
-.item-detail__photo{
-  background-color: black;
-  width: 300px;
-  height: 300px;
 
 
-}
 
-.item-detail__box{
+.item__detail__box{
   background-color: blue;
   width: 500px;
   height: 450px;
   margin: 0px 30px 0px 30px;
 }
 
-.item-buy__price{
-  display: flex;
-}
-
-.item-buy__price__title{
-  font-size: 50px;
-  padding-top: 30px;
-  padding-left: 300px;
-}
-
-.item-buy__price__detail{
-  padding-top: 50px;
-  padding-left: 50px;
-}
-
-.item-buy__bottom{
-  background-color: red;
-  height: 75px;
-  width: 550px;
-  margin: 0 auto;
-  text-align: center;
-  line-height: 75px;
-  font-weight: bold;
-  font-size: 175%;
-}
-
-.item-buy__content{
-  text-align: center;
-  margin-top: 15px;
-  color: red;
-}
-
-.item-buy__notes{
-  padding-left: 150px;
-  padding-top: 40px;
-  font-size: large;
-}
-
-.item-buy__buttom{
-  display: flex;
-  padding: 20px 20px 20px 20px;
-}
-
-
-.item-buy__buttom__good-buttom{
-  padding-left: 20px;
-  color: grey;
-  width: 100px;
 
 }
 
-.item-buy__buttom__repoprt{
-  padding-left: 5px;
-  color: grey;
-  width: 160px;
-}
-
-.item-buy__buttom__security{
-  padding-left: 160px;
-  color: blue;
-}
-
-.item-comment__content{
-  background-color: #fff6de;
-  height: 50px;
-  text-align: center;
-  margin: 0 auto;
-  width: 600px;
-  padding: 20px 20px 20px 20px;
-}
-
-.item-comment__box{
-  width: 600px;
-  height: 100px;
-  border: 1px solid #ccc;
-  margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.item-comment__buttom{
-  margin: 0 auto;
-  height: 60px;
-  width: 800px;
-  background-color: grey;
-  text-align: center;
-  line-height: 60px;
-  margin-top: 20px;
-}
-
-.item-detail-table{
-  margin-left: 60px;
-  width: 350px;
-  height: 400px;
-  font-size: small;
-}
 
 
-.item-comment__box{
-  display: flex;
-  margin-bottom: 20px;
-}
 
-.item-commentbottom{
-  width: 600px;
-  height: 70px;
-  background-color: grey;
-  margin: 0 auto;
-  color: white;
-  text-align: center;
-  line-height: 70px;
-}
+
+
+
+
+
+
