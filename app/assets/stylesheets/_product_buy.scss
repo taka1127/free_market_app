@@ -1,19 +1,20 @@
 .buy{
-  background-color: #fff;
+  background-color: #f5f5f5;
   width: 100vw;
   height: 1300px;
   padding: 50px 200px 50px 200px;
   &__title{
     background-color: black;
-    width: 300px;
+    width: 1000px;
     height: 70px;
-    margin: 0 auto;
     margin-bottom: 30px;
+    color: #333;
   }
   &__box{
-    background-color: white;
+    background-color: #fff;
     width: 1000px;
     height: 1100px;
+    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
     &__title{
       background-color: greenyellow;
       width: 300px;
@@ -21,6 +22,9 @@
       margin: 0 auto;
       line-height: 100px;
       text-align: center;
+      font-size: 22px;
+      padding: 32px;
+
     }
     &__detail{
       display: flex;
@@ -36,137 +40,120 @@
         padding-left: 30px;
       }
     }
+    &__pay{
+        // height: 100px;
+        background-color: khaki;
+      &__price{
+        display: flex;
+        padding: 20px 20px 20px 20px;
+        &__titile{
+          padding: 10px 10px 10px 300px;
+          font-weight: bold;
+          font-size: 25pt;
+        }
+        &__yen{
+          padding: 10px 10px 10px 100px;
+          font-weight: bold;
+          font-size: 25pt;
+        }
+      }
+      &__point{
+        font-size: large;
+        color: grey;
+        text-align: center;
+        background-color: lavender;
+        height: 40px;
+      }
+    } 
+    &__how{
+      height: 150px;
+      text-align: center;
+      display: flex;
+      background-color: palevioletred;
+      &__left{
+        padding-left: 360px;
+        padding-top: 20px;
+      }
+      &__right{
+        padding-left: 100px;
+        padding-top: 20px;
+      }
+    }
+    &__address{
+      height: 160px;
+      background-color: mediumspringgreen;
+      text-align: center;
+      display: flex;
+      &__left{
+        padding-left: 360px;
+        padding-top: 20px;
+      }
+      &__right{
+        padding-left: 150px;
+        padding-top: 20px;
+      }
+    }
+    &__content{
+      height: 60px;
+      margin: 0 auto;
+      color: red;
+      text-align: center;
+      margin: 20px 20px 20px 20px;
+      background-color: aqua;
+    }
+    &__bottom{
+      height: 60px;
+      width: 400px;
+      background-color: grey;
+      color: white;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 60px;
+    }
+    &__appcontent{
+      text-align: center;
+      padding: 10px 10px 10px 10px;
+    }
+    &__appbottom{
+      text-align: center;
+      margin: 20px 20px 20px 20px;
+      display: flex;
+      &__applestore{
+        background-color: grey;
+        margin: 10px 10px 10px 380px;
+        height: 30px;
+        width: 100px;
+        text-align: center;
+      }
+      &__googleplay{
+        background-color: grey;
+        margin: 10px 10px 10px 10px;
+        height: 30px;
+        width: 100px;
+        text-align: center;
+      }
+    }
   }
 }
 
-.buy__box__detail__pay__price__titile{
-  padding: 10px 10px 10px 300px;
-  font-weight: bold;
-  font-size: 25pt;
-}
 
 
 
 
 
-.buy__box__detail__pay__price{
-  display: flex;
-  padding: 20px 20px 20px 20px;
-}
 
 
 
-.buy__box__detail__pay__price__price{
-  padding: 10px 10px 10px 100px;
-  font-weight: bold;
-  font-size: 25pt;
-}
 
 
-
-.buy__box__detail__pay__point{
-  font-size: large;
-  color: grey;
-  text-align: center;
-  background-color: lavender;
-  height: 40px;
-}
-
-.buy__box__detail__pay{
-  // height: 100px;
-  background-color: khaki;
-}
-
-.buy__box__how{
-  height: 150px;
-  text-align: center;
-  display: flex;
-  background-color: palevioletred;
-}
-
-.buy__box__how__left{
-  padding-left: 360px;
-  padding-top: 20px;
-
-
-}
-
-.buy__box__how__right{
-  padding-left: 100px;
-  padding-top: 20px;
-
-}
-
-.buy__box__address{
-  height: 160px;
-  background-color: mediumspringgreen;
-  text-align: center;
-  display: flex;
-}
-
-.buy__box__address__left{
-  padding-left: 360px;
-  padding-top: 20px;
-
-}
-
-.buy__box__address__right{
-  padding-left: 150px;
-  padding-top: 20px;
-
-}
-
-.buy__box__content{
-  height: 60px;
-  margin: 0 auto;
-  color: red;
-  text-align: center;
-  margin: 20px 20px 20px 20px;
-  background-color: aqua;
-}
-
-.buy__box__bottom{
-  height: 60px;
-  width: 400px;
-  background-color: grey;
-  color: white;
-  margin: 0 auto;
-  text-align: center;
-  line-height: 60px;
-}
-
-.buy__box__app__content{
-  text-align: center;
-  margin: 20px 20px 20px 20px;
-
-}
 
 .item-comment__box{
   display: flex;
 
 }
 
-.buy__box__app__bottom{
-
-  display: flex;
-}
 
 
 
-.buy__box__app__bottom__applestore{
-  background-color: grey;
-  margin: 10px 10px 10px 380px;
-  height: 30px;
-  width: 100px;
-  text-align: center;
-}
 
-.buy__box__app__bottom__googleplay{
-  background-color: grey;
-  margin: 10px 10px 10px 10px;
-  height: 30px;
-  width: 100px;
-  text-align: center;
-
-}
 
