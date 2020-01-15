@@ -3,8 +3,13 @@ class ProductsController < ApplicationController
 
   def index
   end
+  
   def show
   end
+  
+  def edit
+  end
+  
 
 private
 
@@ -12,4 +17,5 @@ private
       redirect_to new_user_session_path, unless user_signed_in?　
       end
     end
+
 end
