@@ -1,4 +1,6 @@
 @import "./reset";
+@import "./basic";
+
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
@@ -8,7 +10,8 @@
 @import "shared/exhibition-btn";
 
 @import "./products";
-@import "./buys";
+@import "./products2";
+@import "./product_buy";
 
 @import "shared/header";
 @import "shared/footer";
