@@ -10,9 +10,7 @@
             .main__container__p-container__profile__i-erea__content__name
               name
         .main__container__p-container__profile__text
-          -#---------form_forの値の実装後修正ーーーーーーーーーーーーーーーーーー
-          .main__container__p-container__profile__text__profile
-            例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"
+          %textarea{ type: "text",rows: "5", placeholder: "こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪",id:"profile"}
         .main__container__p-container__profile__btn
           =link_to '#', class:'change' do
             変更する
