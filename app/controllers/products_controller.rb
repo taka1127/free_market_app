@@ -10,11 +10,13 @@ class ProductsController < ApplicationController
   
   def create
     @product = Product.new(product_params)
-    if @product.save
-      redirect_to root_path
-    else
-      render new_product_path
-    end
+    @product.save
+    redirect_to root_path
+    # if @product.save
+    #   redirect_to root_path
+    # else
+    #   render new_product_path
+    # end
   end
 
   def show
@@ -29,8 +31,7 @@ class ProductsController < ApplicationController
     redirect_to new_user_session_path unless user_signed_in?
   end
 
-
   def product_params
-    params.require(:product).permit(:name, :content, :status, :delivery_charge, :shipping_method, :date_of_shipment, :price)
+    params.require(:product).permit(:name, :content, :status, :delivery_charge, :shipping_method, :date_of_shipment, :price).merge(user_id: current_user.id)
   end
 end
