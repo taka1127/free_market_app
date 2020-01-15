@@ -6,7 +6,7 @@
 |name|string|null: false|
 |name_kana|string|null: false|
 |nickname|string|null: false|
-|mail_address|string|null: false, unique: true|
+|email|string|null: false, unique: true|
 |password|string|null: false|
 |tel|integer|null: false|
 |birthday|date|null: false|

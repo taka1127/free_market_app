@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  before_action :access_registration, except: [:index, :show]
+
   def index
   end
 
@@ -12,17 +14,20 @@ class ProductsController < ApplicationController
     redirect_to '/'
   end
 
-  # def edit
-  # end
+  def show
+  end
+  
+  def edit
+  end
 
-  # def update
-  # end
 
-  # def destroy
-  # end
+private
 
-  # def show
-  # end
+    def access_registration
+      redirect_to new_user_session_path, unless user_signed_in?　
+      end
+    end
+
 
   private
   def product_params
