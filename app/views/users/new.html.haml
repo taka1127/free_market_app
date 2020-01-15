@@ -4,8 +4,13 @@
     .new-user-top__contents__header
       新規会員登録
     .new-user-top__contents__body
-      %ul 
-        %li メールアドレスで登録
-        %li Facebookで登録
-        %li googleで登録
+      =link_to "#", class:"mail link"do
+        %i.fas.fa-facebook-square
+        %span メールアドレスで登録
+      =link_to "#", class:"facebook link"do
+        %i.fas.fa-facebook-square
+        %span Facebookで登録 
+      =link_to "#", class:"google link"do
+        %i.fas.fa-facebook-square
+        %span googleで登録
   ＜footerをrender＞

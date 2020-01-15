@@ -1,0 +1,44 @@
+.new-user-top{
+  &__contents{
+    width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    background-color: yellow;
+    &__header {
+      font-size: 22px;
+      padding: 32px;
+      font-weight: bold;
+      border-bottom: 1px solid;
+    }
+    &__body{
+      max-width: 343px;
+      margin: 0 auto;
+      padding-bottom: 16px;
+      .link {
+        display: block;
+        text-decoration: none;
+        color:white;
+        padding-inline-start: 0px;
+        line-height: 48px;
+        margin: 16px auto 0;
+      }
+      .mail {
+        background-color: red;
+        border-radius: 5px;
+        margin: 16px auto 0;
+      }
+      .facebook {
+        background-color: royalblue;
+        margin: 16px auto 0;
+        border-radius: 5px;
+      }
+      .google {
+        background-color: seashell;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: 16px auto ;
+      }
+    }
+  }
+}
