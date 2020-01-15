@@ -21,15 +21,12 @@ class ProductsController < ApplicationController
   end
 
 
-private
-
-    def access_registration
-      redirect_to new_user_session_path, unless user_signed_in?　
-      end
-    end
-
-
   private
+  def access_registration
+    redirect_to new_user_session_path unless user_signed_in?
+  end
+
+
   def product_params
     params.require(:product).permit(:name, :content, :status, :delivery_charge, :shipping_method, :date_of_shipment, :price)
   end
