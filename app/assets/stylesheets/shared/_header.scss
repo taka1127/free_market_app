@@ -1,6 +1,3 @@
-$color_Black :rgb(51, 51, 51);
-$color_Aqua :rgb(62, 181, 255);
-
 
 .header {
   padding-top: 8px;
@@ -13,7 +10,7 @@ $color_Aqua :rgb(62, 181, 255);
     }
   a {
     text-decoration: none;
-    color: $color_Black;
+    color: $color_black;
     &:hover {
       color: rgb(62, 181, 255);
     }
@@ -85,12 +82,12 @@ $color_Aqua :rgb(62, 181, 255);
             background-color: white;
             display: block;
             border-radius: 5px;
-            color: $color_Aqua;
-            border: solid 1px $color_Aqua;
+            color: $color_aqua;
+            border: solid 1px $color_aqua;
             transition-duration: 0.5s;
             &:hover {
               color: white;
-              background-color: $color_Aqua;
+              background-color: $color_aqua;
             }
           }
         }
