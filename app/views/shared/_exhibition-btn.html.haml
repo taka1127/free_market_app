@@ -1,4 +1,5 @@
 .exhibition
-  .btn
-    %p 出品
-    = icon('fas', 'camera')
+  = link_to new_product_path do 
+    .btn
+      %p 出品
+      = icon('fas', 'camera')
