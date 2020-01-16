@@ -1,5 +1,6 @@
 .sign-up-session3
   .sign-up-session3__header
+  =render "sessions-header"
   .sign-up-session3__body
     .sign-up-session3__body__head
       住所入力
@@ -106,4 +107,6 @@
       .sign-up-session3__body__contents__next
         =link_to "#",class:"session3-next" do
           次へ進む
+  .sign-up-session3__footer
+  =render "users-footer"
 

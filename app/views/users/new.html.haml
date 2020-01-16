@@ -1,5 +1,6 @@
 .new-user-top
-  ＜toplogoをrender＞
+  
+  =render "sessions-header"
   .new-user-top__contents
     .new-user-top__contents__header
       新規会員登録
@@ -13,4 +14,4 @@
       =link_to "#", class:"google link" do
         = icon('fab', 'google',  class: "btn--icon google--icon")
         %span{class: "value"}Googleで登録
-  ＜footerをrender＞
+  =render "users-footer"

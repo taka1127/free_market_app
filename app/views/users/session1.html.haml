@@ -1,16 +1,5 @@
 .sign-up-session1
-  .sign-up-session1__head
-    .sign-up-session1__head__logo
-      aaa
-    .sign-up-session1__head__phase
-      .sign-up-session1__head__phase__title
-        %ul
-          %li 会員情報
-          %li 電話番号認証
-          %li 住所入力
-          %li 支払い方法
-          %li 完了
-      .sign-up-session1__head__phase__mapping
+  =render "sessions-header"
   .sign-up-session1__body
     .sign-up-session1__body__head
       会員情報入力
@@ -77,3 +66,4 @@
         本人情報の登録について＞
       .sign-up-session1__body__contents__privacy-policy
         This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+  =render "users-footer"

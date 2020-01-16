@@ -1,5 +1,6 @@
 .sign-up-session4
   .sign-up-session4__header
+  =render "sessions-header"
   .sign-up-session4__body
     .sign-up-session4__body__head
       支払い方法
@@ -75,3 +76,5 @@
       .sign-up-session4__body__contents__next.box
         =link_to "#",class:"session4-next" do
           次へ進む
+  .sign-up-session4__footer
+  =render "users-footer"
