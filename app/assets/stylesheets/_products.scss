@@ -20,7 +20,7 @@
     &__detail{
       background-color: white;
       width: calc(100vw - 750px);
-      height: 500px;
+      height: 480px;
       margin: 0 auto;
       padding: 24px 40px 40px 20px;
       display: flex;
@@ -86,7 +86,7 @@
       }
       &__notes{
         padding-left: 150px;
-        padding-top: 40px;
+        margin: 40px 40px 40px 40px;
         font-size: large;
         font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
       }

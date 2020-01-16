@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     # @image = Image.find(params[:id])
     @category = Category.find(params[:id])
-    @brand = Brand.select(params[:id])
+    @brand = Brand.find(params[:id])
   end
   
   def edit

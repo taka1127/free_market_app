@@ -28,26 +28,30 @@
           %th.show__item__detail__table__a
             カテゴリー
           %td.show__item__detail__table__b
+            >
             -# レディス
             = @category.category_L
             %br/
             %span.show__item__detail__table__smile
+              >
               -# >バック
               = @category.category_M
             %br/
             %span.show__item__detail__table__smile
+              >
               -# >ショルダーバッグ
               = @category.category_S
         %tr
           %th.show__item__detail__table__a
             ブランド
           %td.show__item__detail__table__b
-            コーチ
+            = @brand.brand
         %tr
           %th.show__item__detail__table__a
             商品の状態
           %td.show__item__detail__table__c
             傷や汚れあり
+            = @product.status
         %tr
           %th.show__item__detail__table__a
             配送料の負担
@@ -72,14 +76,15 @@
     .show__item__buy
       .show__item__buy__price
         .show__item__buy__price__title
+          ¥
           = @product.price
           -# ¥25,000   
         .show__item__buy__price__detail
           (税込)送料込み
       .show__item__buy__bottom
         購入画面に進む
-      .show__item__buy__content
-        %p 商品はゆうゆうメルカリ便を利用しているため、アプリからのみ購入できます。
+      -# .show__item__buy__content
+      -#   %p 商品はゆうゆうメルカリ便を利用しているため、アプリからのみ購入できます。
       .show__item__buy__notes
         = @product.content
         -# %p COACH/コーチ   ショート丈ショルダーバッグ
