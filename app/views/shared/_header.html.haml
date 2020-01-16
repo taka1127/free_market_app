@@ -1,38 +1,47 @@
 .header
-  .header__search-bar
-    .header__search-bar__logo
-      = link_to root_path do
-        = image_tag "fmarket_logo_red.svg"
-    .header__search-bar__form
-      %input{type: "search", name: "keyword", size: "80", placeholder: "何かお探しですか？"} 
-        = icon('fas', 'search')
-  .header__contents
-    .header__contents__search-tags
-      .header__contents__search-tags__category.tag
-        = link_to '#' do
-          = icon('fas', 'tasks')
-          カテゴリーから探す
-      .header__contents__search-tags__brand.tag
-        = link_to '#' do
-          = icon('fas', 'tags')
-          ブランドから探す
-    .header__contents__utilities
-      %ul
-        %li.header__contents__utilities__likes
+  .header-box
+    .header__search-bar
+      .header__search-bar__logo
+        = link_to root_path do
+          = image_tag "fmarket_logo_red.svg"
+      .header__search-bar__form
+        %input{type: "search", name: "keyword", size: "80", placeholder: "何かお探しですか？"} 
+          = icon('fas', 'search')
+    .header__contents
+      .header__contents__search-tags
+        .header__contents__search-tags__category.tag
           = link_to '#' do
-            = icon('far', 'heart')
-            いいね！一覧
-        %li.header__contents__utilities__notice
+            = icon('fas', 'tasks')
+            カテゴリーから探す
+        .header__contents__search-tags__brand.tag
           = link_to '#' do
-            = icon('far', 'bell')
-            お知らせ
-        %li.header__contents__utilities__todo
-          = link_to '#' do
-            = icon('fas', 'check')
-            やることリスト
-        %li.header__contents__utilities__mypage
-          = link_to '#' do
-            ●マイページ
-
-
-
+            = icon('fas', 'tags')
+            ブランドから探す
+      .header__contents__utilities
+        %ul
+          - if user_signed_in?
+            %li.header__contents__utilities
+              = link_to destroy_user_session_path,method: :delete do
+                ログアウト
+            %li.header__contents__utilities__likes
+              = link_to '#' do
+                = icon('far', 'heart')
+                いいね！一覧
+            %li.header__contents__utilities__notice
+              = link_to '#' do
+                = icon('far', 'bell')
+                お知らせ
+            %li.header__contents__utilities__todo
+              = link_to '#' do
+                = icon('fas', 'check')
+                やることリスト
+            %li.header__contents__utilities__mypage
+              = link_to '#' do
+                ●マイページ
+          - else
+            %li.header__contents__utilities__sing-up
+              = link_to new_user_registration_path ,class: 'sign-up' do
+                新規会員登録
+            %li.header__contents__utilities__sing-in
+              = link_to new_user_session_path, class: 'sign-in' do
+                ログイン
