@@ -1,7 +1,7 @@
 .show{
   background-color:#f5f5f5;
   width: 100vw;
-  height: 1500px;
+  height: 1600px;
   padding: 50px 80px 50px 80px;
   &__item{
     background-color:white;
@@ -84,10 +84,9 @@
         color: red;
       }
       &__notes{
-        padding-left: 150px;
-        margin: 40px 40px 40px 40px;
         font-size: large;
         font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+        padding: 30px 150px 30px 150px;
       }
       &__buttom{
         display: flex;
@@ -118,7 +117,7 @@
     &__comment{
       &__content{
         background-color: #fff6de;
-        height: 100px;
+        height: 90px;
         text-align: center;
         margin: 0 auto;
         width: 600px;

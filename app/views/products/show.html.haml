@@ -78,7 +78,7 @@
       .show__item__buy__bottom
         購入画面に進む
       .show__item__buy__notes
-        = @product.content
+        = simple_format(@product.content)
       .show__item__buy__buttom
         .show__item__buy__buttom__goodbuttom
           %i.far.fa-heart
