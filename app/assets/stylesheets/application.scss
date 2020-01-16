@@ -1,5 +1,24 @@
 @import "./reset";
+@import "./basic";
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+@import "shared/header";
+@import "shared/footer";
+
+@import "shared/exhibition-btn";
+
+@import "./products";
+@import "./products2";
+@import "./product_buy";
 
 @import "shared/header";
 @import "shared/footer";
 @import "shared/exhibition-btn";
+@import "shared/mypage";
+@import "shared/side_bar";
+@import "shared/logout";
+@import "shared/payment";
+@import "shared/register";
+
