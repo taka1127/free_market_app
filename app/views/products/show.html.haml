@@ -106,11 +106,11 @@
         %p 相手のことを考え丁寧なコメントを心がけましょう。
         %p 不快な言葉遣いなどは利用制限や退会処分となることがあります。
       .show__item__comment__box
-        -# = form_for @comment do |form|
-        -#   %h3
-        -#     投稿する
-        -#   = form.text_area :content, class:"form"
-        -#   = form.submit "コメントする", class:"bottom"
+        = form_for @comment, url: products_path do |f|
+          .field
+            = f.text_field :content, class:"form"
+          .actions
+            = f.submit "コメントする", class:"comment-bottom"
     .show__item__sns
       %i.fab.fa-facebook-square
       %i.fab.fa-twitter-square
