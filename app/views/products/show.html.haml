@@ -1,18 +1,16 @@
 .show
   .show__item
     .show__item__name
-      -# 最新作COACHショルダーバッグ新品花柄フラワー(商品名表示)
       = @product.name
     .show__item__detail
       .show__item__detail__photo
         = image_tag "coach.jpg", size: "300x300", alt: "商品１"
-        -# = @image.image
+        -# = @image.image(あとで使います)
       %table.show__item__detail__table{:border => "1",}
         %tr
           %th.show__item__detail__table__a 
             出品者
           %td.show__item__detail__table__b
-            -# mu☆mu
             = @product.user.nickname
             %br/
             %i.fas.fa-smile
@@ -29,17 +27,14 @@
             カテゴリー
           %td.show__item__detail__table__b
             >
-            -# レディス
             = @category.category_L
             %br/
             %span.show__item__detail__table__smile
               >
-              -# >バック
               = @category.category_M
             %br/
             %span.show__item__detail__table__smile
               >
-              -# >ショルダーバッグ
               = @category.category_S
         %tr
           %th.show__item__detail__table__a
@@ -50,19 +45,16 @@
           %th.show__item__detail__table__a
             商品の状態
           %td.show__item__detail__table__c
-            -# 傷や汚れあり
             = @product.status
         %tr
           %th.show__item__detail__table__a
             配送料の負担
           %td.show__item__detail__table__c
-            -# 送料込み（出品者負担）
             = @product.delivery_charge
         %tr
           %th.show__item__detail__table__a
             配送の方法
           %td.show__item__detail__table__c
-            -# ゆうゆうメルカリ便
             = @product.shipping_method
         %tr
           %th.show__item__detail__table__a
@@ -73,7 +65,6 @@
           %th.show__item__detail__table__a
             発送日の目安
           %td.show__item__detail__table__c
-            -# ４〜７日
             = @product.date_of_shipment
             日で発送
         %tr
@@ -82,13 +73,10 @@
         .show__item__buy__price__title
           ¥
           = @product.price
-          -# ¥25,000   
         .show__item__buy__price__detail
           (税込)送料込み
       .show__item__buy__bottom
         購入画面に進む
-      -# .show__item__buy__content
-      -#   %p 商品はゆうゆうメルカリ便を利用しているため、アプリからのみ購入できます。
       .show__item__buy__notes
         = @product.content
       .show__item__buy__buttom
