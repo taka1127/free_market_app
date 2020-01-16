@@ -68,15 +68,14 @@
           %th.show__item__detail__table__a
             配送元地域
           %td.show__item__detail__table__b
-            沖縄県
-            -# = @ product.shipingplace
+            = @product.shipingplace
         %tr
           %th.show__item__detail__table__a
             発送日の目安
           %td.show__item__detail__table__c
             -# ４〜７日
             = @product.date_of_shipment
-            
+            日で発送
         %tr
     .show__item__buy
       .show__item__buy__price

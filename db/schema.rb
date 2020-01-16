@@ -70,11 +70,12 @@ ActiveRecord::Schema.define(version: 20200110094343) do
     t.text     "content",          limit: 65535, null: false
     t.integer  "category_id",                    null: false
     t.string   "size"
-    t.integer  "brand_id"
-    t.integer  "status",                         null: false
-    t.integer  "delivery_charge",                null: false
-    t.integer  "shipping_method",                null: false
-    t.integer  "date_of_shipment",               null: false
+    t.integer  "brand_id",                       null: false
+    t.string   "status",                         null: false
+    t.string   "delivery_charge",                null: false
+    t.string   "shipping_method",                null: false
+    t.string   "date_of_shipment",               null: false
+    t.string   "shipingplace",                   null: false
     t.integer  "price",                          null: false
     t.integer  "user_id"
     t.datetime "created_at",                     null: false

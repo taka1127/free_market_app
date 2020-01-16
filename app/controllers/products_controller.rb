@@ -20,8 +20,8 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     # @image = Image.find(params[:id])
-    @category = Category.find(params[:id])
-    @brand = Brand.find(params[:id])
+    @category = @product.category
+    @brand = @product.brand
   end
   
   def edit
