@@ -69,11 +69,11 @@ ActiveRecord::Schema.define(version: 20200110094343) do
     t.string   "name",                       null: false
     t.text     "content",      limit: 65535, null: false
     t.string   "size"
-    t.integer  "status",                     null: false
-    t.integer  "s_charge",                   null: false
-    t.integer  "s_method",                   null: false
+    t.string   "status",                     null: false
+    t.string   "s_charge",                   null: false
+    t.string   "s_method",                   null: false
     t.string   "s_prefecture",               null: false
-    t.integer  "s_date",                     null: false
+    t.string   "s_date",                     null: false
     t.integer  "price",                      null: false
     t.string   "category_L"
     t.string   "category_M"
