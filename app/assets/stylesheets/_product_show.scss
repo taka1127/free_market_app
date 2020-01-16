@@ -51,6 +51,8 @@
           color: #0099e8;
           background-color: #FFFFFF;
           padding: 8px;
+          cursor: pointer;
+          cursor: hand;
         }
         &__c{
           color: #333333;
@@ -83,6 +85,8 @@
         font-weight: bold;
         font-size: 175%;
         color: white;
+        cursor: pointer;
+        cursor: hand;
       }
       &__content{
         text-align: center;
@@ -104,19 +108,25 @@
           width: 150px;
           height: 40px;
           line-height: 40px;
+          cursor: pointer;
+          cursor: hand;
         }
         &__repoprt{
           margin-left: 60px;
           color: black;
-          background-color: #f5f5f5;;
+          background-color: #f5f5f5;
           width: 200px;
           height: 40px;
           line-height: 40px;
           padding-left: 20px;
+          cursor: pointer;
+          cursor: hand;
         }
         &__security{
           margin-left: 200px;
           color: blue;
+          cursor: pointer;
+          cursor: hand;
         }
       }
     }
@@ -161,16 +171,46 @@
   line-height: 60px;
   margin-top: 20px;
   color: white;
+  cursor: pointer;
+  cursor: hand;
 }
 
 
 
 .fab.fa-facebook-square{
   color: #385185;
+  cursor: pointer;
+  cursor: hand;
 }
 .fab.fa-twitter-square{
   color: #5d9dc9;
+  cursor: pointer;
+  cursor: hand;
 }
 .fab.fa-pinterest-square{
   color: #aa262a;
+  cursor: pointer;
+  cursor: hand;
 }
+
+
+.fas.fa-smile-wink{
+  color: #aa262a;
+}
+
+.fas.fa-smile{
+  color: coral;
+}
+
+
+.fas.fa-sad-tear{
+  color: #385185;
+}
+
+
+
+.show__item__detail__table__face{
+  color: #333333;
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+}
+
