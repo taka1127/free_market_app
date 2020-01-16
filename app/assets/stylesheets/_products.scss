@@ -20,7 +20,7 @@
     &__detail{
       background-color: white;
       width: calc(100vw - 750px);
-      height: 360px;
+      height: 500px;
       margin: 0 auto;
       padding: 24px 40px 40px 20px;
       display: flex;
@@ -97,7 +97,7 @@
           padding-left: 20px;
           color: black;
           background-color: #f5f5f5;
-          width: 100px;
+          width: 150px;
           height: 30px;
         }
         &__repoprt{
@@ -116,7 +116,7 @@
     &__comment{
       &__content{
         background-color: #fff6de;
-        height: 50px;
+        height: 100px;
         text-align: center;
         margin: 0 auto;
         width: 600px;
