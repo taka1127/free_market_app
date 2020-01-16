@@ -1,0 +1,77 @@
+.sign-up-session4
+  .sign-up-session4__header
+  .sign-up-session4__body
+    .sign-up-session4__body__head
+      支払い方法
+    .sign-up-session4__body__contents
+      .sign-up-session4__body__contents__card-number.box
+        .sign-up-session4__body__contents__card-number__title
+          カード番号
+          %span 必須
+        .sign-up-session4__body__contents__card-number__form
+          %input{class: "form card-number-form", placeholder: "半角数字のみ"}
+        .sign-up-session4__body__contents__card-number__logos
+          %ul
+            %li 
+            = image_tag 'iconfinder_mastercard-curved_38602.png', alt: 'card', size: '48x24', class: 'mastercard'
+            %li
+            = image_tag 'iconfinder_visa-curved_38610.png', alt: 'card', size: '48x24', class: 'visacard'
+            %li
+            = image_tag 'iconfinder_mastercard-curved_38602.png', alt: 'card', size: '48x24', class: 'mastercard'
+            %li
+            = image_tag 'iconfinder_visa-curved_38610.png', alt: 'card', size: '48x24', class: 'visacard'
+            %li
+            = image_tag 'iconfinder_mastercard-curved_38602.png', alt: 'card', size: '48x24', class: 'mastercard'
+            %li
+            = image_tag 'iconfinder_visa-curved_38610.png', alt: 'card', size: '48x24', class: 'visacard'
+            %li
+            = image_tag 'iconfinder_mastercard-curved_38602.png', alt: 'card', size: '48x24', class: 'mastercard'
+      .sign-up-session4__body__contents__card-deadline.box
+        .sign-up-session4__body__contents__card-deadline__title
+          有効期限
+          %span 必須
+        .sign-up-session4__body__contents__card-deadline__form1.selecter
+          %label{name:"m-label",class:"label"}
+            %select{name:"monthes",class:"deadline"}
+              %option{value:"1"} 01
+              %option{value:"2"} 02
+              %option{value:"3"} 03
+              %option{value:"4"} 04
+              %option{value:"5"} 05
+              %option{value:"6"} 06
+              %option{value:"7"} 07
+              %option{value:"8"} 08
+              %option{value:"9"} 09
+              %option{value:"10"} 10
+              %option{value:"11"} 11
+              %option{value:"12"} 12
+            %i.fas.fa-chevron-down
+          %span{class: "date"} 月
+        .sign-up-session4__body__contents__card-deadline__form2.selecter
+          %label{name:"y-label",class:"label"}
+            %select{name:"years",class:"deadline"}
+              %option{value:"1"} 20
+              %option{value:"2"} 21
+              %option{value:"3"} 22
+              %option{value:"4"} 23
+              %option{value:"5"} 24
+              %option{value:"6"} 25
+              %option{value:"7"} 26
+              %option{value:"8"} 27
+              %option{value:"9"} 28
+              %option{value:"10"} 29
+              %option{value:"11"} 30
+            %i.fas.fa-chevron-down
+          %span{class: "date"} 年
+      .sign-up-session4__body__contents__securitycode.box
+        .sign-up-session4__body__contents__securitycode__title
+          セキュリティコード
+          %span 必須
+        .sign-up-session4__body__contents__securitycode__form
+          %input{class: "form card-security-form", placeholder: "カード背面4桁もしくは3桁の番号"}
+        .sign-up-session4__body__contents__securitycode__help
+          %i.fas.fa-question-circle
+          カード裏面の番号とは？
+      .sign-up-session4__body__contents__next.box
+        =link_to "#",class:"session4-next" do
+          次へ進む
