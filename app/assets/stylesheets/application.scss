@@ -1,24 +1,29 @@
-@import "./reset";
-@import "./basic";
+@import "modules/reset";
+@import "modules/basic";
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
 @import "shared/header";
 @import "shared/footer";
-
 @import "shared/exhibition-btn";
 
-@import "./products";
-@import "./products2";
-@import "./product_buy";
+@import "products/products";
+@import "products/products2";
+@import "products/product_buy";
+@import "products/buys";
 
-@import "shared/header";
-@import "shared/footer";
-@import "shared/exhibition-btn";
-@import "shared/mypage";
-@import "shared/side_bar";
-@import "shared/logout";
-@import "shared/payment";
-@import "shared/register";
+@import "users/logout";
+@import "users/mypage";
+@import "users/new-user-top";
+@import "users/payment";
+@import "users/profile_edit";
+@import "users/register";
+@import "users/session1";
+@import "users/session2";
+@import "users/session3";
+@import "users/session4";
+@import "users/session5";
+@import "users/side_bar";
+@import "users/signin";
 
