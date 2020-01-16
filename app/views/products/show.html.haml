@@ -4,8 +4,30 @@
       = @product.name
     .show__item__detail
       .show__item__detail__photo
-        = image_tag "coach.jpg", size: "300x300", alt: "商品１"
+        = image_tag "画像1.jpg", size: "300x300", alt: "商品１"
         -# = @image.image(あとで使います)
+        .show__item__detail__photo__group1
+          .show__item__detail__photo1
+          = image_tag "画像1.jpg", size: "60x60", alt: "商品1"
+          .show__item__detail__photo2
+          = image_tag "画像2.jpg", size: "60x60", alt: "商品2"
+          .show__item__detail__photo3
+          = image_tag "画像3.jpg", size: "60x60", alt: "商品3"
+          .show__item__detail__photo4
+          = image_tag "画像4.jpg", size: "60x60", alt: "商品4"
+          .show__item__detail__photo5
+          = image_tag "画像5.jpg", size: "60x60", alt: "商品5"
+        .show__item__detail__photo__group2
+          .show__item__detail__photo6
+          = image_tag "画像6.jpg", size: "60x60", alt: "商品6"
+          .show__item__detail__photo7
+          = image_tag "画像7.jpg", size: "60x60", alt: "商品7"
+          .show__item__detail__photo8
+          -# = image_tag "画像8.jpg", size: "60x60", alt: "商品8"
+          .show__item__detail__photo9
+          -# = image_tag "画像9.jpg", size: "60x60", alt: "商品9"
+          .show__item__detail__photo10
+          -# = image_tag "画像10.jpg", size: "60x60", alt: "商品10"
       %table.show__item__detail__table{:border => "1",}
         %tr
           %th.show__item__detail__table__a 

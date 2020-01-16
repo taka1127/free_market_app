@@ -19,7 +19,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    # @image = @product.image
+    # @image = Image.find(params[:id])
     @category = @product.category
     @brand = @product.brand
     @comment = Comment.new(comment_params)
