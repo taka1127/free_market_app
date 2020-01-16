@@ -20,12 +20,12 @@
     &__detail{
       background-color: white;
       width: calc(100vw - 750px);
-      height: 480px;
+      height: 460px;
       margin: 0 auto;
       padding: 24px 40px 40px 20px;
       display: flex;
       &__photo{
-        background-color: black;
+        background-color: white;
         width: 300px;
         height: 300px;
       }
@@ -58,10 +58,9 @@
         display: flex;
         &__title{
           font-size: 40px;
-          padding-top: 10px;
-          padding-left: 300px;
           font-weight: 600;
-          
+          margin: 10px;
+          margin-left: 300px;
         }
         &__detail{
           padding-top: 30px;
@@ -98,14 +97,16 @@
           color: black;
           background-color: #f5f5f5;
           width: 150px;
-          height: 30px;
+          height: 40px;
+          line-height: 40px;
         }
         &__repoprt{
           margin-left: 60px;
           color: black;
           background-color: #f5f5f5;;
           width: 200px;
-          height: 30px;
+          height: 40px;
+          line-height: 40px;
         }
         &__security{
           margin-left: 200px;
