@@ -112,7 +112,8 @@
 -#     .products__new__bottom__copyright
 -#       %p © 66期 team A
 
-= form_for @product , url: products_path, method: :post do |f|
+-# = form_for @product , url: products_path, method: :post do |f|
+= form_for @product  do |f|
   %p 商品名
   = f.text_field :name
   %p 説明文
@@ -127,4 +128,15 @@
   = f.text_field :date_of_shipment
   %p 価格
   = f.text_field :price
+  %p カテゴリーL
+  = f.text_field :category_L
+  %p カテゴリーM
+  = f.text_field :category_M
+  %p カテゴリーS
+  = f.text_field :category_S
+  %p ■imageテーブルへ
+  = f.fields_for :images do |i|
+    %p 画像ファイル
+    = i.file_field :image
+
   = f.submit '出品する'
