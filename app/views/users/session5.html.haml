@@ -1,0 +1,43 @@
+.p-main
+  .p-main__container
+    .p-main__container__header
+      .p-main__container__header__logo
+        =image_tag "fmarket_logo_red.svg"
+      .p-main__container__header__process
+        .p-main__container__header__process__info
+          会員情報
+        .p-main__container__header__process__info
+          電話番号認証
+        .p-main__container__header__process__info
+          住所登録
+        .p-main__container__header__process__info
+          支払い方法
+        .p-main__container__header__process__info
+          完了
+    .p-main__container__content
+      .p-main__container__content__header
+        会員登録完了
+      .p-main__container__content__done
+        .p-main__container__content__done__content
+          %li ありがとうございます。
+          %li 会員登録が完了しました。
+      .p-main__container__content__btn
+        = link_to '#', class:'start' do
+          メルカリをはじめる
+
+    -#--トップページ、バナーをrender-----------------
+    .p-main__container__footer
+      .p-main__container__footer__info
+        .p-main__container__footer__info__rule
+          = link_to "#", class:"notation" do
+            プライバシーポリシー
+        .p-main__container__footer__info__rule
+          = link_to "#", class:"notation" do
+            フリマ利用規約
+        .p-main__container__footer__info__rule
+          = link_to "#", class:"notation" do
+            特定商取引に関する表記
+      .p-main__container__footer__logo
+        =image_tag "logo_gray.svg"
+      .p-main__container__footer__copyright
+        ©️2019　Frema 
