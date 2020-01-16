@@ -20,7 +20,6 @@
 -#           %span 必須
 -#         .form
 -#           %input{ placeholder: "商品名（必須40文字まで）"}
-
 -#       .products__new__form__basic__text
 -#         %label 
 -#           商品の説明
@@ -112,31 +111,159 @@
 -#     .products__new__bottom__copyright
 -#       %p © 66期 team A
 
--# = form_for @product , url: products_path, method: :post do |f|
-= form_for @product  do |f|
-  %p 商品名
-  = f.text_field :name
-  %p 説明文
-  = f.text_field :content
-  %p 状態
-  = f.text_field :status
-  %p 配送負担
-  = f.text_field :delivery_charge
-  %p 配送方法
-  = f.text_field :shipping_method
-  %p 発送までの日数
-  = f.text_field :date_of_shipment
-  %p 価格
-  = f.text_field :price
-  %p カテゴリーL
-  = f.text_field :category_L
-  %p カテゴリーM
-  = f.text_field :category_M
-  %p カテゴリーS
-  = f.text_field :category_S
-  %p ■imageテーブルへ
-  = f.fields_for :images do |i|
-    %p 画像ファイル
-    = i.file_field :image
 
-  = f.submit '出品する'
+-# = form_for @product  do |f|
+-#   %p 商品名
+-#   = f.text_field :name
+-#   %p 説明文
+-#   = f.text_field :content
+-#   %p 状態
+-#   = f.text_field :status
+-#   %p 配送負担
+-#   = f.text_field :delivery_charge
+-#   %p 配送方法
+-#   = f.text_field :shipping_method
+-#   %p 発送までの日数
+-#   = f.text_field :date_of_shipment
+-#   %p 価格
+-#   = f.text_field :price
+-#   %p カテゴリーL
+-#   = f.text_field :category_L
+-#   %p カテゴリーM
+-#   = f.text_field :category_M
+-#   %p カテゴリーS
+-#   = f.text_field :category_S
+-#   %p ■imageテーブルへ
+-#   = f.fields_for :images do |i|
+-#     %p 画像ファイル
+-#     = i.file_field :image
+
+-#   = f.submit '出品する'
+
+.products__new
+  .products__new__logo
+    = image_tag "fmarket_logo_red.svg"
+  .products__new__form
+    = form_for @product  do |f|
+      .products__new__form__title
+        %h2 商品の情報を入力
+      .products__new__form__image
+        %h3 
+          商品画像
+          %span 必須
+        = f.fields_for :images do |i|
+          = i.file_field :image
+        %p 最大10枚までアップロードできます
+        .products__new__form__image__file
+          %input
+          %p.row1 ドラッグアンドドロップ
+          %p.row2 またはクリックしてファイルをダウンロード
+      .products__new__form__basic
+        .products__new__form__basic__name
+          %label 
+            商品名
+            %span 必須
+          .form
+            = f.text_field :name, placeholder: "商品名（必須40文字まで）"
+        .products__new__form__basic__text
+          %label 
+            商品の説明
+            %span 必須
+          .form
+            = f.text_field :content, type: "text", rows: "5", placeholder: "商品の説明（必須1,000文字以内）（色、素材、重さ、定価、注意点など）　例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。合わせやすいのでおすすめです。"
+      .products__new__form__details
+        .products__new__form__details__left
+          %h3 商品の詳細
+        .products__new__form__details__right
+          %label 
+            カテゴリーL
+            %span 必須
+          = f.text_field :category_L
+          %label 
+            カテゴリーM
+            %span 必須
+          = f.text_field :category_M
+          %label 
+            カテゴリーS
+            %span 必須
+          = f.text_field :category_S
+          %label 
+            商品の状態
+            %span 必須
+          = f.text_field :status
+      .products__new__form__delivery
+        .products__new__form__delivery__left
+          %h3 
+            配送について
+            = link_to '#',{class: "question"} do
+              = icon('fas', 'question-circle')
+        .products__new__form__delivery__right
+          %label 
+            配送料の負担
+            %span 必須
+          = f.text_field :delivery_charge
+          %label 
+            配送の方法
+            %span 必須
+          = f.text_field :shipping_method
+          %label 
+            発送元の地域
+            %span 必須
+          %select
+          %label 
+            発送までの日数
+            %span 必須
+          = f.text_field :date_of_shipment
+      .products__new__form__price
+        .products__new__form__price__left
+          %h3 
+            販売価格
+            = link_to '#',{class: "question"} do
+              = icon('fas', 'question-circle')
+        .products__new__form__price__right
+          %ul
+            %li
+              .flex
+                %label 
+                  価格
+                  %span 必須
+                = f.text_field :price
+                .en ¥
+            %li
+              .flex
+                .text 販売手数料 (10%)
+                %p -
+            %li
+              .flex
+                .text 販売利益
+                %p -
+      .products__new__form__other
+        %p
+          = link_to '#' do
+            禁止されている出品
+          、
+          = link_to '#' do
+            行為
+          を必ずご確認ください。
+        %p 
+          またブランド品でシリアルナンバー等がある場合はご記載ください。
+          = link_to '#' do
+            偽ブランドの販売
+          は犯罪であり処罰される可能性があります。
+        %p 
+          また、出品をもちまして
+          = link_to '#' do 
+            加盟店規約
+          に同意したことになります。
+        = f.submit '出品する' 
+        = link_to '#' ,{class: "back-btn"} do
+          戻る
+    .products__new__bottom
+      %ul
+        %li プライバシーポリシー
+        %li メルカリ利用規約
+        %li 特定商取引に関する表記
+      .products__new__bottom__logo
+        = image_tag "logo_gray.svg"
+      .products__new__bottom__copyright
+        %p © 66期 team A
