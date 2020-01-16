@@ -201,19 +201,19 @@
           %label 
             配送料の負担
             %span 必須
-          = f.text_field :delivery_charge
+          = f.text_field :s_charge
           %label 
             配送の方法
             %span 必須
-          = f.text_field :shipping_method
+          = f.text_field :s_method
           %label 
             発送元の地域
             %span 必須
-          %select
+          = f.text_field :s_prefecture
           %label 
             発送までの日数
             %span 必須
-          = f.text_field :date_of_shipment
+          = f.text_field :s_date
       .products__new__form__price
         .products__new__form__price__left
           %h3 
