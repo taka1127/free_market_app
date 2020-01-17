@@ -1,0 +1,59 @@
+.new-user-top{
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+  &__contents{
+    width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+    &__header {
+      font-size: 22px;
+      padding: 32px;
+      font-weight: bold;
+      border-bottom: 1px solid #f5f5f5;
+    }
+    &__body{
+      max-width: 343px;
+      margin: 0 auto;
+      padding-bottom: 16px;
+      .link {
+        display: block;
+        text-decoration: none;
+        color:white;
+        padding-inline-start: 0px;
+        line-height: 48px;
+        margin: 16px auto 0;
+        position: relative;
+      }
+      .btn--icon{
+        position: absolute;
+        top: 20%;
+        left: 16px;
+        font-size: 30px;
+      }
+      .mail {
+        background-color: red;
+        border-radius: 5px;
+        margin: 16px auto 0;
+      }
+      .facebook {
+        background-color: royalblue;
+        margin: 16px auto 0;
+        border-radius: 5px;
+      }
+      .google {
+        background-color: white;
+        border: 1px solid #979797;
+        border-radius: 5px;
+        margin: 16px auto ;
+        .value {
+          color: #333;
+        }
+        .google--icon {
+          color: limegreen;
+        }
+      }
+    }
+  }
+}

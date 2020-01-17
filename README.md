@@ -55,16 +55,32 @@
 ## Productテーブル
 |Column|Type|Options|
 |------|----|-------|
+t.string  :name,             null: false
+t.text    :content,          null: false
+t.string  :size
+t.string :status,           null: false
+t.string :s_charge,         null: false
+t.string :s_method,         null: false
+t.string  :s_prefecture,     null: false
+t.string :s_date,           null: false
+t.integer :price,            null: false
+t.string  :category_L
+t.string  :category_M
+t.string  :category_S
+
 |name|string|null: false|
 |content|text|null: false|
-|category_id|integer|null: false, foreign_key: true|
+<!-- |category_id|integer|null: false, foreign_key: true| 一時削除(1/17 中島) -->
 |size|string||
-|brand_id|integer|foreign_key: true|
-|status|integer|null: false|
-|delivery_charge|integer|null: false|
-|shipping_methood|integer|null: false|
-|date_of_shipment|integer|null: false|
+|status|strig|null: false|
+|s_charge|string|null: false|
+|s_method|string|null: false|
+|s_prefecture|string|null: false|
+|s_date|string|null: false|
 |price|integer|null: false|
+|category_L|string|null: false|
+|category_M|string|null: false|
+|category_S|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :brand
@@ -83,7 +99,6 @@
 ### Association
 - belongs_to :product
 
-
 ## Brandテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -91,6 +106,7 @@
 ### Association
   - has_many :products
 
+<!-- 一時的にProductのカラム内へ（1/17 中島） -->
 ## Categoryテーブル
 |Column|Type|Options|
 |------|----|-------|

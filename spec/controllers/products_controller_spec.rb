@@ -1,5 +1,4 @@
 require 'rails_helper'
-
 describe ProductsController do
   describe 'GET #show' do
     it "assigns the requested product to @product" do
@@ -14,13 +13,13 @@ describe ProductsController do
       product = create(:product)
       get :show, params: { id: product }
       expect(response).to render_template :show
-    end
-
-
-
-
-
-
-    
+    end  
   end
+
+  describe 'POST #create' do
+    it 'saves the new product in the database' do
+      expect{post :create, params}
+    end
+  end
+
 end
