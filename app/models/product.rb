@@ -2,7 +2,7 @@ class Product < ApplicationRecord
   validates :name, :content, :status, :s_charge, :s_method, :s_prefecture, 
             :s_date, :price, :category_L ,:category_M, :category_S,
             presence: true
-  belongs_to :brand
+  belongs_to :brand, optional: true
   # belongs_to :category
   belongs_to :user
   has_many :images
