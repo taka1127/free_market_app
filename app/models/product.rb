@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  validates :name, :content, :size, :status, :s_charge, :s_method, :s_prefecture, 
+  validates :name, :content, :status, :s_charge, :s_method, :s_prefecture, 
             :s_date, :price, :category_L ,:category_M, :category_S,
             presence: true
   # belongs_to :brand
