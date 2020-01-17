@@ -22,9 +22,9 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     # @image = Image.find(params[:id])(あとで使います)
-    @category = @product.category
+    # @category = @product.category(あとで使います)
     @brand = @product.brand
-    # @comment = Comment.new(comment_params)
+    @comment = Comment.new
   end
   
   def edit
@@ -41,8 +41,5 @@ class ProductsController < ApplicationController
     params.require(:product).permit(:name, :content, :status, :s_prefecture, :s_charge, :s_method, :s_date, :price,:category_L, :category_M, :category_S, images_attributes: [:image]).merge(user_id: current_user.id)
   end
 
-  # def comment_params
-  #   params.permit(:content)
-  # end
 
 end

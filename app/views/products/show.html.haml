@@ -46,15 +46,15 @@
             カテゴリー
           %td.show__item__detail__table__b
             >
-            = @category.category_L
+            = @product.category_L
             %br/
             %span.show__item__detail__table__smile
               >
-              = @category.category_M
+              = @product.category_M
             %br/
             %span.show__item__detail__table__smile
               >
-              = @category.category_S
+              = @product.category_S
         %tr
           %th.show__item__detail__table__a
             ブランド
@@ -69,22 +69,22 @@
           %th.show__item__detail__table__a
             配送料の負担
           %td.show__item__detail__table__c
-            = @product.delivery_charge
+            = @product.s_charge
         %tr
           %th.show__item__detail__table__a
             配送の方法
           %td.show__item__detail__table__c
-            = @product.shipping_method
+            = @product.s_method
         %tr
           %th.show__item__detail__table__a
             配送元地域
           %td.show__item__detail__table__b
-            = @product.shipingplace
+            = @product.s_prefecture
         %tr
           %th.show__item__detail__table__a
             発送日の目安
           %td.show__item__detail__table__c
-            = @product.date_of_shipment
+            = @product.s_date
             日で発送
         %tr
     .show__item__buy
