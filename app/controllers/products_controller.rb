@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
     # @image = Image.find(params[:id])(あとで使います)
     @category = @product.category
     @brand = @product.brand
-    @comment = Comment.new(comment_params)
+    # @comment = Comment.new(comment_params)
   end
   
   def edit
@@ -39,8 +39,8 @@ class ProductsController < ApplicationController
     params.require(:product).permit(:name, :content, :status, :delivery_charge, :shipping_method, :date_of_shipment, :price)
   end
 
-  def comment_params
-    params.permit(:content)
-  end
+  # def comment_params
+  #   params.permit(:content)
+  # end
 
 end
