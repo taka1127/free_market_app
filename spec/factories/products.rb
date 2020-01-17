@@ -1,5 +1,4 @@
 FactoryBot.define do
-
   factory :product do
     id                 { 1 }
     name               { "ターサージール6" }
@@ -16,6 +15,5 @@ FactoryBot.define do
     category_S         { "ランニングシューズ"}
     user_id            { 1 }
   end
-
 end
 
