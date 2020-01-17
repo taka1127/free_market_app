@@ -1,27 +1,82 @@
 require 'rails_helper'
 describe Product do
   describe '#create' do
-    it "not registrate product !!!!" do
-      product = Product.new(name: "", content: "使用期間は2年程度です。", size: "26.5cm", status: "傷が目立つ", s_charge: "送料込み", s_method: "普通郵便", s_prefecture: "大阪府", s_date: "2~3日で発送", price: "300", category_L: "スポーツ", category_M: "靴", category_S: "ランニングシューズ")
+    it "is invalid without a name" do
+      product = build(:product)
       product.valid?
-      expect(product.errors[:name]).to include("を入力してください")
+      expect(product.errors[:name])
+    end
+
+    it "is invalid without a content " do
+      product = build(:product)
+      product.valid?
+      expect(product.errors[:content])
+    end
+
+    it "is invalid without a size " do
+      product = build(:product)
+      product.valid?
+      expect(product.errors[:size])
+    end
+
+    it "is invalid without a status " do
+      product = build(:product)
+      product.valid?
+      expect(product.errors[:status])
+    end
+
+    it "is invalid without a s_charge " do
+      product = build(:product)
+      product.valid?
+      expect(product.errors[:s_charge])
+    end
+
+    it "is invalid without a s_method " do
+      product = build(:product)
+      product.valid?
+      expect(product.errors[:s_method])
+    end
+
+    it "is invalid without a s_prefecture " do
+      product = build(:product)
+      product.valid?
+      expect(product.errors[:s_prefecture])
+    end
+
+    it "is invalid without a s_date " do
+      product = build(:product)
+      product.valid?
+      expect(product.errors[:s_date])
+    end
+
+    it "is invalid without a price " do
+      product = build(:product)
+      product.valid?
+      expect(product.errors[:price])
+    end
+
+    it "is invalid without a caregory_L " do
+      product = build(:product)
+      product.valid?
+      expect(product.errors[:caregory_L])
+    end
+
+    it "is invalid without a caregory_M " do
+      product = build(:product)
+      product.valid?
+      expect(product.errors[:caregory_M])
+    end
+
+    it "is invalid without a caregory_S " do
+      product = build(:product)
+      product.valid?
+      expect(product.errors[:caregory_S])
+    end
+
+    it "is invalid without a user_id " do
+      product = build(:product)
+      product.valid?
+      expect(product.errors[:user_id])
     end
   end
 end
-
-# t.string  :name,             null: false
-# t.text    :content,          null: false
-# # t.integer :category_id,      null: false, foreign_key: true
-# t.string  :size
-# # t.integer :brand_id,         foreign_key: true
-# t.string :status,           null: false
-# t.string :s_charge,         null: false
-# t.string :s_method,         null: false
-# t.string  :s_prefecture,     null: false
-# t.string :s_date,           null: false
-# t.integer :price,            null: false
-# t.string  :category_L
-# t.string  :category_M
-# t.string  :category_S
-# t.references :user,          foreign_key: true
-# t.timestamps
