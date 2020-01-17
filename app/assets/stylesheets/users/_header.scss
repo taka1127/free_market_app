@@ -1,0 +1,27 @@
+.users-session {
+  &__header{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 130px;
+    &__logo{
+      width: 200px;
+      height: 100px;
+      margin: 30px 0 20px 20px;
+    }
+    &__process{
+      width: 600px;
+      height: 100px;
+      margin-top: 5px;
+      padding-left: 20px;
+      display: flex;
+      &__info{
+        display: block;
+        padding-left: 10px;
+        margin-left: 30px;
+        font-size: 12px;
+      }
+    }
+  }
+}

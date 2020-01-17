@@ -1,4 +1,7 @@
--# -----電話番号確認ページ--------------------------
+.p-main
+  .p-main__container__header
+    =render "users/sessions-header"
+  .p-main__container
     .p-main__container__content
       .p-main__container__content__header
         電話番号の確認
@@ -16,5 +19,7 @@
         = link_to "#", class:"register-info" do
           電話番号の確認が必要な理由
           %i.fas.fa-chevron-right
+    .p-main__container__footer
+      =render "users/users-footer"
 
-    
+  

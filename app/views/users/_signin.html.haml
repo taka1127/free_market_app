@@ -1,4 +1,6 @@
- .signin
+.signin
+  .signin__header
+    =render "users/sessions-header"
   .signin__box
     .signin__box__section
       %p アカウントをお持ちでない方はこちら
@@ -20,4 +22,6 @@
       .btn.log_in
         = link_to '#' do
           ログイン
-      %p.blue パスワードをお忘れの方 
+        %p.blue パスワードをお忘れの方 
+  .signin__footer
+    =render "users/users-footer"
