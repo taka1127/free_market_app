@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 20200110094343) do
     t.string   "name",                       null: false
     t.text     "content",      limit: 65535, null: false
     t.string   "size"
+    t.integer  "brand_id"
     t.string   "status",                     null: false
     t.string   "s_charge",                   null: false
     t.string   "s_method",                   null: false
