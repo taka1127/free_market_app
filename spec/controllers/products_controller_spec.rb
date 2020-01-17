@@ -6,4 +6,8 @@ describe ProductsController do
       expect{post :create, params}
     end
   end
+  
+  describe 'GET #new' do
+    end
+
 end
