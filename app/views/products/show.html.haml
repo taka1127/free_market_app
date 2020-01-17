@@ -58,9 +58,8 @@
         .show__item__buy__price__detail
           (税込)送料込み
       .show__item__buy__bottom
-        購入画面に進む
-      .show__item__buy__content
-        %p 商品はゆうゆうメルカリ便を利用しているため、アプリからのみ購入できます。
+        = link_to edit_product_path do
+          購入する
       .show__item__buy__notes
         %p COACH/コーチ   ショート丈ショルダーバッグ
         %p 10年前程に購入使用していたものですが
