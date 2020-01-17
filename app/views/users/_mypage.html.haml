@@ -1,5 +1,8 @@
 .main
+  =render "shared/header"
   .main__container
+    .main__container__side-bar    
+      = render 'users/side_bar'
     .main__container__content
       .main__container__content__user
         .main__container__content__user__erea
@@ -38,5 +41,5 @@
           =image_tag "logo_gray.svg" 
         .main__container__content__message__nomessage
           現在、やることリストはありません
-      
-    = render 'shared/side_bar'
+  .main__footer
+    = render "shared/footer"
