@@ -4,7 +4,7 @@ class Product < ApplicationRecord
             presence: true
   belongs_to :brand
   # belongs_to :category
-  belongs_to :userkk
+  belongs_to :user
   has_many :images
   has_many :comments
   has_many :goods
