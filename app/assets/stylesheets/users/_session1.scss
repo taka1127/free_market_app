@@ -1,0 +1,154 @@
+.sign-up-session1 {
+  span {
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    display: inline-block;
+    line-height: 16px;
+    padding: 3px;
+    margin-left: 1em;
+  }
+  font-size: 14px;
+  color: #333;
+  background-color: #f5f5f5;
+  margin: 0;
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    &__logo {
+      
+    }
+    &__phase {
+      color: #888;
+      &__title {
+        ul {
+          display: flex;
+          justify-content: space-around;
+          font-size: 12px;
+          list-style: none;
+          padding-inline-start: 0;
+          li {
+            margin-left: 40px;
+          }
+        }
+      }
+    }
+  }
+  &__body {
+    background-color: white;
+    width: 700px;
+    margin: 0 auto;
+    align-items: center;
+    padding-bottom: 24px;
+    &__head {
+      font-size: 22px;
+      text-align: center;
+      border-bottom: 1px solid #f5f5f5;
+      padding: 32px;
+      font-family: 'Source Sans Pro';
+      font-weight: bold;
+      color: #333;
+    }
+    &__contents {
+      max-width: 343px;
+      margin: 0 auto;
+      .form {
+        min-height: 1.5em;
+        margin-top: 8px;
+        font-size: inherit;
+        width: 100%;
+        padding: 10px 16px 16px 8px;
+        align-items: center;
+        border-radius: 3px;
+      }
+      &__nickname {
+        margin-top: 24px;
+      }
+      &__email {
+        margin-top: 24px;
+      }
+      &__password {
+        margin-top: 24px;
+        &__caution {
+          margin-top: 8px;
+          color: #888;
+        }
+      }
+      &__confirmation-message {
+        h2 {
+          font-size: 16px;
+        }
+        p {
+          margin: 0px;
+        }
+      }
+      &__name {
+        margin-top: 24px;
+        &__input {
+          display: flex;
+          .form {
+            width: 50%;
+            margin-left: 8px;
+          }
+        }
+      }
+      &__name-kana {
+        margin-top: 24px;
+        &__form {
+          display: flex;
+          .form {
+            width: 50%;
+            margin-left: 8px;
+          }
+        }
+      }
+      &__birthday {
+        margin-top: 24px;
+        &__caution {
+          p {
+            margin: 0px;
+            color: #888;
+          }
+        }
+      }
+      &__confirmation {
+        margin-top: 40px;
+        span {
+          background-color: white;
+          color: skyblue;
+          font-size: inherit;
+          display: inline;
+          margin: 0px;
+        }
+        p {
+          margin: 0;
+          text-align: center;
+        }
+      }
+      &__next {
+        margin-top: 24px;
+        width: 343px;
+        text-align: center;
+        line-height: 48px;
+        background-color: red;
+        .session1-next {
+          color: white;
+          text-decoration: none;
+        }
+      }
+      &__detail {
+        text-align: end;
+        margin-top: 24px;
+        color: skyblue;
+      }
+      &__privacy-policy {
+        background-color: #f5f5f5;
+        padding: 8px 16px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        color: #888888;
+        font-size: 12px;
+      }
+    }
+  }
+}
