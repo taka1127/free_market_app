@@ -4,24 +4,25 @@
     .sign-up-session1__body__head
       会員情報入力
     .sign-up-session1__body__contents
+    = form_for @user, url: session2_signup_index_path, method: :get, html: {class: 'first-main__box'} do |f|
       .sign-up-session1__body__contents__nickname
         .sign-up-session1__body__contents__nickname__title
           ニックネーム
           %span 必須
         .sign-up-session1__body__contents__nickname__form
-          %input{class: "form nickname-form", placeholder: "例）フリマ太郎"}
+          = f.text_field :nickname, class: "form nickname-form", placeholder: "例）フリマ太郎"
       .sign-up-session1__body__contents__email
         .sign-up-session1__body__contents__email__title
           メールアドレス
           %span 必須
         .sign-up-session1__body__contents__email__form
-          %input{class: "form email-form", placeholder: "PC・携帯どちらでも可"}
+          = f.email_field :email, class: "form email-form", placeholder: "PC・携帯どちらでも可"
       .sign-up-session1__body__contents__password
         .sign-up-session1__body__contents__password__title
           パスワード
           %span 必須
         .sign-up-session1__body__contents__password__form
-          %input{class: "form password-form", placeholder: "7文字以上の半角英数字"}
+          = f.password_field :password, class: "form password-form", placeholder: "7文字以上の半角英数字"
         .sign-up-session1__body__contents__password__caution
           ※英字と数字の両方を含めて設定してください
         .sign-up-session1__body__contents__password__reviel
@@ -36,21 +37,21 @@
           お名前（全角）
           %span 必須
         .sign-up-session1__body__contents__name__input
-          %input{class: "form family-name-form", placeholder: "例）山田"}
-          %input{class: "form last-name-form", placeholder: "例）花子"}
+          = f.text_field :name, class: "form family-name-form", placeholder: "例）山田"
+          = f.text_field :name, class: "form last-name-form", placeholder: "例）花子"
       .sign-up-session1__body__contents__name-kana
         .sign-up-session1__body__contents__name-kana__title
           お名前カナ（全角）
           %span 必須
         .sign-up-session1__body__contents__name-kana__form 
-          %input{class:"form family-name-kana-form", placeholder: "例）ヤマダ"}
-          %input{class:"form last-name-kana-form", placeholder: "例）ハナコ"}
+          = f.text_field :name_kana, class:"form family-name-kana-form", placeholder: "例）ヤマダ"
+          = f.text_field :name_kana, class:"form last-name-kana-form", placeholder: "例）ハナコ"
       .sign-up-session1__body__contents__birthday
         .sign-up-session1__body__contents__birthday__title
           生年月日
           %span 必須
         .sign-up-session1__body__contents__birthday__form
-          %input{class:"form birthday-form", placeholder:"仮置き"}
+          = f.date_field :birthday, class:"form birthday-form", placeholder:"仮置き"
         .sign-up-session1__body__contents__birthday__caution
           %p ※本人情報は正しく記入してください。会員登録後、
           %p 修正するにはお時間をいただく場合があります。
@@ -60,7 +61,7 @@
         %p に同意したものとみなします。
         
       .sign-up-session1__body__contents__next
-        =link_to "#",class: "session1-next" do
+        =link_to session2_signup_index_path,class: "session1-next" do
           次へ進む
       .sign-up-session1__body__contents__detail
         本人情報の登録について＞
