@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root "products#index"
   resources :products,  only: [:index, :new, :create, :edit, :update, :show]
-  resources :signup do
+  resources :signup, only: [:index] do
     collection do
       get 'session1'
       get 'session2'

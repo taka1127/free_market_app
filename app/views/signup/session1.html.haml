@@ -61,8 +61,8 @@
         %p に同意したものとみなします。
         
       .sign-up-session1__body__contents__next
-        =link_to session2_signup_index_path,class: "session1-next" do
-          次へ進む
+        =f.submit "次へ進む",class: "session1-next" 
+          
       .sign-up-session1__body__contents__detail
         本人情報の登録について＞
       .sign-up-session1__body__contents__privacy-policy
