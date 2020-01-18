@@ -4,8 +4,8 @@
       = @product.name
     .show__item__detail
       .show__item__detail__photo
-        = image_tag "画像1.jpg", size: "300x300", alt: "商品１"
-        -# = @image.image(あとで使います)
+        -# = image_tag "画像1.jpg", size: "300x300", alt: "商品１"
+        = @product.image.image
         .show__item__detail__photo__group1
           .show__item__detail__photo1
           = image_tag "画像1.jpg", size: "60x60", alt: "商品1"

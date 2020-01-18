@@ -21,7 +21,6 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    # @image = Image.find(params[:id])(あとで使います)
     # @category = @product.category(あとで使います)
     @brand = @product.brand
     @comment = Comment.new
