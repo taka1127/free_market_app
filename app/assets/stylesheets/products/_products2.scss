@@ -107,6 +107,18 @@
 
   }
   &__footer {
+    &__list {
+      padding: 30px;
+      ul {
+        width: 1020px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        li {
+          padding: 15px;
+        }
+      }
+    }
 
   }
 }
