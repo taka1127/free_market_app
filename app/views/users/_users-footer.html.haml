@@ -1,14 +1,15 @@
 .p-main__container__footer
   .p-main__container__footer__info
-    .p-main__container__footer__info__rule
-      = link_to "#", class:"notation" do
-        プライバシーポリシー
-    .p-main__container__footer__info__rule
-      = link_to "#", class:"notation" do
-        メルカリ利用規約
-    .p-main__container__footer__info__rule
-      = link_to "#", class:"notation" do
-        特定商取引に関する表記
+    %ul
+      %li
+        =link_to "#", class: "link privacy" do
+          プライバシーポリシー
+      %li
+        =link_to "#", class: "link consensus" do
+          メルカリ利用規約
+      %li
+        =link_to "#", class: "link low" do
+          特定商取引法に関する表記
   .p-main__container__footer__logo
     =image_tag "logo_gray.svg"
   .p-main__container__footer__copyright
