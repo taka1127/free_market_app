@@ -1,6 +1,8 @@
 .main__container {
   display:flex;
-  .main__container__l-container{
+  justify-content: center;
+  margin: 40px auto 0;
+  &__l-container{
     width: 700px;
     height: 180px;
     padding: 65px;
