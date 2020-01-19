@@ -1,15 +1,15 @@
-*{
-  box-sizing: border-box;
-}
-.p-main{
+// *{
+//   box-sizing: border-box;
+// }
+.pr-main{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   &__container{
-    width: 700px;
-    margin: 0 auto;
     background-color: #f5f5f5;
+    padding: 0 ;
     &__content{
-      // width: 100%;
-      padding-bottom: 48px;
+      margin:0 auto;
+      max-width: 700px;
+      padding:30px 0 48px;
       background-color: white;
       &__header{
         width: 100%;
@@ -74,38 +74,6 @@
         }
       }
     }
-    &__footer{
-      width: 100vw;
-      height: 300px;
-      &__info{
-        height: 100px;
-        font-size: 10px;
-        margin: 0 auto;
-        align-items: center;
-        ul {
-          display: flex;
-          justify-content: center;
-          margin-block-start: 0;
-          margin: auto;
-          li {
-            margin: 0 8px;
-            .link {
-              text-decoration: none;
-              color: rgba(128, 128, 128, 0.8);
-            }
-          }
-        }
-      }
-      &__logo{
-        margin: 0 auto;
-        width: 100px;
-        height: 100px;
-      }
-      &__copyright{
-        margin: 0 auto;
-        font-size: 10px;
-        text-align: center;
-      }
-    }
   }
+  
 } 
