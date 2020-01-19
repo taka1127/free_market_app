@@ -6,9 +6,9 @@
       .p-main__container__content__header
         電話番号の確認
       .p-main__container__content__tell
-      = form_for @user, url: session3_signup_index_path, method: :get, html: {class: 'third-wrapper__box'} do |f|
+      = form_for @user, url: session3_signup_index_path, method: :get, html: {class: 'second-wrapper__box'} do |f|
         携帯電話の番号
-        =f.text_field :tel, name: "tell-number", size: "50", placeholder:"携帯電話の番号を入力" ,class:"tell-number"
+        =f.text_field :tel,  placeholder:"携帯電話の番号を入力" ,class:"tell-number"
         .p-main__container__content__info
           本人確認のため、携帯電話のSMS（ショートメッセージサービス）を利用して認証を行います。
         .p-main__container__content__btn
