@@ -26,6 +26,9 @@ class ProductsController < ApplicationController
   end
 
 
+  def buy
+  end
+
   private
   def access_registration 
     redirect_to new_user_session_path unless user_signed_in?
