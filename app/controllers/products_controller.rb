@@ -28,7 +28,6 @@ class ProductsController < ApplicationController
 
   private
   def access_registration 
-      # 非ログイン時はログイン画面へ進む
     redirect_to new_user_session_path unless user_signed_in?
   end
 
