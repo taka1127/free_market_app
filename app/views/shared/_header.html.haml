@@ -36,7 +36,7 @@
                 = icon('fas', 'check')
                 やることリスト
             %li.header__contents__utilities__mypage
-              = link_to '#' do
+              = link_to "/users/#{current_user.id}" do
                 ●マイページ
           - else
             %li.header__contents__utilities__sing-up
