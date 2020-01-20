@@ -6,4 +6,17 @@ require 'rails_helper'
     end
   end
 
+  describe 'GET #show' do
+    it "assigns the requested tweet to @product" do
+      product = create(:product)
+      get :show, params: { id: product }
+      expect(assigns(:product)).to eq product
+    end
+
+    it "renders the :edit template" do
+    end
+
+
+
+
 end
