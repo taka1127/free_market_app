@@ -28,13 +28,14 @@ class SignupController < ApplicationController
     # session3で入力された値をsessionに保存
     session[:name] = user_params[:name]
     session[:name_kana] = user_params[:name_kana]
+    session[:tel] = user_params[:tel]
+    @user = User.new 
     session[:postal_code] = user_params[:postal_code]
     session[:prefecture] = user_params[:prefecture]
     session[:city] = user_params[:city]
     session[:house_number] = user_params[:house_number]
     session[:building] = user_params[:building]
-    session[:tel] = user_params[:tel]
-    @user = User.new 
+    @adresses = Address.new 
   end
 
   def create
@@ -49,18 +50,20 @@ class SignupController < ApplicationController
       # session2のデータ
       tel: session[:tel], 
       # session3のデータ
-      name: session[:name], 
-      name_kana: session[:name_kana], 
+      # name: session[:name], 
+      # name_kana: session[:name_kana], 
+    )
+    @adresses = Address.new(
       postal_code: session[:postal_code], 
       prefecture: session[:prefecture], 
       city: session[:city], 
       house_number: session[:house_number], 
       building: session[:building], 
-      tel: session[:tel], 
-      # session4のデータ
-
+      # tel: session[:tel], 
+      # session4のデータ(クレジットカード情報)
     )
-    if @user.save
+
+    if @user.save && @adresses.save
       # ログインするための情報を保管
       session[:id] = @user.id
       redirect_to session5_signup_index_path
