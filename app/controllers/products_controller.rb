@@ -25,8 +25,12 @@ class ProductsController < ApplicationController
   def edit
   end
 
-
   def buy
+    @product = Product.find(params[:product_id])
+    # @category = @product.category(あとで使います)
+    @image = Image.find(params[:product_id])
+    @brand = @product.brand
+    @user = @product.user
   end
 
   private

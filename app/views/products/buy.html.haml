@@ -1,23 +1,28 @@
 .buy
   .buy__title
-    = image_tag "fmarket_logo.svg", size: "180x100", alt: "メルカリ"
   .buy__box
     .buy__box__title
       購入内容の確認
     .buy__box__detail
       .buy__box__detail__image
-        = image_tag "coach.jpg", size: "120x120", alt: "商品1"
+        = image_tag @image.image.url
       .buy__box__detail__title
-        %p COACH コーチ ショルダーバッグ
-        %p ¥4,350 （税込）送料込み
+        = @product.name
+        %br/
+        ¥
+        = @product.price
+        (送料込み)
     .buy__box__pay
       .buy__box__pay__price
         .buy__box__pay__price__titile
           支払い金額
         .buy__box__pay__price__yen
-          ¥4,350
+          ¥
+          = @product.price
       .buy__box__pay__point
-        ポイントを使用 (所持ポイント: P0)
+        ポイントを使用 (所持ポイント:
+        = @user.point
+        P)
     .buy__box__how
       .buy__box__how__left
         %p 支払い方法
@@ -32,8 +37,8 @@
         %p 配送先
         %p 〒ccc-dddd
         %p ************7267
-        %p 兵庫県
-        %p 田中 二郎
+        %br/
+        = @user.name
       .buy__box__address__right
         %p 変更する
     .buy__box__content
