@@ -1,13 +1,14 @@
 .show
   .show__header
     = render "shared/header" 
+  .show__top
   .show__item
     .show__item__name
       最新作COACHショルダーバッグ新品花柄フラワー
     .show__item__detail
       .show__item__detail__photo
         = image_tag "coach.jpg", size: "300x300", alt: "商品１"
-      %table.show__item__detail__table{:border => "1",}
+      %table.show__item__detail__table
         %tr
           %th.show__item__detail__table__a 
             出品者
@@ -69,10 +70,6 @@
         %p 使用しなくなって自宅保管していました。
         %p ☆全体的に使用感あり理解のある方宜しく
         %p お願い致します。(※汚れ、傷あり写真掲載）
-        %p 離島からの発送にて天候や地域により
-        %p 到着までに多少のお時間を要することも
-        %p 加えた上でご理解頂ける方のご購入
-        %p 宜しくお願い致します。m(_ _)m
       .show__item__buy__buttom
         .show__item__buy__buttom__goodbuttom
           %i.far.fa-heart
@@ -94,5 +91,6 @@
       %i.fab.fa-facebook-square
       %i.fab.fa-twitter-square
       %i.fab.fa-pinterest-square
+    .show__item__footer
   .show__item__footer
     =render "shared/footer"
