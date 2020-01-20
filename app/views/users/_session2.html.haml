@@ -1,25 +1,25 @@
-.p-main
-  .p-main__container
-    .p-main__container__header
-      =render "users/sessions-header"
-    .p-main__container__content
-      .p-main__container__content__header
+.pr-main
+  .pr-main__header
+    =render "users/sessions-header"
+  .pr-main__container
+    .pr-main__container__content
+      .pr-main__container__content__header
         電話番号の確認
-      .p-main__container__content__tell
+      .pr-main__container__content__tell
         携帯電話の番号
         %input{type: "text", name: "tell-number", size: "50", placeholder:"携帯電話の番号を入力" ,class:"tell-number"}
-      .p-main__container__content__info
+      .pr-main__container__content__info
         本人確認のため、携帯電話のSMS（ショートメッセージサービス）を利用して認証を行います。
-      .p-main__container__content__btn
+      .pr-main__container__content__btn
         = link_to '#', class:'sms' do
           SMSを送信する
-      .p-main__container__content__note
+      .pr-main__container__content__note
         ＊電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
-      .p-main__container__content__reason
+      .pr-main__container__content__reason
         = link_to "#", class:"register-info" do
           電話番号の確認が必要な理由
           %i.fas.fa-chevron-right
-    .p-main__container__footer
-      =render "users/users-footer"
+  .pr-main__footer
+    =render "users/users-footer"
 
   
