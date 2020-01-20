@@ -1,5 +1,9 @@
 .main
+  .main__header
+    = render "shared/header"
   .main__container
+    .main__container__side-bar
+      = render 'users/side_bar'
     .main__container__p-container
       .main__container__p-container__header
         プロフィール
@@ -14,4 +18,5 @@
         .main__container__p-container__profile__btn
           =link_to '#', class:'change' do
             変更する
-    = render 'shared/side_bar'
+  .main__footer
+    =render "shared/footer"

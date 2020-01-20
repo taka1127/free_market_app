@@ -1,7 +1,12 @@
 .main
+  .main__header
+    =render "shared/header"
   .main__container
+    .main__side-bar
+      = render 'users/side_bar'
     .main__container__l-container
       .main__container__l-container__btn
         =link_to '#', class:'logout' do
           ログアウト
-    = render 'shared/side_bar'
+  .main__footer
+    =render "shared/footer"

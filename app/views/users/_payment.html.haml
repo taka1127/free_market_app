@@ -1,5 +1,9 @@
 .main
+  .main__header
+    =render "shared/header"
   .main__container
+    .main__container__left
+      = render 'users/side_bar'
     .main__container__right
       .main__container__right__payment
         支払い方法
@@ -14,4 +18,5 @@
           = link_to '#', class:'info' do
             支払い方法について
             %i.fas.fa-chevron-right
-    = render 'shared/side_bar'
+  .main__footer
+    = render "shared/footer"
