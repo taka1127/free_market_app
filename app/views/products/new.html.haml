@@ -9,7 +9,7 @@
         商品画像
         %span 必須
         = f.fields_for :images do |i|
-          = i.file_field :image
+          %label= i.file_field :image, class: 'image-field', placeholder: "ドラッグアンドドロップ"
           %p 最大10枚までアップロードできます
       .products-new__contents__name.section
         商品名
