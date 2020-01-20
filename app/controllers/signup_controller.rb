@@ -19,11 +19,13 @@ class SignupController < ApplicationController
   end
 
   def session3
+    # session2で入力された値をsessionに保存
     session[:tel] = user_params[:tel]
     @user = User.new 
   end
 
   def session4
+    # session3で入力された値をsessionに保存
     session[:name] = user_params[:name]
     session[:name_kana] = user_params[:name_kana]
     session[:postal_code] = user_params[:postal_code]
@@ -57,7 +59,6 @@ class SignupController < ApplicationController
       tel: session[:tel], 
       # session4のデータ
 
-
     )
     if @user.save
       # ログインするための情報を保管
@@ -76,7 +77,7 @@ class SignupController < ApplicationController
   private
   # 許可するキーを設定
   def user_params
-    params.require(:user).permit(:email, :password, :nickname, :tel, :birthday, :name_kana, :name,:postal_code,:prefecture,:city,:house_number,:building)
+    params.require(:user).permit(:email, :password, :nickname, :tel, :birthday, :name_kana, :name,addresses_attributes: [:postal_code,:prefecture,:city,:house_number,:building])
     # params.require(:user).permit(:email, :password, :nickname, :tel, :birthday, :name_kana, :name,:postal_code,:prefecture,:city,:house_number,:building).merge(user_id: current_user.id)
   end
 end

@@ -75,7 +75,6 @@
           %i.fas.fa-question-circle
           カード裏面の番号とは？
       .sign-up-session4__body__contents__next.box
-        =link_to session5_signup_index_path,class:"session4-next" do
-          次へ進む
+        =f.submit "SMSを送信する" ,class:"sms"
   .sign-up-session4__footer
     =render "users/users-footer"
