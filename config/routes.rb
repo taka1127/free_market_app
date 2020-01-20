@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :products,  only: [:index, :new, :create, :edit, :update, :show]
   resources :signup, only: [:index,:create] do
     collection do
+      get 'user_top'
       get 'session1'
       get 'session2'
       get 'session3'

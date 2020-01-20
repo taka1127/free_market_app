@@ -1,5 +1,8 @@
 class SignupController < ApplicationController
 
+  def user_top
+  end
+
   def session1
     @user = User.new 
   end
