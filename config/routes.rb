@@ -12,4 +12,5 @@ Rails.application.routes.draw do
       get 'session5' # 登録完了後のページ
     end
   end
+  resources :users, only: [:show]
 end

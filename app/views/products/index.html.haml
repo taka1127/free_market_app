@@ -1,7 +1,6 @@
 = render 'shared/header'
 .products__index
   .products__index__slick
-
   .products__index__category
     .products__index__category__title
       %h2 人気のカテゴリー
@@ -10,7 +9,6 @@
         %li メンズ
         %li 家電・スマホ・カメラ
         %li おもちゃ・ホビー・グッズ
-
     .products__index__category__contents
       .products__index__category__contents__container
         .products__index__category__contents__container__title
@@ -31,7 +29,6 @@
             %li= render 'thumbnail'
             %li= render 'thumbnail'
             %li= render 'thumbnail'
-          
       .products__index__category__contents__container
         .products__index__category__contents__container__title
           %h3 メンズ新着アイテム
@@ -91,9 +88,6 @@
             %li= render 'thumbnail'
             %li= render 'thumbnail'
             %li= render 'thumbnail'
-          
-
-
   .products__index__brand
     .products__index__brand
       .products__index__brand__title
@@ -103,7 +97,6 @@
           %li メンズ
           %li 家電・スマホ・カメラ
           %li おもちゃ・ホビー・グッズ
-
       .products__index__brand__contents
         .products__index__brand__contents__container
           .products__index__brand__contents__container__title
@@ -144,7 +137,6 @@
               %li= render 'thumbnail'
               %li= render 'thumbnail'
               %li= render 'thumbnail'
-
         .products__index__brand__contents__container
           .products__index__brand__contents__container__title
             %h3 シュプリーム新着アイテム
@@ -185,8 +177,6 @@
               %li= render 'thumbnail'
 = render 'shared/footer'
 
-= render 'users/mypage'
-
 = render "users/payment"
 
 = render "users/logout"
@@ -194,5 +184,3 @@
 = render "users/profile_edit"
 
 = render "products/edit"
-
-

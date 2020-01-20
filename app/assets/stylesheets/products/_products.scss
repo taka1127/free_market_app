@@ -1,8 +1,12 @@
 .show{
   background-color:#f5f5f5;
   width: 100vw;
-  height: 1500px;
+  height: 1600px;
   padding: 50px 80px 50px 80px;
+  &__top{
+  height: 50px;
+  background-color: #f5f5f5;
+  }
   &__item{
     background-color:white;
     width: calc(100vw - 550px);
@@ -20,7 +24,7 @@
     &__detail{
       background-color: white;
       width: calc(100vw - 750px);
-      height: 360px;
+      height: 450px;
       margin: 0 auto;
       padding: 24px 40px 40px 20px;
       display: flex;
@@ -97,7 +101,7 @@
           padding-left: 20px;
           color: black;
           background-color: #f5f5f5;
-          width: 100px;
+          width: 150px;
           height: 30px;
         }
         &__repoprt{
@@ -116,11 +120,10 @@
     &__comment{
       &__content{
         background-color: #fff6de;
-        height: 50px;
+        height: 85px;
         text-align: center;
         margin: 0 auto;
         width: 600px;
-        padding: 20px 20px 20px 20px;
       }
       &__box{
         width: 600px;
@@ -147,6 +150,10 @@
       font-size: 45pt;
       text-align: center;
       margin-top: 15px;
+    }
+    &__footer{
+      height: 160px;
+      background-color: #f5f5f5;
     }
   }
 }

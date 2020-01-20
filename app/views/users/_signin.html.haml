@@ -1,27 +1,28 @@
 .signin
-  .signin__header
-    =render "users/sessions-header"
-  .signin__box
-    .signin__box__section
-      %p アカウントをお持ちでない方はこちら
-      .btn.registration
-        = link_to new_user_registration_path do
-          新規会員登録
-    .signin__box__section
-      .btn.facebook
-        = link_to '#' do
-          Facebookでログイン
-        = icon('fab', 'facebook-square')
-      .btn.google
-        = link_to '#',class:'b' do
-          Googleでログイン
-        = icon('fab', 'google')
-      %input{ placeholder: "メールアドレス" }
-      %input{ placeholder: "パスワード" }
-      .robbot
-      .btn.log_in
-        = link_to '#' do
-          ログイン
-        %p.blue パスワードをお忘れの方 
-  .signin__footer
-    =render "users/users-footer"
+  .signin__container
+    .signin__container__header
+      =render "users/sessions-header"
+    .signin__container__box
+      .signin__container__box__section.head
+        %p アカウントをお持ちでない方はこちら
+        .btn.registration
+          = link_to new_user_registration_path do
+            新規会員登録
+      .signin__container__box__section.content
+        .btn.facebook
+          = link_to '#' do
+            Facebookでログイン
+          = icon('fab', 'facebook-square')
+        .btn.google
+          = link_to '#',class:'b' do
+            Googleでログイン
+          = icon('fab', 'google')
+        %input{ placeholder: "メールアドレス" }
+        %input{ placeholder: "パスワード" }
+        .robbot
+        .btn.log_in
+          = link_to '#' do
+            ログイン
+          %p.blue パスワードをお忘れの方 
+    .signin__container__footer
+      =render "users/users-footer"
