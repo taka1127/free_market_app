@@ -54,7 +54,7 @@
         .products__new__form__delivery__left
           %h3 
             配送について
-            = link_to '#',{class: "question"} do
+            = link_to '#',class: "question" do
               = icon('fas', 'question-circle')
         .products__new__form__delivery__right
           %label 
@@ -137,7 +137,7 @@
         .products__new__form__price__left
           %h3 
             販売価格
-            = link_to '#',{class: "question"} do
+            = link_to '#',class: "question" do
               = icon('fas', 'question-circle')
         .products__new__form__price__right
           %ul
@@ -175,7 +175,7 @@
             加盟店規約
           に同意したことになります。
         = f.submit '出品する' 
-        = link_to '#' ,{class: "back-btn"} do
+        = link_to '#' ,class: "back-btn" do
           戻る
     .products__new__bottom
       %ul
