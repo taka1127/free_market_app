@@ -64,7 +64,7 @@ class SignupController < ApplicationController
       # session4のデータ(クレジットカード情報)
     )
 
-    if @user.save && @adresses.save
+    if @user.save! && @adresses.save!
       # ログインするための情報を保管
       session[:id] = @user.id
       redirect_to session5_signup_index_path
