@@ -4,12 +4,12 @@ $(document).on('turbolinks:load', ()=> {
     <input class="js-file" type="file"
     name="product[images_attributes][${num}][image]"
     id="product_images_attributes_${num}_image"><br>
-    <div class="js-remove">削除</div>
+    <span class="js-remove">削除</span>
   </div>`;
     return html;
   }
   const buildImg = (index, url)=> {
-    const html = `<img data-index="${index}" src="${url}" width="100px" height="100px">`;
+    const html = `<img data-index="${index}" src="${url}" width="120px" height="100px">`;
     return html;
   }
 

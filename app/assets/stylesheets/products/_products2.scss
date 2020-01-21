@@ -140,12 +140,13 @@
     }
     &__image {
       .js-file_group {
-        width: 100%;
-        // height: 300px;
-        label {
-          height: 50px;
-          background-color: $color_gray;
-          display: block;
+        input {
+          border: none;
+          margin: 0;
+        }
+        span {
+          background-color: gray;
+          line-height: 10px;
         }
       }
     }
