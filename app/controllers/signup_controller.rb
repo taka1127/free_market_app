@@ -36,7 +36,7 @@ class SignupController < ApplicationController
     session[:city] = user_params[:city]
     session[:house_number] = user_params[:house_number]
     session[:building] = user_params[:building]
-    @adresses = Address.new 
+    # @address = Address.new 
   end
 
   def create
@@ -57,7 +57,7 @@ class SignupController < ApplicationController
     )
     # binding.pry
 
-    @adresses = Address.new(
+    @address = Address.new(
       postal_code: session[:postal_code], 
       prefecture: session[:prefecture], 
       city: session[:city], 
@@ -66,8 +66,8 @@ class SignupController < ApplicationController
       # tel: session[:tel], 
       # session4のデータ(クレジットカード情報)
     )
-
-    if @user.save && @address.save
+    # binding.pry
+    if @user.save && @address.save!
       # ログインするための情報を保管
       session[:id] = @user.id
       redirect_to session5_signup_index_path
