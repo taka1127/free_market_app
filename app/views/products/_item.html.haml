@@ -3,18 +3,12 @@
   -# = render partial: 'layouts/sold_out', locals: {item: item}
   .item__top
     -# = image_tag item.item_images[0].image.url, class: "item-top__image"
-    = image_tag item.item_images.image.url, class: "item-top__image"
+    -# = image_tag item.item_images.image.url, class: "item-top__image"
     -# = image_tag item.images[1], class: "item-top__image"
     -# = image_tag item, class: "item-top__image"
-
-
-
-
-
-
     .item-top__price
       ¥
-      = @image.image
+      -# = @image.image
       -# = item.price
   .item-bottom
     .item-bottom__name

@@ -17,13 +17,12 @@
             %span もっと見る
             = icon('fas', 'angle-right')
         .products__index__category__contents__container__thumbnails
-          %ul
-            %li= render 'item'
-
-
-
-
-
+          - @images.each do |image|
+            .thumbnail
+              .thumbnail__image
+                = image_tag image.image
+              .thumbnail__image__price
+              .thumbnail__title
       .products__index__category__contents__container
         .products__index__category__contents__container__title
           %h3 メンズ新着アイテム
