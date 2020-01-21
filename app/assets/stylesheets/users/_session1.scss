@@ -82,26 +82,26 @@
           margin: 0px;
         }
       }
-      &__name {
-        margin-top: 24px;
-        &__input {
-          display: flex;
-          .form {
-            width: 50%;
-            margin-left: 8px;
-          }
-        }
-      }
-      &__name-kana {
-        margin-top: 24px;
-        &__form {
-          display: flex;
-          .form {
-            width: 50%;
-            margin-left: 8px;
-          }
-        }
-      }
+      // &__name {
+      //   margin-top: 24px;
+      //   &__input {
+      //     display: flex;
+      //     .form {
+      //       width: 50%;
+      //       margin-left: 8px;
+      //     }
+      //   }
+      // }
+      // &__name-kana {
+      //   margin-top: 24px;
+      //   &__form {
+      //     display: flex;
+      //     .form {
+      //       width: 50%;
+      //       margin-left: 8px;
+      //     }
+      //   }
+      // }
       &__birthday {
         margin-top: 24px;
         &__caution {
@@ -110,6 +110,11 @@
             color: #888;
           }
         }
+      }
+      &__robot{
+        height: 70px;
+        width: 300px;
+        background-color: rgb(184, 180, 180);
       }
       &__confirmation {
         margin-top: 40px;

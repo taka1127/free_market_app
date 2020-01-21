@@ -32,20 +32,21 @@
         %p 安心・安全にご利用いただくために、お客様の本人
         %p 情報の登録にご協力ください。他のお客様に公開さ
         %p れることはありません。
-      .sign-up-session1__body__contents__name
-        .sign-up-session1__body__contents__name__title
-          お名前（全角）
-          %span 必須
-        .sign-up-session1__body__contents__name__input
-          = f.text_field :name, class: "form family-name-form", placeholder: "例）山田"
-          = f.text_field :name, class: "form last-name-form", placeholder: "例）花子"
-      .sign-up-session1__body__contents__name-kana
-        .sign-up-session1__body__contents__name-kana__title
-          お名前カナ（全角）
-          %span 必須
-        .sign-up-session1__body__contents__name-kana__form 
-          = f.text_field :name_kana, class:"form family-name-kana-form", placeholder: "例）ヤマダ"
-          = f.text_field :name_kana, class:"form last-name-kana-form", placeholder: "例）ハナコ"
+      -# .sign-up-session1__body__contents__robot
+      -#   私はロボットではありません
+      -#   .sign-up-session1__body__contents__name__title
+      -#     お名前（全角）
+      -#     %span 必須
+      -#   .sign-up-session1__body__contents__name__input
+      -#     = f.text_field :name, class: "form family-name-form", placeholder: "例）山田"
+      -#     = f.text_field :name, class: "form last-name-form", placeholder: "例）花子"
+      -# .sign-up-session1__body__contents__name-kana
+        -# .sign-up-session1__body__contents__name-kana__title
+        -#   お名前カナ（全角）
+        -#   %span 必須
+        -# .sign-up-session1__body__contents__name-kana__form 
+        -#   = f.text_field :name_kana, class:"form family-name-kana-form", placeholder: "例）ヤマダ"
+        -#   = f.text_field :name_kana, class:"form last-name-kana-form", placeholder: "例）ハナコ"
       .sign-up-session1__body__contents__birthday
         .sign-up-session1__body__contents__birthday__title
           生年月日
@@ -55,6 +56,10 @@
         .sign-up-session1__body__contents__birthday__caution
           %p ※本人情報は正しく記入してください。会員登録後、
           %p 修正するにはお時間をいただく場合があります。
+
+      .sign-up-session1__body__contents__robot
+        私はロボットではありません
+
       .sign-up-session1__body__contents__confirmation
         『次へ進む』のボタンを押すことにより、
         %span 利用規約
