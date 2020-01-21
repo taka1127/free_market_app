@@ -139,14 +139,13 @@
       }
     }
     &__image {
-      label{
-        height: 160px;
+      .js-file_group {
         width: 100%;
-        // background-color: $color_gray;
-        display: block;
-        cursor: pointer;
-        input {
-          display: none;
+        // height: 300px;
+        label {
+          height: 50px;
+          background-color: $color_gray;
+          display: block;
         }
       }
     }
