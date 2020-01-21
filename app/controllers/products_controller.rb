@@ -2,7 +2,9 @@ class ProductsController < ApplicationController
   before_action :access_registration, except: [:index, :show]
 
   def index
-    @products = Product.includes(:images).order('created_at DESC')
+    @images = Image.find()
+    # @category = @product.category(あとで使います)
+
   end
 
   def new
