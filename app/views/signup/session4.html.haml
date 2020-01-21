@@ -4,6 +4,7 @@
   .sign-up-session4__body
   = form_for @user, url: signup_index_path, method: :post, html: {class: 'forth-main-wrapper__box'} do |f|
     .sign-up-session4__body__head
+    = f.fields_for :addresses do |i|
       支払い方法
     .sign-up-session4__body__contents
       .sign-up-session4__body__contents__card-number.box
