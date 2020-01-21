@@ -18,11 +18,12 @@
             = icon('fas', 'angle-right')
         .products__index__category__contents__container__thumbnails
           - @images.each do |image|
-            .thumbnail
-              .thumbnail__image
-                = image_tag image.image
-              .thumbnail__image__price
-              .thumbnail__title
+            .itembox
+              .itembox__image
+                = image_tag image.image, class: "itembox__image"
+                .itembox__image__price
+              .itembox__title
+                = @product.name
       .products__index__category__contents__container
         .products__index__category__contents__container__title
           %h3 メンズ新着アイテム

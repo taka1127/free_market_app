@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
   def index
     @images = Image.all
     # @category = @product.category(あとで使います)
+    @product = Product.all
   end
 
   def new

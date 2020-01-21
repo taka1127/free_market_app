@@ -78,10 +78,11 @@
   }
 }
 
-.thumbnail {
+.itembox {
   padding: 10px;
   width: 188px;
   &__image {
+    width: 168px;
     height: 188px;
     background-color: lightyellow;
     &__price {
