@@ -34,16 +34,19 @@
     &__contents {
       max-width: 343px;
       margin: 0 auto;
-      .form {
-        min-height: 1.5em;
-        margin-top: 8px;
-        font-size: inherit;
-        width: 100%;
-        padding: 10px 16px 16px 8px;
-        align-items: center;
-        border-radius: 3px;
-      }
       &__card-number {
+        &__form{
+          input.form.card-number-form{
+            min-height: 1.5em;
+            margin-top: 8px;
+            font-size: inherit;
+            width: 100%;
+            height: 50px;
+            padding: 10px 16px 16px 8px;
+            align-items: center;
+            border-radius: 3px;
+          }
+        }
         &__logos {
           ul{
             list-style: none;
@@ -105,6 +108,18 @@
         }
       }
       &__securitycode {
+        &__form{
+          .form.card-security-form{
+            min-height: 1.5em;
+            margin-top: 8px;
+            font-size: inherit;
+            width: 100%;
+            height: 50px;
+            padding: 10px 16px 16px 8px;
+            align-items: center;
+            border-radius: 3px;
+          }
+        }
         &__help {
           text-align: right;
           color: skyblue;
