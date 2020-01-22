@@ -99,7 +99,25 @@
         padding: 30px 150px 30px 150px;
       }
       &__edit {
-        
+        margin: 24px 0;
+        p {
+          text-align: center;
+        }
+        a {
+          font-size: 14px;
+          line-height: 50px;
+          width: 70%;
+          height: 50px;
+          margin: 10px auto;
+          text-align: center;
+          display: block;
+          text-decoration: none;
+          color: white;
+          background-color: gray;
+          &:first-of-type{
+            background-color: $color_red;
+          }
+        }
       }
       &__buttom{
         display: flex;
