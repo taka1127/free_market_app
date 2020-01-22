@@ -21,6 +21,11 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @product = Product.find(params[:id])
+    @images = Image.where(product_id: params[:id])
+    # @category = @product.category(あとで使います)
+    # @brand = @product.brand
+    @comment = Comment.new
   end
   
   def edit
@@ -35,4 +40,6 @@ class ProductsController < ApplicationController
   def product_params
     params.require(:product).permit(:name, :content, :status, :s_prefecture, :s_charge, :s_method, :s_date, :price,:category_L, :category_M, :category_S, images_attributes: [:image, :_destroy, :id]).merge(user_id: current_user.id)
   end
+
+
 end
