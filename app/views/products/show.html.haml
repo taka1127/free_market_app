@@ -44,7 +44,8 @@
           %th.show__item__detail__table__a
             ブランド
           %td.show__item__detail__table__b
-            -# = @brand.brand
+            - if @product.brand_id
+              = @product.brand_id
         %tr
           %th.show__item__detail__table__a
             商品の状態

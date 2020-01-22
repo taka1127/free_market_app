@@ -90,7 +90,10 @@
         font-size: 175%;
         color: white;
         cursor: pointer;
-
+        a {
+          text-decoration: none;
+          color: white;
+        }
       }
       &__content{
         text-align: center;
@@ -113,7 +116,6 @@
           height: 40px;
           line-height: 40px;
           cursor: pointer;
-          cursor: hand;
         }
         &__repoprt{
           margin-left: 60px;
