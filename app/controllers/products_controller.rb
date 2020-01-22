@@ -31,6 +31,17 @@ class ProductsController < ApplicationController
   def edit
   end
 
+  def update
+  end
+  
+  def destroy
+    product = Product.find(params[:id])
+    product.destroy
+    redirect_to root_path
+  end
+
+
+
 
   private
   def access_registration 

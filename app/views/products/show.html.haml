@@ -84,16 +84,26 @@
           購入画面に進む
       .show__item__buy__notes
         = simple_format(@product.content)
-      .show__item__buy__buttom
-        .show__item__buy__buttom__goodbuttom
-          %i.far.fa-heart
-          %span いいね!
-          %span 0
-        .show__item__buy__buttom__repoprt
-          %i.fas.fa-flag
-          %span 不適切な商品の報告
-        .show__item__buy__buttom__security
-          %p あんしん・あんぜんへの取り組み
+      - if current_user.id == @product.user_id
+        .show__item__buy__edit
+          = link_to edit_product_path do
+            商品の編集
+          %p or
+          = link_to '#' do
+            出品を一時停止する
+          = link_to product_path, method: :delete do
+            この商品を削除する
+      - else
+        .show__item__buy__buttom
+          .show__item__buy__buttom__goodbuttom
+            %i.far.fa-heart
+            %span いいね!
+            %span 0
+          .show__item__buy__buttom__repoprt
+            %i.fas.fa-flag
+            %span 不適切な商品の報告
+          .show__item__buy__buttom__security
+            %p あんしん・あんぜんへの取り組み
     .show__item__comment
       .show__item__comment__content
         %p 相手のことを考え丁寧なコメントを心がけましょう。
