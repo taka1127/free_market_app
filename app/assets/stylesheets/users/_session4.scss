@@ -113,14 +113,14 @@
         }
       }
       &__next {
-        margin: 40px auto 0;
-        padding: 0 16px 0;
-        width: 100%;
-        text-align: center;
-        line-height: 48px;
-        background-color: red;
-        text-align: center;
-        .session4-next {
+        input{
+          margin: 40px auto 0;
+          padding: 0 16px 0;
+          width: 100%;
+          text-align: center;
+          line-height: 48px;
+          background-color: red;
+          text-align: center;
           color: white;
           text-decoration: none;
         }
