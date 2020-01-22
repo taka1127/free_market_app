@@ -33,59 +33,51 @@
           = link_to '#' do
             %span もっと見る
             = icon('fas', 'angle-right')
-        .products__index__category__contents__container__thumbnails
-          %ul
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
-          %ul
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
-          
+        .products__index__category__contents__container__item
+          - @products.each do |product|
+            .itembox
+              .itembox__image
+                - product.images.each do |image|
+                  = image_tag image.image, size: "168x188", alt: "product"
+                .itembox__image__price
+                  ¥
+                  = product.price
+              .itembox__title
+                = product.name
       .products__index__category__contents__container
         .products__index__category__contents__container__title
           %h3 家電・スマホ・カメラ新着アイテム
           = link_to '#' do
             %span もっと見る
             = icon('fas', 'angle-right')
-        .products__index__category__contents__container__thumbnails
-          %ul
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
-          %ul
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
-          
+        .products__index__category__contents__container__item
+          - @products.each do |product|
+            .itembox
+              .itembox__image
+                - product.images.each do |image|
+                  = image_tag image.image, size: "168x188", alt: "product"
+                .itembox__image__price
+                  ¥
+                  = product.price
+              .itembox__title
+                = product.name
       .products__index__category__contents__container
         .products__index__category__contents__container__title
           %h3 おもちゃ・ホビー・グッズ新着アイテム
           = link_to '#' do
             %span もっと見る
             = icon('fas', 'angle-right')
-        .products__index__category__contents__container__thumbnails
-          %ul
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
-          %ul
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
-            %li= render 'thumbnail'
+        .products__index__category__contents__container__item
+          - @products.each do |product|
+            .itembox
+              .itembox__image
+                - product.images.each do |image|
+                  = image_tag image.image, size: "168x188", alt: "product"
+                .itembox__image__price
+                  ¥
+                  = product.price
+              .itembox__title
+                = product.name
   .products__index__brand
     .products__index__brand
       .products__index__brand__title
@@ -102,77 +94,68 @@
             = link_to '#' do
               %span もっと見る
               = icon('fas', 'angle-right')
-          .products__index__brand__contents__container__thumbnails
-            %ul
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-            %ul
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-
+        .products__index__category__contents__container__item
+          - @products.each do |product|
+            .itembox
+              .itembox__image
+                - product.images.each do |image|
+                  = image_tag image.image, size: "168x188", alt: "product"
+                .itembox__image__price
+                  ¥
+                  = product.price
+              .itembox__title
+                = product.name
         .products__index__brand__contents__container
           .products__index__brand__contents__container__title
             %h3 ルイヴィトン新着アイテム
             = link_to '#' do
               %span もっと見る
               = icon('fas', 'angle-right')
-          .products__index__brand__contents__container__thumbnails
-            %ul
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-            %ul
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
+        .products__index__category__contents__container__item
+          - @products.each do |product|
+            .itembox
+              .itembox__image
+                - product.images.each do |image|
+                  = image_tag image.image, size: "168x188", alt: "product"
+                .itembox__image__price
+                  ¥
+                  = product.price
+              .itembox__title
+                = product.name
         .products__index__brand__contents__container
           .products__index__brand__contents__container__title
             %h3 シュプリーム新着アイテム
             = link_to '#' do
               %span もっと見る
               = icon('fas', 'angle-right')
-          .products__index__brand__contents__container__thumbnails
-            %ul
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-            %ul
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
+        .products__index__category__contents__container__item
+          - @products.each do |product|
+            .itembox
+              .itembox__image
+                - product.images.each do |image|
+                  = image_tag image.image, size: "168x188", alt: "product"
+                .itembox__image__price
+                  ¥
+                  = product.price
+              .itembox__title
+                = product.name
         .products__index__brand__contents__container
           .products__index__brand__contents__container__title
             %h3 ナイキ新着アイテム
             = link_to '#' do
               %span もっと見る
               = icon('fas', 'angle-right')
-          .products__index__brand__contents__container__thumbnails
-            %ul
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-            %ul
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
-              %li= render 'thumbnail'
+        .products__index__category__contents__container__item
+          - @products.each do |product|
+            .itembox
+              .itembox__image
+                - product.images.each do |image|
+                  = image_tag image.image, size: "168x188", alt: "product"
+                .itembox__image__price
+                  ¥
+                  = product.price
+              .itembox__title
+                = product.name
 = render 'shared/footer'
 
 = render "users/payment"
