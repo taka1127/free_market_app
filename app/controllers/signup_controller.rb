@@ -26,8 +26,9 @@ class SignupController < ApplicationController
     # binding.pry
     session[:tel] = user_params[:tel]
     @user = User.new 
+    # binding.pry
     # @user.build_address
-    @adresses = Address.new 
+    # @adresses = Address.new 
     # @address = Address.new(address_params)
   end
 
@@ -45,6 +46,7 @@ class SignupController < ApplicationController
     session[:house_number] = user_params[:house_number]
     session[:building] = user_params[:building]
     # binding.pry
+    # @user.addresses.build
     @address = Address.new
     # @address = Address.new(address_params)
   end
@@ -92,9 +94,9 @@ class SignupController < ApplicationController
   private
   # 許可するキーを設定
   def user_params
-    params.require(:user).permit(:email, :password, :nickname, :tel, :birthday, :name_kana, :name,address_attributes: [ :postal_code,:prefecture,:city,:house_number,:building])
+    # params.require(:user).permit(:email, :password, :nickname, :tel, :birthday, :name_kana, :name,address_attributes: [ :postal_code,:prefecture,:city,:house_number,:building])
     # params.require(:user).permit(:email, :password, :nickname, :tel, :birthday, :name_kana, :name,address_attributes: [ :postal_code,:prefecture,:city,:house_number,:building]).merge(address_id: current_address.id)
-    # params.require(:user).permit(:email, :password, :nickname, :tel, :birthday, :name_kana, :name,addresses_attributes: [ :id, :postal_code,:prefecture,:city,:house_number,:building])
+    params.require(:user).permit(:email, :password, :nickname, :tel, :birthday, :name_kana, :name,addresses_attributes: [ :id, :postal_code,:prefecture,:city,:house_number,:building])
   end
 
   # def address_params
