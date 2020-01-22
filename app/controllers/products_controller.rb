@@ -22,9 +22,9 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @images = Image.where(product_id: params[:id])
     # @category = @product.category(あとで使います)
-    @image = Image.find(params[:id])
-    @brand = @product.brand
+    # @brand = @product.brand
     @comment = Comment.new
   end
   

@@ -1,29 +1,15 @@
+= render 'shared/header'
 .show
   .show__item
     .show__item__name
       = @product.name
     .show__item__detail
       .show__item__detail__photo
-        = image_tag @image.image, size: "300x300", alt: "商品１"
+        = image_tag @images[0].image , size: "300x300"
         .show__item__detail__photo__group1
           .show__item__detail__photo1
-          = image_tag "画像1.jpg", size: "60x60", alt: "商品1"
-          .show__item__detail__photo2
-          = image_tag "画像2.jpg", size: "60x60", alt: "商品2"
-          .show__item__detail__photo3
-          = image_tag "画像3.jpg", size: "60x60", alt: "商品3"
-          .show__item__detail__photo4
-          = image_tag "画像4.jpg", size: "60x60", alt: "商品4"
-          .show__item__detail__photo5
-          = image_tag "画像5.jpg", size: "60x60", alt: "商品5"
-        .show__item__detail__photo__group2
-          .show__item__detail__photo6
-          = image_tag "画像6.jpg", size: "60x60", alt: "商品6"
-          .show__item__detail__photo7
-          = image_tag "画像7.jpg", size: "60x60", alt: "商品7"
-          .show__item__detail__photo8
-          .show__item__detail__photo9
-          .show__item__detail__photo10
+            - @images.each do |i|
+              = image_tag i.image, size: "60x60"
       %table.show__item__detail__table{:border => "1",}
         %tr
           %th.show__item__detail__table__a 
@@ -58,7 +44,7 @@
           %th.show__item__detail__table__a
             ブランド
           %td.show__item__detail__table__b
-            = @brand.brand
+            -# = @brand.brand
         %tr
           %th.show__item__detail__table__a
             商品の状態
@@ -121,3 +107,4 @@
       %i.fab.fa-facebook-square
       %i.fab.fa-twitter-square
       %i.fab.fa-pinterest-square
+= render 'shared/footer'
