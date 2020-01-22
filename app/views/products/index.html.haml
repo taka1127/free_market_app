@@ -16,14 +16,17 @@
           = link_to '#' do
             %span もっと見る
             = icon('fas', 'angle-right')
-        .products__index__category__contents__container__thumbnails
-          - @images.each do |image|
+        .products__index__category__contents__container__item
+          - @products.each do |product|
             .itembox
               .itembox__image
-                = image_tag image.image, class: "itembox__image"
+                - product.images.each do |image|
+                  = image_tag image.image, size: "168x188", alt: "product"
                 .itembox__image__price
+                  ¥
+                  = product.price
               .itembox__title
-                = @product.name
+                = product.name
       .products__index__category__contents__container
         .products__index__category__contents__container__title
           %h3 メンズ新着アイテム
@@ -177,5 +180,3 @@
 = render "users/logout"
 
 = render "users/profile_edit"
-
-= render "products/edit"
