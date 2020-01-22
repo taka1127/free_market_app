@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+describe ProductsController, type: :controller do
   describe 'POST #create' do
     it 'saves the new product in the database' do
       expect{post :create, params}
@@ -7,16 +8,8 @@ require 'rails_helper'
   end
 
   describe 'GET #show' do
-    it "assigns the requested tweet to @product" do
-      product = create(:product)
-      get :show, params: { id: product }
-      expect(assigns(:product)).to eq product
+    it "renders the :show template" do
+      expect(assigns(:product))
     end
-
-    it "renders the :edit template" do
-    end
-
-
-
-
+  end
 end
