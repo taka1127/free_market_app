@@ -1,24 +1,28 @@
-%h2= t('.sign_in')
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit t('.sign_in')
-= render "devise/shared/links"
--# =render "users/new-user-top"
--# =render "users/session1"
--# =render "users/session2"
--# =render "users/session3"
--# =render "users/session4"
--# =render "users/signin"
--# =render "users/session5"
+.signin
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .signin__container
+      .signin__container__header
+        =render "users/sessions-header"
+      .signin__container__box
+        .signin__container__box__section.head
+          %p アカウントをお持ちでない方はこちら
+          .btn.registration
+            = link_to user_top_signup_index_path do
+              新規会員登録
+        .signin__container__box__section.content
+          .btn.facebook
+            = link_to '#' do
+              Facebookでログイン
+            = icon('fab', 'facebook-square')
+          .btn.google
+            = link_to '#',class:'b' do
+              Googleでログイン
+            = icon('fab', 'google')
+          = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス" 
+          = f.password_field :password, autocomplete: "current-password", placeholder: "パスワード" 
+          .robbot
+          .btn.log_in
+            = f.submit 'ログイン' 
+            %p.blue パスワードをお忘れの方 
+      .signin__container__footer
+        =render "users/users-footer"
