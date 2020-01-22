@@ -6,7 +6,7 @@
       = render 'users/side_bar'
     .main__container__l-container
       .main__container__l-container__btn
-        =link_to '#', class:'logout' do
+        =link_to destroy_user_session_path, method: :delete, class:'logout' do
           ログアウト
   .main__footer
     =render "shared/footer"
