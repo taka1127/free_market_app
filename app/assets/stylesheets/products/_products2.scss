@@ -94,225 +94,115 @@
 }
 
 // ------------------- new -------------------
-.products__new{
-  width: 100vw;
+
+.products-new {
+  width: 700px;
+  margin: 0 auto;
   &__logo {
-    height: 50px;
     width: 185px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px 0 40px;
     margin: 0 auto;
   }
-  &__form {
-    margin: 0 auto;
-    width: 668px;
+  &__contents {
     background-color: white;
-    h3 {
-      font-size: 16px;
-      font-weight: bold;
+    .section {
+      border-bottom: solid 2px $color_gray;
+      padding: 40px;
     }
     span {
-      margin-left: 8px;
-      padding: 4px;
-      border-radius: 2px;
-      color: #fff;
+      background-color: red;
+      color: white;
       font-size: 12px;
-      background-color: $color_red;
-      font-weight: bold;
+      display: inline-block;
+      line-height: 16px;
+      padding: 3px;
+      margin-left: 1em;
+      border-radius: 3px;
     }
-    label {
-      font-weight: bold;
-      margin-bottom: 10px;
-      display: block;
-    } 
-    select{
-      width: 360px;
+    input, select {
+      width: 400px;
       height: 46px;
-      margin-bottom: 30px;
-      background-color: white;
+      display: block;
+      margin:10px 0 20px;
+      border-radius: 3px;
+      border: solid 1px gray;
     }
-    .fa-question-circle{
-      color: $color_aqua;
+    .flex {
+      display: flex;
+      justify-content: space-between;
     }
     &__title {
-      text-align: center;
-      border-bottom: 1px solid $color_gray;
-      margin-top: 60px;
       h2 {
+        text-align: center;
         font-size: 22px;
         font-weight: bold;
-        padding: 32px 16px;
       }
     }
     &__image {
-      padding: 40px;
-      border-bottom: 1px solid $color_gray;
-      p {
-        padding: 15px 0;
-      }
-      &__file {
-        position: relative;
-        border: dashed 1px rgb(155, 155, 155);
-        background-color: $color_gray;
+      .js-file_group {
         input {
-          width: 586px;
-          height: 160px;
-          border: 0;
-          outline: 0;
-          background-color: $color_gray;
+          border: none;
+          margin: 0;
         }
-          p {
-          width: 100%;
-          text-align: center;
-          display: block;
-          font-size: 12px;
-          font-weight: bold;
-          &.row1 {
-            position: absolute;
-            top: 60px;
-          }
-          &.row2 {
-            position: absolute;
-            top: 80px;
-          }
+        span {
+          background-color: gray;
+          line-height: 10px;
         }
       }
     }
-    &__basic {
-      padding: 40px;
-      border-bottom: 1px solid $color_gray;
-      &__name {
-        input {
-          width: calc(100% - 20px);
-          height: 25px;
-          line-height: 45px;
-          margin: 10px 0 40px;
-          padding: 10px;
-        }
-      }
-      &__text {
-        input {
-          margin: 10px 0 40px;
-          width: calc(100% - 20px);
-          height: 130px;
-          padding: 10px;
-          border: rgb(182, 182, 182) 1px solid;
-        }
-      }
+    &__name {
+      input { width: 100%; }
+      .text { height: 120px; }
     }
-    &__details {
-      padding: 40px;
-      border-bottom: 1px solid $color_gray;
-      display: flex;
-      &__left {
-        width: 280px;
-      }
+    &__detail {
     }
     &__delivery {
-      padding: 40px;
-      border-bottom: 1px solid $color_gray;
-      display: flex;
-      &__left {
-        width: 280px;
-      }
     }
     &__price {
-      padding: 40px;
-      border-bottom: 1px solid $color_gray;
-      display: flex;
-      &__left {
-        width: 230px;
-      }
-      &__right {
-        width: calc(100% - 230px);
-        ul {
-          margin-bottom: 40px;
-          li {
-            border-bottom: 1px solid $color_gray;
-            padding: 20px 0;
-            &:last-of-type{
-              font-weight: bold;
-              border-bottom: 0;
-            }
-            .flex {
-              width: 100%;
-              display: flex;
-              justify-content: space-between;
-              line-height: 45px;
-              position: relative;
-              p {
-                display: block;
-              }
-              input {
-                height: 28px;
-                width: 126px;
-                padding: 9px 16px;
-              }
-              .en {
-                position: absolute;
-                right: 160px;
-              }
-            }
-            &.text {
-              padding: 20px 0;
-            }
-          }
-        }
+      line-height: 60px;
+      input {
+        width: 160px;
+        margin-left: 60px;
       }
     }
     &__other {
-      padding: 40px;
-      font-size: 14px;
-      p a {
+      p>a {
         text-decoration: none;
         color: $color_aqua;
       }
       input {
-        background-color: $color_red;
         width: 100%;
-        height: 50px;
-        line-height: 50px;
-        margin-top: 40px;
+        background-color: $color_red;
         color: white;
+        border: none;
       }
-      .back-btn {
-        margin: 24px auto 0;
-        display: block;
-        text-decoration: none;
-        width: 45%;
-        background-color: #aaaaaa;
-        color: white;
-        height: 50px;
-        line-height: 50px;
+      a.back-btn {
         text-align: center;
+        width: 280px;
+        height: 45px;
+        line-height: 45px;
+        display: block;
+        background-color: gray;
+        color: white;
+        margin: 0 auto;
+        text-decoration: none;
       }
     }
   }
-  &__bottom {
+  &__footer {
+    margin: 0 auto ;
     text-align: center;
-    width: 668px;
-    margin: 0 auto;
-    border: 0;
-    background: none;
-    ul {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      li {
-        font-size: 12.5px;
-        padding: 40px 10px;
+    padding: 15px;
+    &__list {
+      ul {
+        display: flex;
+        justify-content: center;
+        li { padding: 15px; }
       }
     }
     &__logo {
-      height: 65px;
       width: 80px;
-      margin: 0 auto ;
-    }
-    &__copyright {
-      font-size: 13px;
-      padding-top: 20px;
-      padding-bottom: 40px;
+      margin: 0 auto;
     }
   }
 }
-
