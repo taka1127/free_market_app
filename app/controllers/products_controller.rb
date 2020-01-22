@@ -4,6 +4,8 @@ class ProductsController < ApplicationController
   def index
     # @images = Image.all
     # @category = @product.category(あとで使います)
+    @ladies_product = Product.includes(:images).where(L_category:"レディス").order("created_at DESC").limit(10)
+    binding.pry
     @products = Product.all.includes(:images).limit(10).order("created_at DESC")
     # @images = @products.images
   end

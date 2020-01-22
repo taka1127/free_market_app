@@ -18,15 +18,15 @@
             %span もっと見る
             = icon('fas', 'angle-right')
         .products__index__category__contents__container__item
-          - @products.each do |product|
+          - @ladies_product.each do |ladie|
             .itembox
               .itembox__image
-                = image_tag product.images.first.image, size: "168x188", alt: "product"
+                = image_tag ladie.images.first.image, size: "168x188", alt: "product"
                 .itembox__image__price
                   ¥
-                  = product.price
+                  = ladie.price
               .itembox__title
-                = product.name
+                = ladie.name
       .products__index__category__contents__container
         .products__index__category__contents__container__title
           %h3 メンズ新着アイテム
