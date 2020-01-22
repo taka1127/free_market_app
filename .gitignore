@@ -16,4 +16,9 @@
 # Ignore Byebug command history file.
 .byebug_history
 
+# アップロードした画像をgitに載せない
+/public/uploads/
+
+# シークレットキーをgitに載せない
 config/secrets.yml
+
