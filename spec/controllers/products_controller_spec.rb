@@ -19,9 +19,9 @@ describe ProductsController, type: :controller do
     end
   end
 
-  describe 'PUT #update' do
+  describe 'PATCH #update' do
     it "updates the product" do
-      expect{put :update, id: product}
+      expect(assigns(:product))
     end
   end
 end
