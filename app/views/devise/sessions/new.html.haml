@@ -21,6 +21,7 @@
           = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス" 
           = f.password_field :password, autocomplete: "current-password", placeholder: "パスワード" 
           .robbot
+            = recaptcha_tags
           .btn.log_in
             = f.submit 'ログイン' 
             %p.blue パスワードをお忘れの方 

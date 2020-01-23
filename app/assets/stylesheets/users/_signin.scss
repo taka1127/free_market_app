@@ -74,11 +74,11 @@
           border: solid 1px gray;
         }
         .robbot {
-          // margin: 24px 0 0 180px;
           height: 90px;
           width: 350px;
-          background-image:image-url('ec03e8f4e399b59d08ca8e41136d6e0d.png');
-          background-size:  cover;
+          .g-recaptcha {
+            margin-left: 20px;
+          }
         }
         .log_in {
           input{
