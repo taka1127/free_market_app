@@ -1,4 +1,9 @@
 .sign-up-session1 {
+  input{
+    height: 50px;
+    width: 300px;
+    padding-left: 10px;
+  }
   span {
     background-color: red;
     color: white;
@@ -62,19 +67,21 @@
         border-radius: 3px;
       }
       &__nickname {
-        margin-top: 24px;
+        margin: 24px 0 0 200px;
+        
       }
       &__email {
-        margin-top: 24px;
+        margin: 24px 0 0 200px;
       }
       &__password {
-        margin-top: 24px;
+        margin: 24px 0 0 200px;
         &__caution {
           margin-top: 8px;
           color: #888;
         }
       }
       &__confirmation-message {
+        margin: 24px 0 0 200px;
         h2 {
           font-size: 16px;
         }
@@ -82,28 +89,8 @@
           margin: 0px;
         }
       }
-      &__name {
-        margin-top: 24px;
-        &__input {
-          display: flex;
-          .form {
-            width: 50%;
-            margin-left: 8px;
-          }
-        }
-      }
-      &__name-kana {
-        margin-top: 24px;
-        &__form {
-          display: flex;
-          .form {
-            width: 50%;
-            margin-left: 8px;
-          }
-        }
-      }
       &__birthday {
-        margin-top: 24px;
+        margin: 24px 0 0 200px;
         &__caution {
           p {
             margin: 0px;
@@ -111,8 +98,15 @@
           }
         }
       }
+      &__robot{
+        margin: 24px 0 0 180px;
+        height: 90px;
+        width: 350px;
+        background-image:image-url('ec03e8f4e399b59d08ca8e41136d6e0d.png');
+        background-size:  cover;
+      }
       &__confirmation {
-        margin-top: 40px;
+        margin: 24px 0 0 200px;
         span {
           background-color: white;
           color: skyblue;
@@ -126,14 +120,14 @@
         }
       }
       &__next {
-        margin-top: 24px;
-        width: 343px;
-        text-align: center;
-        line-height: 48px;
-        background-color: red;
-        .session1-next {
+        input {
+          margin: 24px auto;
+          width: 343px;
+          text-align: center;
+          line-height: 48px;
+          background-color: red;
           color: white;
-          text-decoration: none;
+          display: block;
         }
       }
       &__detail {

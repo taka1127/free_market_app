@@ -74,18 +74,28 @@
           border: solid 1px gray;
         }
         .robbot {
-          height: 70px;
-          width: 90%;
-          background-color: gray;
-          margin-bottom: 40px;
+          // margin: 24px 0 0 180px;
+          height: 90px;
+          width: 350px;
+          background-image:image-url('ec03e8f4e399b59d08ca8e41136d6e0d.png');
+          background-size:  cover;
         }
         .log_in {
-          background-color: $color_red;
-          margin-bottom: 40px;
+          input{
+          margin: 10px auto;
+          width: 343px;
+          height: 60px;
+          text-align: center;
+          line-height: 48px;
+          background-color: red;
+          color: white;
+          display: block;
+          }
         }
         .blue {
           color: $color_aqua;
           text-align: left;
+          line-height: 10px;
         }
       }
     }
