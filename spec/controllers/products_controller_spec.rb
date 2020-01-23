@@ -34,11 +34,13 @@ describe ProductsController, type: :controller do
 
   describe '#update' do
     it '名前が更新される' do
-      @user = FactoryBot.create(:user)
-      
-      @product = FactoryBot.create(:product)
-      put path, params: { name: 'new_name!' }
-      expect(product.reload.name).not_to eq 'ターサージール6'
+      # @user = FactoryBot.create(:user)
+      # @product = FactoryBot.create(:product)
+      # product_params = {name: "ターサージール6"}
+      # patch :update, params: { product: product_params }
+      # expect(@product.reload.name)
+      patch :update, params: { name: 'new_name!' }
+      expect(product.reload.name).not_to eq 'old_name'
     end
   end
 end
