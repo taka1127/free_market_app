@@ -18,4 +18,18 @@ describe ProductsController, type: :controller do
       expect{delete :destroy, id: product}
     end
   end
+
+  describe 'GET #index' do
+    it "assigns the requested tweet to @ladies_product" do
+      ladies_product = create(:product)
+      get :index
+      expect(assigns(:product)).to eq ladies_product
+    end
+
+    it "renders the :index template？" do
+      get :index
+      expect(response).to render_template :index
+    end
+  end
+
 end
