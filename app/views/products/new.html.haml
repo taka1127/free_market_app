@@ -37,21 +37,7 @@
         .products-new__contents__detail.right
           カテゴリー
           %span 必須
-          = f.select :category_L do
-            %option ----
-            %option レディース
-            %option メンズ
-            %option ベビー・キッズ
-            %option インテリア・住まい・小物
-            %option 本・音楽・ゲーム
-            %option おもちゃ・ホビー・グッズ
-            %option コスメ・香水・美容
-            %option 家電・スマホ・カメラ
-            %option スポーツ・レジャー
-            %option ハンドメイド
-            %option チケット
-            %option 自転車・オートバイ
-            %option その他
+          = f.select :category_L,[["----", nil],"レディース","メンズ","ベビー・キッズ","インテリア・住まい・小物","本・音楽・ゲーム","おもちゃ・ホビー・グッズ","コスメ・香水・美容","家電・スマホ・カメラ","スポーツ・レジャー","ハンドメイド","チケット","自転車・オートバイ","その他"]
           商品の状態
           %span 必須
           = f.select :status do
@@ -66,29 +52,7 @@
         .products-new__contents__brand.left
           %h4 ブランド
         .products-new__contents__brand.right
-          = f.select :brand do
-            %option ----
-            %option louis_vuitton
-            %option CHANEL
-            %option GUCCI
-            %option HERMES
-            %option COACH
-            %option Levi's
-            %option NIKE
-            %option adidas
-            %option apple
-            %option SHARP
-            %option CASIO
-            %option zara
-            %option g.u
-            %option CROCOLUX
-            %option burberry
-            %option fender
-            %option 遊戯王
-            %option ドラゴンボール
-            %option SUPREME
-            %option Schott
-            %option AURALEE
+          = f.select :brand,[["----", nil],"ルイヴィトン","シャネル","シュプリーム","ナイキ","ザラ","リーバイス","ユニクロ","ジーユー","アディダス","アップル","フェンダー","遊戯王","その他"]
       .products-new__contents__delivery.section.flex
         .products-new__contents__delivery.left
           %h4 配送について
