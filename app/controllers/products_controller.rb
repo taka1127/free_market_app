@@ -12,7 +12,6 @@ class ProductsController < ApplicationController
   
   def create
     @product = Product.new(product_params)
-    
     if @product.save
       redirect_to root_path
     else
@@ -35,9 +34,12 @@ class ProductsController < ApplicationController
   end
   
   def destroy
-    product = Product.find(params[:id])
-    product.destroy
-    redirect_to root_path
+    @product = Product.find(params[:id])
+    if @product.destroy
+      redirect_to root_path
+    else
+      render user_path(@product.user_id)
+    end
   end
 
 
