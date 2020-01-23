@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
   root "products#index"
-  resources :products,  only: [:index, :new, :create, :edit, :update, :show]
   resources :signup, only: [:index,:create] do
     collection do
       get 'user_top'
@@ -12,6 +11,7 @@ Rails.application.routes.draw do
       get 'session5' # 登録完了後のページ
     end
   end
+  resources :products
   resources :users, only: [:show, :logout] do
     collection do
       get "logout" 

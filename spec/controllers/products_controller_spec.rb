@@ -12,4 +12,10 @@ describe ProductsController, type: :controller do
       expect(assigns(:product))
     end
   end
+
+  describe 'delete #destroy' do
+    it "deletes the product" do
+      expect{delete :destroy, id: product}
+    end
+  end
 end
