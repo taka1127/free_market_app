@@ -56,6 +56,7 @@
           %p 修正するにはお時間をいただく場合があります。
 
       .sign-up-session1__body__contents__robot
+        = flash[:recaptcha_error]
         = recaptcha_tags
       .sign-up-session1__body__contents__confirmation
         『次へ進む』のボタンを押すことにより、
