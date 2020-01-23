@@ -7,8 +7,8 @@ Rails.application.routes.draw do
       get 'session1'
       get 'session2'
       get 'session3'
-      get 'session4' # ここで、入力の全てが終了する
-      get 'session5' # 登録完了後のページ
+      get 'session4' 
+      get 'session5' 
     end
   end
   resources :products
