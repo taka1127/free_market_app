@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
-  # before_action :access_registration, except: [:index, :show]
+  before_action :access_registration, except: [:index, :show]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  # before_action :ensure_correct_user, only: [:edit, :update, :destroy]
+  before_action :ensure_correct_user, only: [:edit, :update, :destroy]
 
   def index
     @products = Product.includes(:images).order('created_at DESC')
