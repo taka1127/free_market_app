@@ -8,13 +8,9 @@ class User < ApplicationRecord
             :tel, :birthday, :name_kana,  :name,
             presence: true
 
-  # validates :email, :password, :nickname,
-  #           :birthday, :name_kana,  :name,
-  #           presence: true
         
   has_many :goods
   has_many :products
   has_many :comments
   has_one :address, dependent: :destroy
-  # has_one :address, inverse_of: :user
 end

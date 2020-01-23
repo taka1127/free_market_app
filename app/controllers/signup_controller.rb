@@ -32,7 +32,6 @@ class SignupController < ApplicationController
     session[:city] = address_params[:city]
     session[:house_number] = address_params[:house_number]
     session[:building] = address_params[:building]
-    # binding.pry
     @address = Address.new
   end
 
