@@ -29,12 +29,11 @@ class ProductsController < ApplicationController
   end
   
   def edit
-    @images = Image.where(product_id: params[:id])
+    @images = @product.images
   end
 
   def update
-    binding.pry
-    @images = Image.where(product_id: params[:id])
+    @images = @product.images
     if @product.update(product_params)
       redirect_to product_path(@product.id)
     else

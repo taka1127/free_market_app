@@ -27,9 +27,7 @@ describe ProductsController, type: :controller do
       params = { product: attributes_for(:product)}
       params[:id] = @product.id
       params[:product][:name] = "ナイキシューズ"
-
       patch :update, params: params
-
       expect(@product.reload.name).not_to eq "ターサージール6"
     end
   end
