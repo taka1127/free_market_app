@@ -35,7 +35,7 @@
         .products-new__contents__detail.left
           %h4 商品の詳細
         .products-new__contents__detail.right
-          カテゴリーL
+          カテゴリー
           %span 必須
           = f.select :category_L do
             %option ----
@@ -52,12 +52,6 @@
             %option チケット
             %option 自転車・オートバイ
             %option その他
-          カテゴリーM
-          %span 必須
-          = f.text_field :category_M
-          カテゴリーS
-          %span 必須
-          = f.text_field :category_S
           商品の状態
           %span 必須
           = f.select :status do
@@ -68,6 +62,33 @@
             %option やや傷や汚れあり
             %option 傷や汚れあり
             %option 全体的に状態が悪い
+      .products-new__contents__brand.section.flex
+        .products-new__contents__brand.left
+          %h4 ブランド
+        .products-new__contents__brand.right
+          = f.select :brand do
+            %option ----
+            %option louis_vuitton
+            %option CHANEL
+            %option GUCCI
+            %option HERMES
+            %option COACH
+            %option Levi's
+            %option NIKE
+            %option adidas
+            %option apple
+            %option SHARP
+            %option CASIO
+            %option zara
+            %option g.u
+            %option CROCOLUX
+            %option burberry
+            %option fender
+            %option 遊戯王
+            %option ドラゴンボール
+            %option SUPREME
+            %option Schott
+            %option AURALEE
       .products-new__contents__delivery.section.flex
         .products-new__contents__delivery.left
           %h4 配送について
