@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
-  # before_action :access_registration, except: [:index, :show]
+  before_action :access_registration, except: [:index, :show]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  # before_action :ensure_correct_user, only: [:edit, :update, :destroy]
+  before_action :ensure_correct_user, only: [:edit, :update, :destroy]
 
   def index
     @ladies_product = Product.index(category_L:"レディース")
@@ -66,7 +66,7 @@ class ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:name, :content, :status, :s_prefecture, :s_charge, :s_method, :s_date, :price,:category_L, :category_M, :category_S, images_attributes: [:image, :_destroy, :id]).merge(user_id: current_user.id)
+    params.require(:product).permit(:name, :content, :status, :s_prefecture, :s_charge, :s_method, :s_date, :price, :category, :brand_name, images_attributes: [:image, :_destroy, :id]).merge(user_id: current_user.id)
   end
 
   def set_product
