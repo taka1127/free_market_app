@@ -4,8 +4,14 @@ class ProductsController < ApplicationController
   def index
     # @images = Image.all
     # @category = @product.category(あとで使います)
-    @ladies_product = Product.includes(:images).where(L_category:"レディス").order("created_at DESC").limit(10)
-    binding.pry
+    @ladies_product = Product.includes(:images).where(category_L:"レディス").order("created_at DESC").limit(10)
+    @mens_product = Product.includes(:images).where(category_L:"メンズ").order("created_at DESC").limit(10)
+    @e_product = Product.includes(:images).where(category_L:"家電・スマホ・カメラ").order("created_at DESC").limit(10)
+    @hobby_product = Product.includes(:images).where(category_L:"おもちゃ・ホビー・グッズ").order("created_at DESC").limit(10)
+    @chanel_product = Product.includes(:images).where(brand_id:18).order("created_at DESC").limit(10)
+    @louis_product = Product.includes(:images).where(brand_id:2).order("created_at DESC").limit(10)
+    @supreme_product = Product.includes(:images).where(brand_id:17).order("created_at DESC").limit(10)
+    @nike_product = Product.includes(:images).where(brand_id:10).order("created_at DESC").limit(10)
     @products = Product.all.includes(:images).limit(10).order("created_at DESC")
     # @images = @products.images
   end

@@ -34,15 +34,15 @@
             %span もっと見る
             = icon('fas', 'angle-right')
         .products__index__category__contents__container__item
-          - @products.each do |product|
+          - @mens_product.each do |men|
             .itembox
               .itembox__image
-                = image_tag product.images.first.image, size: "168x188", alt: "product"
+                = image_tag men.images.first.image, size: "168x188", alt: "product"
                 .itembox__image__price
                   ¥
-                  = product.price
+                  = men.price
               .itembox__title
-                = product.name
+                = men.name
       .products__index__category__contents__container
         .products__index__category__contents__container__title
           %h3 家電・スマホ・カメラ新着アイテム
@@ -50,15 +50,15 @@
             %span もっと見る
             = icon('fas', 'angle-right')
         .products__index__category__contents__container__item
-          - @products.each do |product|
+          - @e_product.each do |e|
             .itembox
               .itembox__image
-                = image_tag product.images.first.image, size: "168x188", alt: "product"
+                = image_tag e.images.first.image, size: "168x188", alt: "product"
                 .itembox__image__price
                   ¥
-                  = product.price
+                  = e.price
               .itembox__title
-                = product.name
+                = e.name
       .products__index__category__contents__container
         .products__index__category__contents__container__title
           %h3 おもちゃ・ホビー・グッズ新着アイテム
@@ -66,15 +66,15 @@
             %span もっと見る
             = icon('fas', 'angle-right')
         .products__index__category__contents__container__item
-          - @products.each do |product|
+          - @hobby_product.each do |hobby|
             .itembox
               .itembox__image
-                = image_tag product.images.first.image, size: "168x188", alt: "product"
+                = image_tag hobby.images.first.image, size: "168x188", alt: "product"
                 .itembox__image__price
                   ¥
-                  = product.price
+                  = hobby.price
               .itembox__title
-                = product.name
+                = hobby.name
   .products__index__brand
     .products__index__brand
       .products__index__brand__title
@@ -92,15 +92,15 @@
               %span もっと見る
               = icon('fas', 'angle-right')
         .products__index__category__contents__container__item
-          - @products.each do |product|
+          - @chanel_product.each do |chanel|
             .itembox
               .itembox__image
-                = image_tag product.images.first.image, size: "168x188", alt: "product"
+                = image_tag chanel.images.first.image, size: "168x188", alt: "product"
                 .itembox__image__price
                   ¥
-                  = product.price
+                  = chanel.price
               .itembox__title
-                = product.name
+                = chanel.name
         .products__index__brand__contents__container
           .products__index__brand__contents__container__title
             %h3 ルイヴィトン新着アイテム
@@ -108,15 +108,15 @@
               %span もっと見る
               = icon('fas', 'angle-right')
         .products__index__category__contents__container__item
-          - @products.each do |product|
+          - @louis_product.each do |louis|
             .itembox
               .itembox__image
-                = image_tag product.images.first.image, size: "168x188", alt: "product"
+                = image_tag louis.images.first.image, size: "168x188", alt: "product"
                 .itembox__image__price
                   ¥
-                  = product.price
+                  = louis.price
               .itembox__title
-                = product.name
+                = louis.name
         .products__index__brand__contents__container
           .products__index__brand__contents__container__title
             %h3 シュプリーム新着アイテム
@@ -124,15 +124,15 @@
               %span もっと見る
               = icon('fas', 'angle-right')
         .products__index__category__contents__container__item
-          - @products.each do |product|
+          - @supreme_product.each do |supreme|
             .itembox
               .itembox__image
-                = image_tag product.images.first.image, size: "168x188", alt: "product"
+                = image_tag supreme.images.first.image, size: "168x188", alt: "product"
                 .itembox__image__price
                   ¥
-                  = product.price
+                  = supreme.price
               .itembox__title
-                = product.name
+                = supreme.name
         .products__index__brand__contents__container
           .products__index__brand__contents__container__title
             %h3 ナイキ新着アイテム
@@ -140,15 +140,15 @@
               %span もっと見る
               = icon('fas', 'angle-right')
         .products__index__category__contents__container__item
-          - @products.each do |product|
+          - @nike_product.each do |nike|
             .itembox
               .itembox__image
-                = image_tag product.images.first.image, size: "168x188", alt: "product"
+                = image_tag nike.images.first.image, size: "168x188", alt: "product"
                 .itembox__image__price
                   ¥
-                  = product.price
+                  = nike.price
               .itembox__title
-                = product.name
+                = nike.name
 = render 'shared/footer'
 
 = render "users/payment"
