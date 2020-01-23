@@ -33,6 +33,7 @@ class ProductsController < ApplicationController
   end
 
   def update
+    binding.pry
     @images = Image.where(product_id: params[:id])
     if @product.update(product_params)
       redirect_to product_path(@product.id)
