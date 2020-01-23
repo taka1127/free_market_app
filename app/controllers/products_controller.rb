@@ -2,8 +2,6 @@ class ProductsController < ApplicationController
   before_action :access_registration, except: [:index, :show]
 
   def index
-    # @images = Image.all
-    # @category = @product.category(あとで使います)
     @ladies_product = Product.includes(:images).where(category_L:"レディース").order("created_at DESC").limit(10)
     @mens_product = Product.includes(:images).where(category_L:"メンズ").order("created_at DESC").limit(10)
     @e_product = Product.includes(:images).where(category_L:"家電・スマホ・カメラ").order("created_at DESC").limit(10)
@@ -12,8 +10,6 @@ class ProductsController < ApplicationController
     @louis_product = Product.includes(:images).where(brand_id:2).order("created_at DESC").limit(10)
     @supreme_product = Product.includes(:images).where(brand_id:17).order("created_at DESC").limit(10)
     @nike_product = Product.includes(:images).where(brand_id:10).order("created_at DESC").limit(10)
-    @products = Product.all.includes(:images).limit(10).order("created_at DESC")
-    # @images = @products.images
   end
 
   def new
@@ -33,8 +29,6 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @images = Image.where(product_id: params[:id])
-    # @category = @product.category(あとで使います)
-    # @brand = @product.brand
     @comment = Comment.new
   end
   
