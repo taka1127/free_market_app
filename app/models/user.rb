@@ -15,6 +15,6 @@ class User < ApplicationRecord
   has_many :goods
   has_many :products
   has_many :comments
-  has_one :address
+  has_one :address, dependent: :destroy
   # has_one :address, inverse_of: :user
 end
