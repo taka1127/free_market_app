@@ -60,7 +60,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
-  private     def check_captcha
+  private     
+  
+  def check_captcha
     unless verify_recaptcha
       self.resource = resource_class.new sign_up_params
       resource.validate # Look for any other validation errors besides Recaptcha
