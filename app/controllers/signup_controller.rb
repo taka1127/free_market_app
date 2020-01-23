@@ -38,6 +38,7 @@ class SignupController < ApplicationController
   end
 
   def create
+    # @user.build_address
     @user = User.new(
       # session1のデータ
       nickname: session[:nickname], # sessionに保存された値をインスタンスに渡す
@@ -50,21 +51,31 @@ class SignupController < ApplicationController
       name: session[:name], 
       name_kana: session[:name_kana], 
     )
+    @user.save
     # @user.build_address
     # binding.pry
       # tel: session[:tel]addressカラムに作っていないのでコメントアウト
       # session4のデータ(クレジットカード情報)未実装
 
-    @address = Address.new(
+    # @address = Address.new(
+    #   postal_code: session[:postal_code], 
+    #   prefecture: session[:prefecture], 
+    #   city: session[:city], 
+    #   house_number: session[:house_number], 
+    #   building: session[:building],
+    #   user_id: @user.id
+    #   # tel: session[:tel]addressカラムに作っていないのでコメントアウト
+    #   # session4のデータ(クレジットカード情報)未実装
+    # )
+    @address = @user.build_address(
       postal_code: session[:postal_code], 
       prefecture: session[:prefecture], 
       city: session[:city], 
       house_number: session[:house_number], 
       building: session[:building],
-      # tel: session[:tel]addressカラムに作っていないのでコメントアウト
-      # session4のデータ(クレジットカード情報)未実装
+      user_id: @user.id
     )
-    @user.build_address
+    # @user.build_address()
     # binding.pry
     # @address.build_user
     # @address = @user.address.build
