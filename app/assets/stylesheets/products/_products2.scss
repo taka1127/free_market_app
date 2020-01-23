@@ -52,6 +52,7 @@
             margin-top: 42px;
             display: flex;
             justify-content: space-between;
+            width: 930px;
             h3 {
               font-size: 24px;
               font-weight: bold;
@@ -76,30 +77,27 @@
   padding: 10px;
   width: 188px;
   border-width: 0px;
-  border-style: initial;
-  border-color: initial;
-  border-image: initial;
-  font: inherit;
   vertical-align: baseline;
   &__image {
     width: 168px;
     height: 188px;
     background-color: lightyellow;
+    position: relative;
     &__price {
       align-items: center;
       background: rgba(0,0,0,.4);
       border-radius: 0 14px 14px 0;
-      bottom: 40px;
+      bottom: 15px;
+      left: 0px;
       box-sizing: border-box;
       color: #fff;
       display: inline-flex;
       font-size: 17px;
       height: 32px;
-      height: 28px;
       letter-spacing: .02em;
       margin: 0;
       padding: 0 12px;
-      position: relative;
+      position: absolute;
     }
   }
   &__title {
