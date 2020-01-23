@@ -13,7 +13,7 @@ describe ProductsController, type: :controller do
     end
   end
 
-  describe 'delete #destroy' do
+  describe 'DELETE #destroy' do
     it "deletes the product" do
       expect{delete :destroy, id: product}
     end
@@ -32,4 +32,16 @@ describe ProductsController, type: :controller do
     end
   end
 
+  describe '#update' do
+    it '名前が更新される' do
+      @product = FactoryBot.create(:product)
+      @user = User.find(@product.user_id)
+      login @user
+      params = { product: attributes_for(:product)}
+      params[:id] = @product.id
+      params[:product][:name] = "ナイキシューズ"
+      patch :update, params: params
+      expect(@product.reload.name).not_to eq "ターサージール6"
+    end
+  end
 end
