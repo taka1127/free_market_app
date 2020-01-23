@@ -4,14 +4,14 @@ class ProductsController < ApplicationController
   before_action :ensure_correct_user, only: [:edit, :update, :destroy]
 
   def index
-    @ladies_product = Product.index(category_L:"レディース")
-    @mens_product = Product.index(category_L:"メンズ")
-    @e_product =  Product.index(category_L:"家電・スマホ・カメラ")
-    @hobby_product = Product.index(category_L:"おもちゃ・ホビー・グッズ")
-    @chanel_product = Product.index(brand_id:18)
-    @louis_product = Product.index(brand_id:2)
-    @supreme_product = Product.index(brand_id:17)
-    @nike_product = Product.index(brand_id:10)
+    @ladies_product = Product.index(category:"レディース")
+    @mens_product = Product.index(category:"メンズ")
+    @e_product =  Product.index(category:"家電・スマホ・カメラ")
+    @hobby_product = Product.index(category:"おもちゃ・ホビー・グッズ")
+    @chanel_product = Product.index(brand_name:シャネル)
+    @louis_product = Product.index(brand_name:ルイヴィトン)
+    @supreme_product = Product.index(brand_name:シュプリーム)
+    @nike_product = Product.index(brand_name:ナイキ)
   end
 
   def new
