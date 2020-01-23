@@ -19,9 +19,26 @@ describe ProductsController, type: :controller do
     end
   end
 
-  describe 'PATCH #update' do
-    it "updates the product" do
-      expect(assigns(:product))
+  # describe 'PATCH #update' do
+  #   it "updates the product" do
+  #     expect(assigns(:product))
+  #   end
+  # end
+
+  # describe 'PATCH #update' do
+  #   it '名前が更新される' do
+  #     put patch, params: { name: 'new_name!' }
+  #     expect(user.name).not_to eq 'old_name'
+  #   end
+  # end
+
+  describe '#update' do
+    it '名前が更新される' do
+      @user = FactoryBot.create(:user)
+      
+      @product = FactoryBot.create(:product)
+      put path, params: { name: 'new_name!' }
+      expect(product.reload.name).not_to eq 'ターサージール6'
     end
   end
 end
