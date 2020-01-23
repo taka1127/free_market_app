@@ -13,9 +13,15 @@ describe ProductsController, type: :controller do
     end
   end
 
-  describe 'delete #destroy' do
+  describe 'DELETE #destroy' do
     it "deletes the product" do
       expect{delete :destroy, id: product}
+    end
+  end
+
+  describe 'PUT #update' do
+    it "updates the product" do
+      expect{put :update, id: product}
     end
   end
 end
