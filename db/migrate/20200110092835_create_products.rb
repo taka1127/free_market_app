@@ -6,7 +6,7 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.text    :content,          null: false
       # t.integer :category_id,      null: false, foreign_key: true
       t.string  :size
-      t.integer :brand_id,         foreign_key: true
+      t.string :brandname,         foreign_key: true
       t.string :status,           null: false
       t.string :s_charge,         null: false
       t.string :s_method,         null: false
