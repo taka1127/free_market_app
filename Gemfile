@@ -77,4 +77,8 @@ gem 'fog-aws'
 gem 'mini_magick'
 gem "font-awesome-sass"
 gem 'pry-rails'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection"
+gem "omniauth"
 
