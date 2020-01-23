@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :access_registration, except: [:index, :show]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :ensure_correct_user, only: [:edit, :update, :destroy]
 
   def index
     @products = Product.includes(:images).order('created_at DESC')
@@ -51,6 +52,12 @@ class ProductsController < ApplicationController
   private
   def access_registration 
     redirect_to new_user_session_path unless user_signed_in?
+  end
+
+  def ensure_correct_user
+    if @product.user_id != current_user.id
+      redirect_to root_path
+    end
   end
 
   def product_params
