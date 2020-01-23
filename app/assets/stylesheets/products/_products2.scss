@@ -126,6 +126,7 @@
       margin:10px 0 20px;
       border-radius: 3px;
       border: solid 1px gray;
+      resize: vertical;
     }
     .flex {
       display: flex;
@@ -151,8 +152,8 @@
       }
     }
     &__name {
-      input { width: 100%; }
-      .text { height: 120px; }
+      input, textarea {  width: 100%;
+        &.text {height: 140px; }}
     }
     &__detail {
     }
