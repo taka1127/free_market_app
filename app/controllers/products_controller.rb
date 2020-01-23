@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   def index
     # @images = Image.all
     # @category = @product.category(あとで使います)
-    @ladies_product = Product.includes(:images).where(category_L:"レディス").order("created_at DESC").limit(10)
+    @ladies_product = Product.includes(:images).where(category_L:"レディース").order("created_at DESC").limit(10)
     @mens_product = Product.includes(:images).where(category_L:"メンズ").order("created_at DESC").limit(10)
     @e_product = Product.includes(:images).where(category_L:"家電・スマホ・カメラ").order("created_at DESC").limit(10)
     @hobby_product = Product.includes(:images).where(category_L:"おもちゃ・ホビー・グッズ").order("created_at DESC").limit(10)
