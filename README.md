@@ -58,16 +58,14 @@
 t.string  :name,             null: false
 t.text    :content,          null: false
 t.string  :size
-t.string :brandname,         foreign_key: true
+t.string :brand_name,         foreign_key: true
 t.string :status,           null: false
 t.string :s_charge,         null: false
 t.string :s_method,         null: false
 t.string  :s_prefecture,     null: false
 t.string :s_date,           null: false
 t.integer :price,            null: false
-t.string  :category_L
-t.string  :category_M
-t.string  :category_S
+t.string  :category,
 
 |name|string|null: false|
 |content|text|null: false|
