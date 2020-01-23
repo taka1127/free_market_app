@@ -58,6 +58,7 @@
 t.string  :name,             null: false
 t.text    :content,          null: false
 t.string  :size
+t.string :brandname,         foreign_key: true
 t.string :status,           null: false
 t.string :s_charge,         null: false
 t.string :s_method,         null: false
@@ -72,6 +73,7 @@ t.string  :category_S
 |content|text|null: false|
 <!-- |category_id|integer|null: false, foreign_key: true| 一時削除(1/17 中島) -->
 |size|string||
+|brandname|string||
 |status|strig|null: false|
 |s_charge|string|null: false|
 |s_method|string|null: false|
@@ -83,8 +85,8 @@ t.string  :category_S
 |category_S|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :brand
-  belongs_to :category
+- belongs_to :category
+  <!-- belongs_to :brand -->
   belongs_to :user
   has_many :images
   has_many :comments
@@ -99,12 +101,12 @@ t.string  :category_S
 ### Association
 - belongs_to :product
 
-## Brandテーブル
+<!-- ## Brandテーブル
 |Column|Type|Options|
 |------|----|-------|
 |brand|string||
 ### Association
-  - has_many :products
+  - has_many :products --1/23 檜田>
 
 <!-- 一時的にProductのカラム内へ（1/17 中島） -->
 ## Categoryテーブル
