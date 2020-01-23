@@ -50,11 +50,13 @@ class SignupController < ApplicationController
       name: session[:name], 
       name_kana: session[:name_kana], 
     )
-    @user.save
+      
+    @user.save      #@user.saveでセーブしuser.idを取得
+      
       # tel: session[:tel]addressカラムに作っていないのでコメントアウト
       # session4のデータ(クレジットカード情報)未実装
 
-    # 
+      # @user.build_addressで親モデルに属する子モデルを生成し@addressを代入
     @address = @user.build_address(
       postal_code: session[:postal_code], 
       prefecture: session[:prefecture], 
