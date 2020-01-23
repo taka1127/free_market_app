@@ -23,7 +23,7 @@ describe ProductsController, type: :controller do
     it "assigns the requested tweet to @ladies_product" do
       ladies_product = create(:product)
       get :index
-      expect(assigns(:product)).to eq ladies_product
+      expect(assigns(:ladies_product)[0]).to eq ladies_product
     end
 
     it "renders the :index template？" do
