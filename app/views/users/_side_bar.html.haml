@@ -2,7 +2,7 @@
   .main__container__side__nav
     %ul
       %li.main__container__side__nav__mypage
-        = link_to '#', class:'list' do
+        = link_to mypage_index_path(current_user), class:'list' do
           マイページ
         %i.fas.fa-chevron-right
       %li.main__container__side__nav__info
@@ -72,7 +72,7 @@
         %h3設定
         %ul
           %li.main__container__side__nav__list__profile
-            = link_to '#', class:'list' do
+            = link_to profile_edit_mypage_index_path, class:'list' do
               プロフィール
             %i.fas.fa-chevron-right
           %li.main__container__side__nav__list__change-of-address
@@ -80,7 +80,7 @@
               発送元・お届け先住所変更
             %i.fas.fa-chevron-right
           %li.main__container__side__nav__list__payment
-            = link_to '#', class:'list' do
+            = link_to payment_mypage_index_path, class:'list' do
               支払い方法
             %i.fas.fa-chevron-right
           %li.main__container__side__nav__list__mail
@@ -96,6 +96,6 @@
               電話番号の確認
             %i.fas.fa-chevron-right
           %li.main__container__side__nav__list__logout
-            = link_to logout_users_path, class:'list' do
+            = link_to logout_mypage_index_path, class:'list' do
               ログアウト
             %i.fas.fa-chevron-right
