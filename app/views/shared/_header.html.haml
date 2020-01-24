@@ -20,9 +20,9 @@
       .header__contents__utilities
         %ul
           - if user_signed_in?
-            %li.header__contents__utilities
-              = link_to logout_users_path, method: :get do
-                ログアウト
+            -# %li.header__contents__utilities
+            -#   = link_to logout_users_path, method: :get do
+            -#     ログアウト
             %li.header__contents__utilities__likes
               = link_to '#' do
                 = icon('far', 'heart')
@@ -36,7 +36,7 @@
                 = icon('fas', 'check')
                 やることリスト
             %li.header__contents__utilities__mypage
-              = link_to "/users/#{current_user.id}" do
+              = link_to user_path(current_user) do
                 ●マイページ
           - else
             %li.header__contents__utilities__sing-up

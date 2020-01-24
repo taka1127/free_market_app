@@ -12,9 +12,11 @@ Rails.application.routes.draw do
     end
   end
   resources :products
-  resources :users, only: [:show, :logout] do
-    collection do
+  resources :users, only: [:show] do
+    member do
       get "logout" 
+      get "payment" 
+      get "profile_edit" 
     end
   end
 end
