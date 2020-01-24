@@ -7,7 +7,6 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-
     -# =render "users/new-user-top"
     -# -# =render "users/signin"
     -# =render "users/session1"
@@ -17,5 +16,6 @@
     -# =render "users/session5"
     -# = render 'shared/header'
     = render 'shared/exhibition-btn'
+    = render 'shared/breadcrumbs'
     = yield
     -# = render 'shared/footer'

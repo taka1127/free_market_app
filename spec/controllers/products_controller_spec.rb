@@ -19,6 +19,19 @@ describe ProductsController, type: :controller do
     end
   end
 
+  describe 'GET #index' do
+    it "assigns the requested tweet to @ladies_product" do
+      ladies_product = create(:product)
+      get :index
+      expect(assigns(:ladies_product)[0]).to eq ladies_product
+    end
+
+    it "renders the :index template？" do
+      get :index
+      expect(response).to render_template :index
+    end
+  end
+
   describe '#update' do
     it '名前が更新される' do
       @product = FactoryBot.create(:product)
