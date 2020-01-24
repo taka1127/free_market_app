@@ -14,7 +14,10 @@
       width: 750px;
       height: 260px;
       margin: 0 auto;
-
+      position: absolute;
+      bottom:60px;
+      left:150px;
+      }
       h2 {
         font-size: 24px;
         padding-top: 40px;
@@ -26,9 +29,7 @@
       &__banner-icons {
         display: flex;
       }
-    }
-    #bg {
-      background-color: gray;
+    &__bg {
       position: relative;
     }
   }
