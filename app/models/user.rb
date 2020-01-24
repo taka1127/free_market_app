@@ -13,5 +13,6 @@ class User < ApplicationRecord
   has_many :goods
   has_many :products
   has_many :comments
+  has_many :card
   has_one :address, dependent: :destroy
 end
