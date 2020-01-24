@@ -4,7 +4,14 @@ class ProductsController < ApplicationController
   before_action :ensure_correct_user, only: [:edit, :update, :destroy]
 
   def index
-    @products = Product.includes(:images).order('created_at DESC')
+    @ladies_product = Product.index(category:"レディース")
+    @mens_product = Product.index(category:"メンズ")
+    @e_product =  Product.index(category:"家電・スマホ・カメラ")
+    @hobby_product = Product.index(category:"おもちゃ・ホビー・グッズ")
+    @chanel_product = Product.index(brand_name:"シャネル")
+    @louis_product = Product.index(brand_name:"ルイヴィトン")
+    @supreme_product = Product.index(brand_name:"シュプリーム")
+    @nike_product = Product.index(brand_name:"ナイキ")
   end
 
   def new
@@ -23,8 +30,6 @@ class ProductsController < ApplicationController
 
   def show
     @images = Image.where(product_id: params[:id])
-    # @category = @product.category(あとで使います)
-    # @brand = @product.brand
     @comment = Comment.new
   end
   
