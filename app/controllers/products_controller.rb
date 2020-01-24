@@ -38,10 +38,8 @@ class ProductsController < ApplicationController
   end
 
   def buy
-    @product = Product.find(params[:product_id])
-    # @category = @product.category(あとで使います)
+    @product = Product.includes(:images).find(params[:product_id])
     @image = Image.find(params[:product_id])
-    @brand = @product.brand
     @user = @product.user
   end
 
