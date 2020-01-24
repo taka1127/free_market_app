@@ -12,19 +12,14 @@ Rails.application.routes.draw do
     end
   end
   resources :products
-  # resources :users, only: [:show, :logout] do
-  #   collection do
-  #     get "logout" 
-  #   end
-  # end
 
   #マイページ
   resources :users, only: [:index] do
     member do
       resources :mypage, only: [:index] do
         collection do
-          get 'profile_edit'
-          post 'profile_edit'
+          get 'profile'
+          post 'profile'
           get 'payment'
           get 'logout'
         end
