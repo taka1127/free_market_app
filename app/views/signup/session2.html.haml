@@ -6,13 +6,14 @@
       .pr-main__container__content__header
         電話番号の確認
       .pr-main__container__content__tell
+      = form_for @user, url: session3_signup_index_path, method: :get, html: {class: 'second-wrapper__box'} do |f|
         携帯電話の番号
-        %input{type: "text", name: "tell-number", size: "50", placeholder:"携帯電話の番号を入力" ,class:"tell-number"}
-      .pr-main__container__content__info
-        本人確認のため、携帯電話のSMS（ショートメッセージサービス）を利用して認証を行います。
-      .pr-main__container__content__btn
-        = link_to '#', class:'sms' do
-          SMSを送信する
+        =f.text_field :tel,  placeholder:"携帯電話の番号を入力" ,class:"tell-number"
+        .pr-main__container__content__info
+          本人確認のため、携帯電話のSMS（ショートメッセージサービス）を利用して認証を行います。
+        .pr-main__container__content__btn
+          =f.submit "SMSを送信する" ,class:"sms"
+          
       .pr-main__container__content__note
         ＊電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
       .pr-main__container__content__reason

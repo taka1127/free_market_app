@@ -31,21 +31,14 @@
             カテゴリー
           %td.show__item__detail__table__b
             >
-            = @product.category_L
+            = @product.category
             %br/
-            %span.show__item__detail__table__smile
-              >
-              = @product.category_M
-            %br/
-            %span.show__item__detail__table__smile
-              >
-              = @product.category_S
         %tr
           %th.show__item__detail__table__a
             ブランド
           %td.show__item__detail__table__b
-            - if @product.brand_id
-              = @product.brand_id
+            - if @product.brand_name
+              = @product.brand_name
         %tr
           %th.show__item__detail__table__a
             商品の状態
