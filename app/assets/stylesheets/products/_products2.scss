@@ -52,6 +52,7 @@
             margin-top: 42px;
             display: flex;
             justify-content: space-between;
+            width: 930px;
             h3 {
               font-size: 24px;
               font-weight: bold;
@@ -62,15 +63,9 @@
               font-weight: bold;
             }
           }
-          &__thumbnails {
-            // width: 1020px;
-            ul {
-              display: flex;
-              width: 1020px;
-              li {
-                width: 20%;
-              }
-            }
+          &__item {
+            display: flex;
+            flex-wrap: wrap;
           }
         }
       }
@@ -78,18 +73,37 @@
   }
 }
 
-.thumbnail {
+.itembox {
   padding: 10px;
-  // width: 188px;
+  width: 188px;
+  border-width: 0px;
+  vertical-align: baseline;
   &__image {
+    width: 168px;
     height: 188px;
     background-color: lightyellow;
+    position: relative;
     &__price {
+      align-items: center;
+      background: rgba(0,0,0,.4);
+      border-radius: 0 14px 14px 0;
+      bottom: 15px;
+      left: 0px;
+      box-sizing: border-box;
+      color: #fff;
+      display: inline-flex;
+      font-size: 17px;
+      height: 32px;
+      letter-spacing: .02em;
+      margin: 0;
+      padding: 0 12px;
+      position: absolute;
     }
   }
   &__title {
     background-color: white;
     height: 64px;
+    font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
   }
 }
 
