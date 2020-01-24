@@ -1,0 +1,107 @@
+.products-new
+  .products-new__logo
+    = link_to root_path do
+      = image_tag "fmarket_logo_red.svg"
+  .products-new__contents
+    = form_for @product  do |f|
+      .products-new__contents__title.section
+        %h2 商品の情報を入力
+      .products-new__contents__image.section
+        商品画像
+        %span 必須
+        %p 最大10枚までアップロードできます
+        #image-box
+          #previews
+            - if @product.persisted?
+              - @product.images.each_with_index do |image, x|
+                = image_tag image.image.url, data:{ index: x }, width: "120", height: '100'
+          = f.fields_for :images do |i|
+            .js-file_group{"data-index" => "#{i.index}"}
+              = i.file_field :image, class: 'js-file', id: 'img-file'
+              %span.js-remove 削除
+            - if @product.persisted?
+              = i.check_box :_destroy, data:{ index: i.index }, class: 'hidden-destroy'
+          - if @product.persisted?
+            .js-file_group{"data-index" => "#{@product.images.count}"}
+              = file_field_tag :image, name: "product[images_attributes][#{@product.images.count}][image]", class: 'js-file'
+              .js-remove 削除
+      .products-new__contents__name.section
+        商品名
+        %span 必須
+        = f.text_field :name, placeholder: "商品名（必須40文字まで）"
+        商品の説明
+        %span 必須
+        = f.text_area :content, class: 'text',type: "text", rows: "5", placeholder: "商品の説明（必須1,000文字以内）（色、素材、重さ、定価、注意点など） 例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。合わせやすいのでおすすめです。"
+      .products-new__contents__detail.section.flex
+        .products-new__contents__detail.left
+          %h4 商品の詳細
+        .products-new__contents__detail.right
+          カテゴリー
+          %span 必須
+          = f.select :category,[["----", nil],"レディース","メンズ","ベビー・キッズ","インテリア・住まい・小物","本・音楽・ゲーム","おもちゃ・ホビー・グッズ","コスメ・香水・美容","家電・スマホ・カメラ","スポーツ・レジャー","ハンドメイド","チケット","自転車・オートバイ","その他"]
+          ブランド
+          %span 必須
+          = f.select :brand_name,[["----", nil],"ルイヴィトン","シャネル","シュプリーム","ナイキ","ザラ","リーバイス","ユニクロ","ジーユー","アディダス","アップル","フェンダー","遊戯王","その他"]
+          商品の状態
+          %span 必須
+          = f.select :status, [["----", nil],"新品、未使用","未使用に近い","目立った傷や汚れなし","やや傷や汚れあり","全体的に状態が悪い"]
+      .products-new__contents__delivery.section.flex
+        .products-new__contents__delivery.left
+          %h4 配送について
+        .products-new__contents__delivery.right
+          配送料の負担
+          %span 必須
+          = f.select :s_charge, [["----", nil],"送料込み（出品者負担）","着払い（購入者負担）"]
+          配送の方法
+          %span 必須
+          = f.select :s_method, [["----", nil],"未定","クロネコヤマト","ゆうパック","ゆうメール"]
+          発送元の地域
+          %span 必須
+          = f.select :s_prefecture , [["----", nil],"北海道","青森県","岩手県","宮城県","秋田県","山形県","福島県","東京都","神奈川県","埼玉県","千葉県","茨城県","栃木県","群馬県","秋田県","山梨県","長野県","富山県","石川県","福井県","愛知県","岐阜県","静岡県","三重県","大阪府","兵庫県","京都府","滋賀県","奈良県","和歌山県","鳥取県","島根県","岡山県","広島県","山口県","徳島県","香川県","愛媛県","高知県","福岡県","佐賀県","長崎県","熊本県","大分県","宮城県","秋田県","鹿児島県","沖縄県"] 
+          発送までの日数
+          %span 必須
+          = f.select :s_date, [["----", nil],"1~2日で発送","2~3日で発送","4~7日で発送"]
+      .products-new__contents__price.section.flex
+        .products-new__contents__price.left
+          %h4 販売価格(300〜9,999,999)
+        .products-new__contents__price.right
+          %ul
+            %li.flex
+              .left 
+                価格
+                %span 必須
+              .right 
+                = f.number_field :price
+            %li 販売手数料(10%)
+            %li 販売利益
+      .products-new__contents__other.section
+        %p
+          = link_to '#' do
+            禁止されている出品
+          、
+          = link_to '#' do
+            行為
+          を必ずご確認ください。
+        %p 
+          またブランド品でシリアルナンバー等がある場合はご記載ください。
+          = link_to '#' do
+            偽ブランドの販売
+          は犯罪であり処罰される可能性があります。
+        %p 
+          また、出品をもちまして
+          = link_to '#' do 
+            加盟店規約
+          に同意したことになります。
+        = f.submit '出品する' 
+        = link_to '#' ,class: "back-btn" do
+          もどる
+  .products-new__footer
+    .products-new__footer__list
+      %ul
+        %li プライバシーポリシー
+        %li メルカリ利用規約
+        %li 特定商取引に関する表記
+    .products-new__footer__logo
+      = image_tag "logo_gray.svg"
+    .products-new__footer__copyright
+      %p © 66期 team A

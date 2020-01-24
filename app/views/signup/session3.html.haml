@@ -1,0 +1,68 @@
+.sign-up-session3
+  .sign-up-session3__header
+  =render "users/sessions-header"
+  .sign-up-session3__body
+    .sign-up-session3__body__head
+      住所入力
+    .sign-up-session3__body__contents
+    = form_for @user, url: session4_signup_index_path, method: :get, html: {class: 'third-wrapper__box'} do |f|
+
+      .sign-up-session3__body__contents__name.box
+        .sign-up-session3__body__contents__name__title
+          お名前
+          %span{class: "required"}必須
+        .sign-up-session3__body__contents__name__form
+          = f.text_field :name, class: "form family-name-form", placeholder: "例）山田"
+          = f.text_field :name, class: "form last-name-form", placeholder: "例）花子"
+      .sign-up-session3__body__contents__name-kana.box
+        .sign-up-session3__body__contents__name-kana__title
+          お名前カナ
+          %span{class: "required"}必須
+        .sign-up-session3__body__contents__name-kana__form
+          = f.text_field :name_kana, class: "form family-name-kana-form", placeholder: "例）ヤマダ"
+          = f.text_field :name_kana, class: "form last-name-kana-form", placeholder: "例）ハナコ"
+      .sign-up-session3__body__contents__postal.box
+        = f.fields_for :addresses  do |i|
+          .sign-up-session3__body__contents__postal__title
+            郵便番号
+            %span{class: "required"}必須
+          .sign-up-session3__body__contents__postal__form
+            = i.text_field :postal_code, class: "form postal-form", placeholder: "例）123-4567"
+          .sign-up-session3__body__contents__prefecture.box
+            .sign-up-session3__body__contents__prefecture__title
+              都道府県
+              %span{class: "required"}必須
+            .sign-up-session3__body__contents__prefecture__form
+              %label{name:"p-label",class:"label"}
+                = i.select :prefecture, [["北海道","1"], ["青森県","2"],  ["岩手県","3"], ["宮城県","4"],["秋田県","4"],["山形県","5"],["福島県","6"],["東京都","7"],["神奈川県","8"],["埼玉県","9"],["千葉県","10"],["茨城県","11"],["栃木県","12"],["群馬県","13"],["秋田県","14"],["山梨県","15"],["長野県","16"],["富山県","17"],["石川県","18"],["福井県","19"],["愛知県","20"],["岐阜県","21"],["静岡県","22"],["三重県","23"],["大阪府","24"],["兵庫県","25"],["京都府","26"],["滋賀県","27"],["奈良県","28"],["和歌山県","29"],["鳥取県","30"],["島根県","31"],["岡山県","32"],["広島県","33"],["山口県","34"],["徳島県","35"],["香川県","36"],["愛媛県","37"],["高知県","38"],["福岡県","39"],["佐賀県","40"],["長崎県","41"],["熊本県","42"],["大分県","43"],["宮城県","44"],["秋田県","45"],["鹿児島県","46"],["沖縄県","47"] ],class:"prefecture" 
+
+                %i.fas.fa-chevron-down
+          .sign-up-session3__body__contents__city.box
+            .sign-up-session3__body__contents__city__title
+              市区町村
+              %span{class: "required"}必須
+            .sign-up-session3__body__contents__city__form
+              = i.text_field :city, class: "form city-form", placeholder: "例）大阪府浪速区"
+          .sign-up-session3__body__contents__number.box
+            .sign-up-session3__body__contents__number__title
+              番地
+              %span{class: "required"}必須
+            .sign-up-session3__body__contents__number__form
+              = i.text_field :house_number, class: "form number-form", placeholder: "例）元町3-12-12"
+          .sign-up-session3__body__contents__building.box
+            .sign-up-session3__body__contents__building__title
+              建物
+              %span{class: "optional"}任意
+            .sign-up-session3__body__contents__building__form
+              = i.text_field :building, class: "form building-form", placeholder: "例）なんばスカイオ"
+          .sign-up-session3__body__contents__tel.box
+            .sign-up-session3__body__contents__tel__title
+              電話
+              %span{class: "optional"}任意
+            .sign-up-session3__body__contents__tel__form
+              = i.text_field :tel, class: "form building-form", placeholder: "例）0120828828"
+          .sign-up-session3__body__contents__next
+            =f.submit "次へ進む",class:"session3-next"
+  .sign-up-session3__footer
+  =render "users/users-footer"
+

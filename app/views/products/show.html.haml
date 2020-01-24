@@ -1,90 +1,115 @@
+= render 'shared/header'
 .show
   .show__item
     .show__item__name
-      最新作COACHショルダーバッグ新品花柄フラワー
+      = @product.name
     .show__item__detail
       .show__item__detail__photo
-        = image_tag "coach.jpg", size: "300x300", alt: "商品１"
-      %table.show__item__detail__table
+        = image_tag @images[0].image , size: "300x300"
+        .show__item__detail__photo__group1
+          .show__item__detail__photo1
+            - @images.each do |i|
+              = image_tag i.image, size: "60x60"
+      %table.show__item__detail__table{:border => "1",}
         %tr
           %th.show__item__detail__table__a 
             出品者
-          %td.show__item__detail__table__b 
-            mu☆mu
+          %td.show__item__detail__table__b
+            = @product.user.nickname
             %br/
+            %i.fas.fa-smile-wink
+            %span.show__item__detail__table__face
+              670 
             %i.fas.fa-smile
-            %span.show__item__detail__table__smile
-              670
-            %i.fas.fa-smile
-            %span.show__item__detail__table__normal
-              6
-            %i.fas.fa-smile
-            %span.show__item__detail__table__bad
-              1
+            %span.show__item__detail__table__face
+              6 
+            %i.fas.fa-sad-tear
+            %span.show__item__detail__table__face
+              1 
         %tr.a
           %th.show__item__detail__table__a
             カテゴリー
           %td.show__item__detail__table__b
-            レディス
+            >
+            = @product.category
             %br/
-            %span.show__item__detail__table__smile
-              >バック
-            %br/
-            %span.show__item__detail__table__smile
-              >ショルダーバッグ
         %tr
-          %th.show__item__detail__table__a ブランド
-          %td.show__item__detail__table__b コーチ
+          %th.show__item__detail__table__a
+            ブランド
+          %td.show__item__detail__table__b
+            - if @product.brand_name
+              = @product.brand_name
         %tr
-          %th.show__item__detail__table__a 商品の状態
-          %td.show__item__detail__table__c 傷や汚れあり
+          %th.show__item__detail__table__a
+            商品の状態
+          %td.show__item__detail__table__c
+            = @product.status
         %tr
-          %th.show__item__detail__table__a 配送料の負担
-          %td.show__item__detail__table__c 送料込み（出品者負担）
+          %th.show__item__detail__table__a
+            配送料の負担
+          %td.show__item__detail__table__c
+            = @product.s_charge
         %tr
-          %th.show__item__detail__table__a 配送の方法
-          %td.show__item__detail__table__c ゆうゆうメルカリ便
+          %th.show__item__detail__table__a
+            配送の方法
+          %td.show__item__detail__table__c
+            = @product.s_method
         %tr
-          %th.show__item__detail__table__a 配送元地域
-          %td.show__item__detail__table__b 沖縄県
+          %th.show__item__detail__table__a
+            配送元地域
+          %td.show__item__detail__table__b
+            = @product.s_prefecture
         %tr
-          %th.show__item__detail__table__a 発送日の目安
-          %td.show__item__detail__table__c ４〜７日で発送
+          %th.show__item__detail__table__a
+            発送日の目安
+          %td.show__item__detail__table__c
+            = @product.s_date
         %tr
     .show__item__buy
       .show__item__buy__price
         .show__item__buy__price__title
-          ¥25,000   
+          ¥
+          = @product.price
         .show__item__buy__price__detail
           (税込)送料込み
-      .show__item__buy__bottom
-        購入画面に進む
-      .show__item__buy__content
-        %p 商品はゆうゆうメルカリ便を利用しているため、アプリからのみ購入できます。
+      - if current_user.id != @product.user_id
+        .show__item__buy__bottom
+          = link_to '#' do
+            購入画面に進む
       .show__item__buy__notes
-        %p COACH/コーチ   ショート丈ショルダーバッグ
-        %p 10年前程に購入使用していたものですが
-        %p 使用しなくなって自宅保管していました。
-        %p ☆全体的に使用感あり理解のある方宜しく
-        %p お願い致します。(※汚れ、傷あり写真掲載）
-      .show__item__buy__buttom
-        .show__item__buy__buttom__goodbuttom
-          %i.far.fa-heart
-          %span いいね!
-          %span 0
-        .show__item__buy__buttom__repoprt
-          %i.fas.fa-flag
-          %span 不適切な商品の報告
-        .show__item__buy__buttom__security
-          %p あんしん・あんぜんへの取り組み
+        = simple_format(@product.content)
+      - if current_user.id == @product.user_id
+        .show__item__buy__edit
+          = link_to edit_product_path do
+            商品の編集
+          %p or
+          = link_to '#' do
+            出品を一時停止する
+          = link_to product_path, method: :delete do
+            この商品を削除する
+      - else
+        .show__item__buy__buttom
+          .show__item__buy__buttom__goodbuttom
+            %i.far.fa-heart
+            %span いいね!
+            %span 0
+          .show__item__buy__buttom__repoprt
+            %i.fas.fa-flag
+            %span 不適切な商品の報告
+          .show__item__buy__buttom__security
+            %p あんしん・あんぜんへの取り組み
     .show__item__comment
       .show__item__comment__content
         %p 相手のことを考え丁寧なコメントを心がけましょう。
         %p 不快な言葉遣いなどは利用制限や退会処分となることがあります。
       .show__item__comment__box
-      .show__item__comment__bottom
-        コメントする
+        = form_for @comment, url: products_path do |f|
+          .field
+            = f.text_field :content, class:"form"
+          .actions
+            = f.submit "コメントする", class:"comment-bottom"
     .show__item__sns
       %i.fab.fa-facebook-square
       %i.fab.fa-twitter-square
       %i.fab.fa-pinterest-square
+= render 'shared/footer'

@@ -21,7 +21,7 @@
         %ul
           - if user_signed_in?
             %li.header__contents__utilities
-              = link_to destroy_user_session_path,method: :delete do
+              = link_to logout_users_path, method: :get do
                 ログアウト
             %li.header__contents__utilities__likes
               = link_to '#' do
@@ -40,7 +40,7 @@
                 ●マイページ
           - else
             %li.header__contents__utilities__sing-up
-              = link_to new_user_registration_path ,class: 'sign-up' do
+              = link_to user_top_signup_index_path ,class: 'sign-up' do
                 新規会員登録
             %li.header__contents__utilities__sing-in
               = link_to new_user_session_path, class: 'sign-in' do
