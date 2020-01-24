@@ -16,9 +16,18 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
-  resources :users, only: [:show, :logout] do
-    collection do
-      get "logout" 
+  #マイページ
+  resources :users, only: [:index] do
+    member do
+      resources :mypage, only: [:index] do
+        collection do
+          get 'profile'
+          post 'profile'
+          patch 'profile_edit'
+          get 'payment'
+          get 'logout'
+        end
+      end
     end
   end
 end

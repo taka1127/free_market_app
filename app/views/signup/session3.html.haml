@@ -12,15 +12,15 @@
           お名前
           %span{class: "required"}必須
         .sign-up-session3__body__contents__name__form
-          = f.text_field :name, class: "form family-name-form", placeholder: "例）山田"
-          = f.text_field :name, class: "form last-name-form", placeholder: "例）花子"
+          = f.text_field :first_name, class: "form family-name-form", placeholder: "例）山田"
+          = f.text_field :last_name, class: "form last-name-form", placeholder: "例）花子"
       .sign-up-session3__body__contents__name-kana.box
         .sign-up-session3__body__contents__name-kana__title
           お名前カナ
           %span{class: "required"}必須
         .sign-up-session3__body__contents__name-kana__form
-          = f.text_field :name_kana, class: "form family-name-kana-form", placeholder: "例）ヤマダ"
-          = f.text_field :name_kana, class: "form last-name-kana-form", placeholder: "例）ハナコ"
+          = f.text_field :first_name_kana, class: "form family-name-kana-form", placeholder: "例）ヤマダ"
+          = f.text_field :last_name_kana, class: "form last-name-kana-form", placeholder: "例）ハナコ"
       .sign-up-session3__body__contents__postal.box
         = f.fields_for :addresses  do |i|
           .sign-up-session3__body__contents__postal__title
