@@ -1,8 +1,6 @@
 .breadcrumbs
-  %ul
-    %li
-    = breadcrumbs
-    パンくず
+  - breadcrumb :products
+  = breadcrumbs pretext: "現在のページ: ",separator: " &rsaquo; ", class: "breadcrumbs-list"
 
--# - breadcrumb :trading
--# = breadcrumbs separator: " &rsaquo; "
+
+  -# - breadcrumb :product, @product

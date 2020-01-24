@@ -1,16 +1,22 @@
+# ルート
 crumb :root do
-  link "ホーム", root_path
+  link "トップページ", root_path
 end
 
-crumb :mypage do
-  link "マイページ", users_path
-  parent :root
+crumb :products do
+  link "商品出品", new_product_path
+  # parent :root
 end
 
-crumb :logout do
-  link "ログアウト", logout_users_path
-  parent :mypage
-end
+# crumb :product do |product|
+#   link 'product.name', product_path(product.id)
+#   parent :products
+# end
+
+# crumb :users do
+#   link "ユーザー", users_path
+#   parent :root
+# end
 
 # crumb :projects do
 #   link "Projects", projects_path
