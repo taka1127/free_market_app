@@ -11,7 +11,10 @@ Rails.application.routes.draw do
       get 'session5' 
     end
   end
-  resources :products
+  resources :products do
+    collection do
+      get 'search'
+    end
   resources :users, only: [:show, :logout] do
     collection do
       get "logout" 
