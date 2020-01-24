@@ -5,8 +5,10 @@
         = link_to root_path do
           = image_tag "fmarket_logo_red.svg"
       .header__search-bar__form
-        %input{type: "search", name: "keyword", size: "80", placeholder: "何かお探しですか？"} 
-          = icon('fas', 'search')
+        = form_for :product, local: true ,url: search_products_path, method: :get do |s|
+          = s.text_field :name, placeholder: "何かお探しですか？"
+          = s.submit "検索" do
+            = icon('fas', 'search')
     .header__contents
       .header__contents__search-tags
         .header__contents__search-tags__category.tag

@@ -1,9 +1,10 @@
 class ProductsController < ApplicationController
-  before_action :access_registration, except: [:index, :show]
+  before_action :access_registration, except: [:index, :show, :search]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :ensure_correct_user, only: [:edit, :update, :destroy]
 
   def index
+    @products = Product.all
     @ladies_product = Product.index(category:"レディース")
     @mens_product = Product.index(category:"メンズ")
     @e_product =  Product.index(category:"家電・スマホ・カメラ")
@@ -52,6 +53,10 @@ class ProductsController < ApplicationController
     else
       render user_path(@product.user_id)
     end
+  end
+
+  def search
+    @products = Product.search(params[:name]) 
   end
 
   private
