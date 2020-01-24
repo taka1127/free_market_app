@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, 
          :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
 
-  validates :email, :password, :nickname,
+  validates :email, :nickname,
             :tel, :birthday, :name_kana,  :name,
             presence: true
         
