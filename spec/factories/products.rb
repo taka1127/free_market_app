@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :product do
-    name               { "ターサージール6" }
+    name               { "シャネル" }
     content            { "使用期間は2年程度です。" }
     size               { "26.5cm" }
     status             { "傷が目立つ" }
