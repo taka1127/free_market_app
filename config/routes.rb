@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   root "products#index"
   resources :products,  only: [:index, :new, :create, :edit, :update, :show] do
     get 'buy', to: 'products#buy'
+    namespace :api do
+      resources :products, only: :index, defaults: { format: 'json' }
+    end
   end
   resources :users, only: [:show]
   resources :signup, only: [:index,:create] do
