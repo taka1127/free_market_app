@@ -1,0 +1,16 @@
+.breadcrumbs {
+  width: 1020px;
+  margin: 10px auto ;
+  .breadcrumbs-list {
+    padding: 5px;
+    font-weight: bold;
+    a {
+      text-decoration: none;
+      color: $color_black;
+      &:hover {
+        color: $color_aqua;
+        transition: 0.5s;
+      }
+    }
+  }
+}
