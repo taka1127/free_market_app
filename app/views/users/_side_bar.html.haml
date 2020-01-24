@@ -2,7 +2,7 @@
   .main__container__side__nav
     %ul
       %li.main__container__side__nav__mypage
-        = link_to mypage_index_path(current_user), class:'list' do
+        = link_to mypage_index_path(current_user.id), class:'list' do
           マイページ
         %i.fas.fa-chevron-right
       %li.main__container__side__nav__info

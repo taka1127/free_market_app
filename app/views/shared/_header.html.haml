@@ -20,9 +20,6 @@
       .header__contents__utilities
         %ul
           - if user_signed_in?
-            -# %li.header__contents__utilities
-            -#   = link_to logout_mypage_index_path, method: :get do
-            -#     ログアウト
             %li.header__contents__utilities__likes
               = link_to '#' do
                 = icon('far', 'heart')

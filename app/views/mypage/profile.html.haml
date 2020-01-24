@@ -5,7 +5,7 @@
     .main__container__side-bar
       = render 'users/side_bar'
     .main__container__p-container
-      = form_for @user, url: profile_mypage_index_path, method: :post do |f|
+      = form_for @user, url: profile_edit_mypage_index_path(current_user.id), method: :patch do |f|
         .main__container__p-container__header
           プロフィール
         .main__container__p-container__profile
@@ -15,9 +15,8 @@
               .main__container__p-container__profile__i-erea__content__name
                 = @user.nickname
           .main__container__p-container__profile__text
-            %textarea{ type: "text",rows: "5", placeholder: "こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪",id:"profile"}
+            =f.text_area :self_introduction, placeholder: "こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪",id:"profile"
           .main__container__p-container__profile__btn
-            =link_to profile_mypage_index_path, class:'change' do
-              変更する
+            = f.submit '変更する',class:'change' 
   .main__footer
     =render "shared/footer"

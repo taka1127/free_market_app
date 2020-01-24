@@ -5,15 +5,14 @@ class MypageController < ApplicationController
     unless current_user.id == @user.id
       return_back and return
     end
-    # @user = User.new
   end
 
   def profile_edit
     unless current_user.id == @user.id
       return_back and return
     end
-    # @user = User.new(profile_params)
-    # @user.save
+    @user.update(profile_params)
+    redirect_to profile_mypage_index_path(current_user.id)
   end
 
   def payment

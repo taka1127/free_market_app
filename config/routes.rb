@@ -20,6 +20,7 @@ Rails.application.routes.draw do
         collection do
           get 'profile'
           post 'profile'
+          patch 'profile_edit'
           get 'payment'
           get 'logout'
         end
