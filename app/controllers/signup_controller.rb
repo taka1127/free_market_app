@@ -103,21 +103,6 @@ class SignupController < ApplicationController
   end
 end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   private
   # 許可するキーを設定
   def user_params
