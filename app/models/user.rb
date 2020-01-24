@@ -8,7 +8,6 @@ class User < ApplicationRecord
   validates :email, :nickname,
             :tel, :birthday, :name_kana,  :name,
             presence: true
-        
   has_many :goods
   has_many :products
   has_many :comments

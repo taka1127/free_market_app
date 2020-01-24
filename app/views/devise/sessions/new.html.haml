@@ -17,7 +17,7 @@
           .btn.google
             = link_to  user_google_oauth2_omniauth_authorize_path, method: :post do
               = icon('fab', 'google')
-              Googleでログイン
+              %span{class:"gtext"} Googleでログイン
           = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス" 
           = f.password_field :password, autocomplete: "current-password", placeholder: "パスワード" 
           .robbot
