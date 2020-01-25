@@ -1,7 +1,13 @@
 = render 'shared/header'
 .products__index
   .products__index__slick
-    = image_tag "freemarket_topimage.jpg", alt: "メルカリ", class: "image", height: "390px", width: "100%"
+    %ul.slider
+      %li
+        = image_tag "freemarket_topimage.jpg", alt: "メルカリ", class: "image", height: "390px", width: "100%"
+      %li
+        = image_tag "louisvuitton-logo.jpg", alt: "メルカリ", class: "image", height: "390px", width: "100%"
+      %li
+        = image_tag "supreme.jpeg", alt: "メルカリ", class: "image", height: "390px", width: "100%"
   .products__index__category
     .products__index__category__title
       %h2 人気のカテゴリー
