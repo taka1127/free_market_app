@@ -1,6 +1,9 @@
 .main
   .main__header
     =render "shared/header"
+    .breadcrumbs
+      - breadcrumb :logout
+      = breadcrumbs pretext: "",separator: " &rsaquo; ", class: "breadcrumbs-list"
   .main__container
     .main__side-bar
       = render 'users/side_bar'
