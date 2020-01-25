@@ -7,20 +7,11 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css", :rel => "stylesheet", :type => "text/css"}/
     %script{:src => "https://code.jquery.com/jquery-2.2.4.min.js"}
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css", :rel => "stylesheet", :type => "text/css"}/
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"}
 
   %body
 
-    -# =render "users/new-user-top"
-    -# -# =render "users/signin"
-    -# =render "users/session1"
-    -# =render "users/session2"
-    -# =render "users/session3"
-    -# =render "users/session4"
-    -# =render "users/session5"
-    -# = render 'shared/header'
     = render 'shared/exhibition-btn'
     = yield
-    -# = render 'shared/footer'
