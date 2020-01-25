@@ -24,14 +24,39 @@
                 14
       .main__container__content__tabs
         .main__container__content__tabs__info
-          お知らせ
+          %label(for="info") お知らせ
         .main__container__content__tabs__todo
-          やることリスト
+          %label(for="todo") やることリスト
       .main__container__content__message
-        .main__container__content__message__logo
+        .main__container__content__message__nomessage{ id: "panel_1" }
           =image_tag "logo_gray.svg" 
-        .main__container__content__message__nomessage
-          現在、やることリストはありません
+        %p 現在、お知らせはありません
+        .main__container__content__message__nomessage{ id: "panel_2" }
+          =image_tag "logo_gray.svg"
+        %p 現在、やることリストはありません
+
+      -# -# .main__container__content__tab_wrap
+      -# -#   .main__container__content__tab_wrap__tab_area
+      -# -#     %label.tab1_label{:for => "tab1"} tab1
+      -# -#     %label.tab2_label{:for => "tab2"} tab2
+      -# -#     %label.tab3_label{:for => "tab3"} tab3
+      -#   .main__container__content__tab_wrap__panel_area
+      -#     #panel1.tab_panel
+      -#       %p panel1
+      -#     #panel2.tab_panel
+      -#       %p panel2
+      -#     #panel3.tab_panel
+      -#       %p panel3
+      -# // .tab_area{font-size:0; margin:0 10px;}
+      -# // .tab_area label{width:150px; margin:0 5px; display:inline-block; padding:12px 0; color:#999; background:#ddd; text-align:center; font-size:13px; cursor:pointer; transition:ease 0.2s opacity;}
+      -# // .tab_area label:hover{opacity:0.5;}
+      -# // .panel_area{background:#fff;}
+      -# // .tab_panel{width:100%; padding:80px 0; display:none;}
+      -# // .tab_panel p{font-size:14px; letter-spacing:1px; text-align:center;}
+      
+      -# // .tab_area label.active{background:#fff; color:#000;}
+      -# // .tab_panel.active{display:block;}
+
 
       .main__container__content__bottom
         購入した商品

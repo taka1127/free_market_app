@@ -74,6 +74,9 @@
           float: left;
           border-top:solid 2px red;
           font-family: Arial, Helvetica, sans-serif;
+          :active{
+            background:#fff; color:#000;
+          }
         }
         &__todo{
           width: 50%;
@@ -95,15 +98,20 @@
         text-align: center;
         border: solid 0.5px gray;
         background-color: white;
-        &__logo{
+        &__nomessage{
           width: 120px;
           margin: 0 auto;
-        }
-        &__nomessage{
           color: #333;
           opacity: 0.6;
           font-family: Arial, Helvetica, sans-serif;
           font-weight: bold;
+          text-align: center;
+          :active{
+            display:block;
+          }
+          p{
+            display: block;
+          }
         }
       }
       &__bottom{
