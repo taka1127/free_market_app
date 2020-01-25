@@ -26,14 +26,17 @@ class SignupController < ApplicationController
 
   def session4
     # session3で入力された値をsessionに保存
-    session[:name] = user_params[:name]
-    session[:name_kana] = user_params[:name_kana]
+    session[:first_name] = user_params[:first_name]
+    session[:last_name] = user_params[:last_name]
+    session[:first_name_kana] = user_params[:first_name_kana]
+    session[:last_name_kana] = user_params[:last_name_kana]
     @user = User.new 
     session[:postal_code] = address_params[:postal_code]
     session[:prefecture] = address_params[:prefecture]
     session[:city] = address_params[:city]
     session[:house_number] = address_params[:house_number]
     session[:building] = address_params[:building]
+    session[:tel] = address_params[:tel]
     @address = Address.new
   end
 
@@ -47,8 +50,10 @@ class SignupController < ApplicationController
       # session2のデータ
       tel: session[:tel], 
       # session3のデータ
-      name: session[:name], 
-      name_kana: session[:name_kana], 
+      first_name: session[:first_name], 
+      last_name: session[:last_name], 
+      first_name_kana: session[:first_name_kana], 
+      last_name_kana: session[:last_name_kana], 
     )
       
     @user.save      #@user.saveでセーブしuser.idを取得
@@ -63,6 +68,7 @@ class SignupController < ApplicationController
       city: session[:city], 
       house_number: session[:house_number], 
       building: session[:building],
+      tel: session[:tel],
       user_id: @user.id
     )
 
@@ -106,11 +112,11 @@ end
   private
   # 許可するキーを設定
   def user_params
-    params.require(:user).permit(:email, :password, :nickname, :tel, :birthday, :name_kana, :name)
+    params.require(:user).permit(:email, :password, :nickname, :tel, :birthday, :first_name, :last_name, :first_name_kana, :last_name_kana)
   end
 
   def address_params
-    params.require(:user).require(:addresses).permit(:postal_code,:prefecture,:city,:house_number,:building )
+    params.require(:user).require(:addresses).permit(:postal_code, :prefecture, :city, :house_number, :building, :tel )
   end
 
 end

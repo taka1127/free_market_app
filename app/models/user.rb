@@ -6,7 +6,7 @@ class User < ApplicationRecord
         #  :omniauthable
   validates :email, 
             :nickname,
-            :tel, :birthday, :name_kana,  :name,
+            :tel, :birthday, :first_name_kana, :last_name_kana,  :first_name, :last_name,
             presence: true
 
         
