@@ -11,10 +11,10 @@ class Product < ApplicationRecord
   has_many :goods
   accepts_nested_attributes_for :images, allow_destroy: true
 
+
   def self.search(search)
     if search
-      # Product.where(["name LIKE(?)","%#{search}%"])
-      Product.where(id: 1)
+      Product.where('keyword LIKE(?)',"%#{search}%")
     else
       Product.all
     end
