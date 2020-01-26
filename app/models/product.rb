@@ -14,10 +14,7 @@ class Product < ApplicationRecord
 
 
   def self.search(search)
-    if search
-      Product.where(["]name LIKE ?","%#{search}%"])
-    else
-      Product.all
-    end
+    # return Product.all unless search
+    Product.where('name LIKE(?)', "%#{search}%")
   end
 end
