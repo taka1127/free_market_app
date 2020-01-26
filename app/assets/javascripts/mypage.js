@@ -1,8 +1,18 @@
-$(".tabs").on("click",function(){
-  console.log("hello");
-	var $th = $(this).index();
-	$(".info").removeClass("active");
-	$(".nomessage").removeClass("active");
-	$(this).addClass("active");
-	$(".nomessage").eq($th).addClass("active");
+$(".info").on("click",function(){
+  var $th = $(this).index();
+  $("#panel_1").removeClass("active");
+  $("#panel_2").removeClass("active");
+  $(this).addClass("active");
+  $(".nomessage").eq($th).addClass("active");
 });
+
+
+// $(document).on('turbolinks:load', ()=> {  
+//   $(".info").on("click",function(){
+//     var $th = $(this).index();
+//     $("#panel_1").removeClass("active");
+//     $("#panel_2").removeClass("active");
+//     $(this).addClass("active");
+//     $(".nomessage").eq($th).addClass("active");
+//   });
+// });
