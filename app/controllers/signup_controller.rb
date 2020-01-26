@@ -1,5 +1,4 @@
 class SignupController < ApplicationController
-  require 'payjp' #payjpの読み込み
 
   def user_top
   end
@@ -85,29 +84,8 @@ class SignupController < ApplicationController
     sign_in User.find(session[:id]) unless user_signed_in?
   end
 
-  Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"] # APIキーの呼び出し
-  if params['payjp_token'].blank? # ここはJavaScriptの.append()内のname属性です
-    render '/signup/session4'
-  else
-    customer = Payjp::Customer.create(        # customerの定義、ここの情報を元に、カード情報との紐付けがされる
-      description: 'test',                    # なくてもいいです
-      email: current_user.email,              # なくてもいいです
-      card: params['payjp_token'],            # 必須です
-      metadata: {user_id: current_user.id}    # なくてもいいです
-    )
-    @card = Card.new(                  # カードテーブルのデータの作成
-      user_id: current_user.id,        # ここでcurrent_user.idがいるので、前もってsigninさせておく
-      customer_id: customer.id,        # customerは上で定義
-      card_id: customer.default_card   # .default_cardを使うことで、customer定義時に紐付けされたカード情報を引っ張ってくる ここがnullなら上のcustomerのcard: params['payjp_token']が読み込めていないことが多い
-    )
 
-    if @card.save
-      redirect_to done_signup_index_path
-    else
-      redirect_to action: "create"
-    end
-  end
-end
+
 
   private
   # 許可するキーを設定
@@ -118,5 +96,4 @@ end
   def address_params
     params.require(:user).require(:addresses).permit(:postal_code, :prefecture, :city, :house_number, :building, :tel )
   end
-
 end

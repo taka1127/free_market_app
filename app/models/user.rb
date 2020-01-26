@@ -8,8 +8,6 @@ class User < ApplicationRecord
             :nickname,
             :tel, :birthday, :first_name_kana, :last_name_kana,  :first_name, :last_name,
             presence: true
-
-        
   has_many :goods
   has_many :products
   has_many :comments

@@ -43,6 +43,12 @@ class ProductsController < ApplicationController
     @user = @product.user
   end
 
+  def confirm
+  end
+
+
+
+
   def update
     @images = @product.images
     if @product.update(product_params)
