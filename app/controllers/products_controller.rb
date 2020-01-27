@@ -47,8 +47,7 @@ class ProductsController < ApplicationController
 
   def confirm
     @sold = Product.find(params[:product_id])
-    @sold.update_attribute('sold', params[:product_id])
-    binding.pry
+    @sold.update_attribute('sold', "売り切れました")
     Payjp.api_key = "sk_test_96f14e0e07de7024eedd09ec"
     Payjp::Charge.create(
       amount:  3500, # 決済する値段
