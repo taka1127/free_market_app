@@ -22,18 +22,19 @@
               出品数
               %li
                 14
-      .main__container__content__tabs
-        .main__container__content__tabs__info
-          %label(for="info") お知らせ
-        .main__container__content__tabs__todo
-          %label(for="todo") やることリスト
-      .main__container__content__message
-        .main__container__content__message__nomessage{ id: "panel_1" }
-          =image_tag "logo_gray.svg" 
-        %p 現在、お知らせはありません
-        .main__container__content__message__nomessage{ id: "panel_2" }
-          =image_tag "logo_gray.svg"
-        %p 現在、やることリストはありません
+      %section
+        .main__container__content__tabs
+          .main__container__content__tabs__info
+            %label(for="info") お知らせ
+          .main__container__content__tabs__todo
+            %label(for="todo") やることリスト
+        .main__container__content__message
+          .main__container__content__message__nomessage{ id: "panel_1" }
+            =image_tag "logo_gray.svg" 
+          %p 現在、お知らせはありません
+          .main__container__content__message__nomessage{ id: "panel_2" }
+            =image_tag "logo_gray.svg"
+          %p 現在、やることリストはありません
 
       -# -# .main__container__content__tab_wrap
       -# -#   .main__container__content__tab_wrap__tab_area
