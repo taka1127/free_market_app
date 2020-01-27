@@ -1,6 +1,8 @@
 -#-----------本人確認ページ----------------------------
 .main
+  = render "shared/header"
   .main__container
+    = render 'users/side_bar' 
     .main__container__r-container
       .main__container__r-container__header
         本人情報の登録
@@ -15,15 +17,17 @@
         .main__container__r-container__register__form
           お名前
         .main__container__r-container__register__info
-          山田　太郎
+          = @user.first_name
+          = @user.last_name
         .main__container__r-container__register__form
           お名前カナ
         .main__container__r-container__register__info
-          ヤマダ　タロウ
+          = @user.first_name_kana
+          = @user.last_name_kana
         .main__container__r-container__register__form
           生年月日
         .main__container__r-container__register__info
-          2000/01/01
+          = @user.birthday
         .main__container__r-container__register__form
           .main__container__r-container__register__form__place
             郵便番号
@@ -115,4 +119,4 @@
         = link_to "#", class:"register-info" do
           本人情報の登録について
           %i.fas.fa-chevron-right
-    = render 'shared/side_bar'      
+  =render "shared/footer"      

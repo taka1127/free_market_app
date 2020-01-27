@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root "products#index"
-  resources :products,  only: [:index, :new, :create, :edit, :update, :show] do
+  resources :products do
     get 'buy', to: 'products#buy'
     post 'confirm', to: 'products#confirm'
   end
@@ -16,8 +16,10 @@ Rails.application.routes.draw do
       get 'session5' 
     end
   end
-  resources :products
-
+  resources :products do
+    get 'buy', to: 'products#buy'
+    post 'confirm', to: 'products#confirm'
+  end
   #マイページ
   resources :users, only: [:index] do
     member do
@@ -27,6 +29,7 @@ Rails.application.routes.draw do
           post 'profile'
           patch 'profile_edit'
           get 'payment'
+          get 'register'
           get 'logout'
         end
       end
