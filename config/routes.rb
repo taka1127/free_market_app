@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root "products#index"
   resources :products,  only: [:index, :new, :create, :edit, :update, :show] do
     get 'buy', to: 'products#buy'
-    get 'confirm', to: 'products#confirm'
+    post 'confirm', to: 'products#confirm'
   end
   resources :users, only: [:show]
   resources :signup, only: [:index,:create] do
