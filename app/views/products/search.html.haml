@@ -1,3 +1,23 @@
-- @products.each do |p|
-  = link_to product_path(p) do
-    = p.name
+= render 'shared/header'
+.products
+  .products__index
+    .products__index__category
+      .products__index__category__contents
+        .products__index__category__contents__container
+          .products__index__category__contents__container__title
+            %h3 検索結果
+            = link_to '#' do
+              %span もっと見る
+              = icon('fas', 'angle-right')
+          .products__index__category__contents__container__item
+            - @products.each do |search|
+              = link_to product_path(search) do
+                .itembox
+                  .itembox__image
+                    = image_tag search.images.first.image, size: "168x188", alt: "product"
+                    .itembox__image__price
+                      ¥
+                      = search.price
+                  .itembox__title
+                    = search.name
+= render 'shared/footer'

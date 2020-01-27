@@ -7,8 +7,7 @@
       .header__search-bar__form
         = form_for :product, url: search_products_path, method: :get do |s|
           = s.text_field :keyword, placeholder: "何かお探しですか？"
-          = s.submit "検索" do
-            = icon('fas', 'search')
+          = s.submit "検索"
     .header__contents
       .header__contents__search-tags
         .header__contents__search-tags__category.tag
