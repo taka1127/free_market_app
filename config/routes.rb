@@ -22,6 +22,7 @@ Rails.application.routes.draw do
           post 'profile'
           patch 'profile_edit'
           get 'payment'
+          get 'register'
           get 'logout'
         end
       end

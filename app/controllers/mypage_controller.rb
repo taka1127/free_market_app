@@ -1,5 +1,6 @@
 class MypageController < ApplicationController
   before_action :set_user
+  # before_action :set_address
 
   def index
     unless current_user.id == @user.id
@@ -21,6 +22,16 @@ class MypageController < ApplicationController
     end
   end
 
+  def register
+    unless current_user.id == @user.id
+      return_back and return
+    end
+    # @user.update(profile_params)
+    # redirect_to profile_mypage_index_path(current_user.id)
+    # @address.update(address_params)
+    # redirect_to profile_mypage_index_path(current_user.id)
+  end
+
   def logout
     
   end
@@ -31,7 +42,15 @@ class MypageController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  # def set_address
+  #   @address = Address.find(params[:id])
+  # end
+
   def profile_params
     params.require(:user).permit(:self_introduction)
   end
+
+  # def address_params
+  #   params.require(:address).permit(:postal_code,:prefecture,:city,:place,:building)
+  # end
 end
