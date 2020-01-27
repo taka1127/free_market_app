@@ -87,6 +87,7 @@ ActiveRecord::Schema.define(version: 20200124120003) do
     t.string   "s_date",                     null: false
     t.integer  "price",                      null: false
     t.string   "category"
+    t.string   "sold"
     t.integer  "user_id"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
