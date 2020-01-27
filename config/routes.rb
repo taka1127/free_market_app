@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root "products#index"
+
+
   resources :signup, only: [:index,:create] do
     collection do
       get 'user_top'
@@ -11,8 +13,10 @@ Rails.application.routes.draw do
       get 'session5' 
     end
   end
-  resources :products
-
+  resources :products do
+    get 'buy', to: 'products#buy'
+    post 'confirm', to: 'products#confirm'
+  end
   #マイページ
   resources :users, only: [:index] do
     member do
@@ -22,6 +26,7 @@ Rails.application.routes.draw do
           post 'profile'
           patch 'profile_edit'
           get 'payment'
+          get 'register'
           get 'logout'
         end
       end

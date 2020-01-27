@@ -14,6 +14,13 @@ class ProductsController < ApplicationController
     @nike_product = Product.index(brand_name:"ナイキ")
   end
 
+
+  def buy
+    @product = Product.includes(:images).find(params[:product_id])
+    @image = Image.find(params[:product_id])
+    @user = @product.user
+  end
+
   def new
     @product = Product.new
     @product.images.new
