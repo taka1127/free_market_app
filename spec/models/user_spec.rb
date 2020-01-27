@@ -14,15 +14,27 @@ describe User do
     end
 
     it "is invalid without a name" do
-      user = build(:user, name: nil)
+      user = build(:user, first_name: nil)
       user.valid?
-      expect(user.errors[:name]).to include("を入力してください")
+      expect(user.errors[:first_name]).to include("を入力してください")
+    end
+
+    it "is invalid without a name" do
+      user = build(:user, last_name: nil)
+      user.valid?
+      expect(user.errors[:last_name]).to include("を入力してください")
     end
     
     it "is invalid without a name_kana" do
-      user = build(:user, name_kana: nil)
+      user = build(:user, first_name_kana: nil)
       user.valid?
-      expect(user.errors[:name_kana]).to include("を入力してください")
+      expect(user.errors[:first_name_kana]).to include("を入力してください")
+    end
+
+    it "is invalid without a name_kana" do
+      user = build(:user, last_name_kana: nil)
+      user.valid?
+      expect(user.errors[:last_name_kana]).to include("を入力してください")
     end
 
     it "is invalid without a tel" do

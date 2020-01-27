@@ -72,13 +72,7 @@
           = @product.price
         .show__item__buy__price__detail
           (税込)送料込み
-      - if current_user.id != @product.user_id
-        .show__item__buy__bottom
-          = link_to '#' do
-            購入画面に進む
-      .show__item__buy__notes
-        = simple_format(@product.content)
-      - if current_user.id == @product.user_id
+      - if user_signed_in? && current_user.id == @product.user_id
         .show__item__buy__edit
           = link_to edit_product_path do
             商品の編集
@@ -88,6 +82,11 @@
           = link_to product_path, method: :delete do
             この商品を削除する
       - else
+        .show__item__buy__bottom
+          = link_to product_buy_path(@product), method: :get do
+            購入画面に進む
+      .show__item__buy__notes
+        = simple_format(@product.content)
         .show__item__buy__buttom
           .show__item__buy__buttom__goodbuttom
             %i.far.fa-heart

@@ -104,6 +104,11 @@
     background-color: white;
     height: 64px;
     font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    color: $color_black;
+    padding: 5px;
+    width: 100%;
   }
 }
 
@@ -221,3 +226,7 @@
     }
   }
 }
+
+
+
+

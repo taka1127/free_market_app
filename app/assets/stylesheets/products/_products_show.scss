@@ -1,13 +1,10 @@
 .show{
   background-color:#f5f5f5;
-  width: 100vw;
-  height: 1700px;
-  padding: 50px 80px 50px 80px;
+  width: 900px;
+  margin: 30px auto;
   &__item{
     background-color:white;
-    width: calc(100vw - 550px);
     height: 1600px;
-    margin: 0 auto;
     &__name{
       color: rgb(51, 51, 51);
       text-align: center;
@@ -19,11 +16,11 @@
     }
     &__detail{
       background-color: white;
-      width: calc(100vw - 750px);
       height: 470px;
       margin: 0 auto;
       padding: 20px 20px 0px 20px;
       display: flex;
+      justify-content: center;
       &__photo{
         background-color: white;
         width: 300px;
@@ -75,7 +72,7 @@
       &__bottom{
         background-color: red;
         height: 75px;
-        width: 550px;
+        width: 70%;
         margin: 0 auto;
         text-align: center;
         line-height: 75px;
@@ -126,26 +123,27 @@
           padding-left: 20px;
           color: black;
           background-color: #f5f5f5;
-          width: 150px;
+          width: 200px;
           height: 40px;
           line-height: 40px;
           cursor: pointer;
         }
         &__repoprt{
-          margin-left: 60px;
+          margin-left: 20px;
           color: black;
           background-color: #f5f5f5;
-          width: 200px;
+          width: 240px;
           height: 40px;
           line-height: 40px;
-          padding-left: 20px;
           cursor: pointer;
+          span {
+            font-size: 14px;
+          }
         }
         &__security{
           margin-left: 200px;
           color: blue;
           cursor: pointer;
-          // cursor: hand;
         }
       }
     }
@@ -155,13 +153,12 @@
         height: 90px;
         text-align: center;
         margin: 0 auto;
-        width: 600px;
+        width: 90%;
         padding: 20px 20px 0px 20px;
       }
       &__box{
         height: 340px;
         padding: 0px 40px 10px 40px;
-        width: 900px;
       }
     }
     &__sns{
@@ -175,7 +172,6 @@
     }
   }
   .form{
-    width: 600px;
     height: 200px;
     width: 100%;
     margin: 0 auto;

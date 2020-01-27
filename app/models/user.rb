@@ -6,7 +6,7 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
 
   validates :email, :nickname,
-            :tel, :birthday, :name_kana,  :name,
+            :tel, :birthday, :first_name_kana, :last_name_kana,  :first_name, :last_name,
             presence: true
   has_many :goods
   has_many :products
