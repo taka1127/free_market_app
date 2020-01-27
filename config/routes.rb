@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :products,  only: [:index, :new, :create, :edit, :update, :show] do
     get 'buy', to: 'products#buy'
     post 'confirm', to: 'products#confirm'
+  end
   #マイページ
   resources :users, only: [:index] do
     member do
