@@ -21,6 +21,12 @@ class MypageController < ApplicationController
     end
   end
 
+  def register
+    unless current_user.id == @user.id
+      return_back and return
+    end
+  end
+
   def logout
     
   end
