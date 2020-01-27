@@ -26,7 +26,7 @@ describe ProductsController, type: :controller do
       expect(assigns(:ladies_product)[0]).to eq ladies_product
     end
 
-    it "renders the :index template" do
+    it "renders the :index template？" do
       get :index
       expect(response).to render_template :index
     end
