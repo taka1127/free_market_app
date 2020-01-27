@@ -31,8 +31,8 @@ Rails.application.routes.draw do
           get 'payment'
           get 'register'
           get 'logout'
-          post 'card'
-          get 'confirm'
+          get 'card'
+          post 'confirm'
         end
       end
     end
