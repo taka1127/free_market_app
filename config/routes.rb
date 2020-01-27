@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root "products#index"
+
+  
   resources :signup, only: [:index,:create] do
     collection do
       get 'user_top'
