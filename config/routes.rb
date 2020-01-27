@@ -13,7 +13,7 @@ Rails.application.routes.draw do
       get 'session5' 
     end
   end
-  resources :products,  only: [:index, :new, :create, :edit, :update, :show] do
+  resources :products do
     get 'buy', to: 'products#buy'
     post 'confirm', to: 'products#confirm'
   end
