@@ -44,12 +44,4 @@ describe ProductsController, type: :controller do
       expect(@product.reload.name).not_to eq "ターサージール6"
     end
   end
-
-  describe 'GET #search' do
-    it "complete search action" do
-      Product.search(params[:product][:keyword]) = "美品"
-      get :search
-      expect(response).to render_template :search
-    end
-  end
 end
