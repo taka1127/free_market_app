@@ -54,7 +54,6 @@ class ProductsController < ApplicationController
       card: params['payjp-token'], # フォームを送信すると作成・送信されてくるトークン
       currency: 'jpy'
     )
-    binding.pry
   end
 
   def update

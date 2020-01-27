@@ -69,7 +69,23 @@
           padding-left: 50px;
         }
       }
-      &__bottom{
+      &__confirm{
+        background-color: grey;
+        height: 75px;
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 75px;
+        font-weight: bold;
+        font-size: 175%;
+        color: white;
+        cursor: pointer;
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+      &__btm{
         background-color: red;
         height: 75px;
         width: 70%;
