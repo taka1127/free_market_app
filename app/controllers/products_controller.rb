@@ -29,10 +29,10 @@ class ProductsController < ApplicationController
   
   def create
     @product = Product.new(product_params)
-    if @product.save
+    if @product.images.present? && @product.save
       redirect_to root_path
     else
-      render :new
+      redirect_to products_path
     end
   end
 
@@ -47,10 +47,10 @@ class ProductsController < ApplicationController
 
   def update
     @images = @product.images
-    if @product.update(product_params)
+    if @product.images.present? && @product.update(product_params)
       redirect_to product_path(@product.id)
     else
-      render :edit
+      redirect_to edit_product_path
     end
   end
   
