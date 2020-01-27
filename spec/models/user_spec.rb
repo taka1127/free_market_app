@@ -42,4 +42,23 @@ describe User do
       expect(user.errors[:password]).to include("を入力してください")
     end
   end
+  describe "facebook連携でサインアップする" do
+
+    # before do
+    #   OmniAuth.config.mock_auth[:facebook] = nil
+    #   Rails.application.env_config['omniauth.auth'] = facebook_mock
+    # end
+
+    it "指定のemailアドレスを持つユーザーが登録されていればそのユーザーを返す" do
+      binding.pry
+      user = create(:user, email: "sample@test.com")
+      Rails.application.env_config['omniauth.auth'] = facebook_mock
+      user2 = build(:user,)
+
+    end
+
+    it "指定のemailアドレスを持つユーザーが登録されていなければ新規にユーザーを作成させる" do
+      user = build(:user, email: "somple@tist.com")
+    end
+  end
 end
