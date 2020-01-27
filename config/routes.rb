@@ -14,8 +14,10 @@ Rails.application.routes.draw do
     end
   end
   resources :products do
-    get 'buy', to: 'products#buy'
-    post 'confirm', to: 'products#confirm'
+    member do
+      get 'buy', to: 'products#buy'
+      post 'confirm', to: 'products#confirm'
+    end
     collection do
       get 'search'
     end

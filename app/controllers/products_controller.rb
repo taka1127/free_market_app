@@ -17,8 +17,8 @@ class ProductsController < ApplicationController
 
 
   def buy
-    @product = Product.includes(:images).find(params[:product_id])
-    @image = Image.find(params[:product_id])
+    @product = Product.find(params[:id])
+    @images = @product.images
     @user = @product.user
   end
 
@@ -37,7 +37,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @images = Image.where(product_id: params[:id])
+    @images = @product.images
     @comment = Comment.new
   end
   
