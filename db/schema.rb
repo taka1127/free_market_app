@@ -13,11 +13,12 @@
 ActiveRecord::Schema.define(version: 20200110094343) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "postal_code",  null: false
+    t.string   "postal_code",  null: false
     t.integer  "prefecture",   null: false
     t.string   "city",         null: false
     t.string   "house_number", null: false
     t.string   "building"
+    t.string   "tel"
     t.integer  "user_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
@@ -69,16 +70,14 @@ ActiveRecord::Schema.define(version: 20200110094343) do
     t.string   "name",                       null: false
     t.text     "content",      limit: 65535, null: false
     t.string   "size"
-    t.integer  "brand_id"
+    t.string   "brand_name"
     t.string   "status",                     null: false
     t.string   "s_charge",                   null: false
     t.string   "s_method",                   null: false
     t.string   "s_prefecture",               null: false
     t.string   "s_date",                     null: false
     t.integer  "price",                      null: false
-    t.string   "category_L"
-    t.string   "category_M"
-    t.string   "category_S"
+    t.string   "category"
     t.integer  "user_id"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
@@ -89,9 +88,11 @@ ActiveRecord::Schema.define(version: 20200110094343) do
     t.string   "nickname",                                          null: false
     t.string   "email",                                default: "", null: false
     t.string   "encrypted_password",                   default: "", null: false
-    t.string   "name",                                              null: false
-    t.string   "name_kana",                                         null: false
-    t.integer  "tel",                                               null: false
+    t.string   "first_name",                                        null: false
+    t.string   "last_name",                                         null: false
+    t.string   "first_name_kana",                                   null: false
+    t.string   "last_name_kana",                                    null: false
+    t.string   "tel",                                               null: false
     t.date     "birthday",                                          null: false
     t.text     "self_introduction",      limit: 65535
     t.integer  "point",                                default: 0

@@ -78,3 +78,5 @@ gem 'mini_magick'
 gem "font-awesome-sass"
 gem 'pry-rails'
 gem 'recaptcha', require: "recaptcha/rails"
+gem 'gretel'
+

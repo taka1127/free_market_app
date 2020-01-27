@@ -4,8 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
         #  :omniauthable
-  validates :email, :password, :nickname,
-            :tel, :birthday, :name_kana,  :name,
+  validates :email, 
+            :nickname,
+            :tel, :birthday, :first_name_kana, :last_name_kana,  :first_name, :last_name,
             presence: true
 
         

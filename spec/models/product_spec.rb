@@ -55,22 +55,10 @@ describe Product do
       expect(product.errors[:price])
     end
 
-    it "is invalid without a caregory_L " do
+    it "is invalid without a caregory " do
       product = build(:product)
       product.valid?
       expect(product.errors[:caregory_L])
-    end
-
-    it "is invalid without a caregory_M " do
-      product = build(:product)
-      product.valid?
-      expect(product.errors[:caregory_M])
-    end
-
-    it "is invalid without a caregory_S " do
-      product = build(:product)
-      product.valid?
-      expect(product.errors[:caregory_S])
     end
 
     it "is invalid without a user_id " do

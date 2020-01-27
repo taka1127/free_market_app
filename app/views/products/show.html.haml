@@ -31,21 +31,14 @@
             カテゴリー
           %td.show__item__detail__table__b
             >
-            = @product.category_L
+            = @product.category
             %br/
-            %span.show__item__detail__table__smile
-              >
-              = @product.category_M
-            %br/
-            %span.show__item__detail__table__smile
-              >
-              = @product.category_S
         %tr
           %th.show__item__detail__table__a
             ブランド
           %td.show__item__detail__table__b
-            - if @product.brand_id
-              = @product.brand_id
+            - if @product.brand_name
+              = @product.brand_name
         %tr
           %th.show__item__detail__table__a
             商品の状態
@@ -79,13 +72,13 @@
           = @product.price
         .show__item__buy__price__detail
           (税込)送料込み
-      - if current_user.id != @product.user_id
+      - if current_user != @product.user_id
         .show__item__buy__bottom
           = link_to '#' do
             購入画面に進む
       .show__item__buy__notes
         = simple_format(@product.content)
-      - if current_user.id == @product.user_id
+      - if current_user == @product.user_id
         .show__item__buy__edit
           = link_to edit_product_path do
             商品の編集
