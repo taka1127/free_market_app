@@ -32,7 +32,7 @@ class ProductsController < ApplicationController
     if @product.images.present? && @product.save
       redirect_to root_path
     else
-      redirect_to products_path
+      redirect_to new_product_path
     end
   end
 
@@ -50,7 +50,7 @@ class ProductsController < ApplicationController
     if @product.images.present? && @product.update(product_params)
       redirect_to product_path(@product.id)
     else
-      redirect_to edit_product_path
+      render :edit
     end
   end
   
