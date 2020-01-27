@@ -1,0 +1,46 @@
+.buy
+  .buy__title
+  .buy__box
+    .buy__box__title
+      購入内容の確認
+    .buy__box__detail
+      .buy__box__detail__image
+        = image_tag @image.image.url
+      .buy__box__detail__title
+        = @product.name
+        %br/
+        ¥
+        = @product.price
+        (送料込み)
+    .buy__box__pay
+      .buy__box__pay__price
+        .buy__box__pay__price__titile
+          支払い金額
+        .buy__box__pay__price__yen
+          ¥
+          = @product.price
+      .buy__box__pay__point
+        ポイントを使用 (所持ポイント:
+        = @user.point
+        P)
+    .buy__box__how
+      .buy__box__how__left
+        = form_tag(product_confirm_path, method: :post) do
+          :plain
+            <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_0d5e9e81d2537186181eeef0"></script>
+      .buy__box__how__right
+        %p 変更する
+    .buy__box__address
+      .buy__box__address__left
+        %p 配送先
+        %p 〒ccc-dddd
+        %p ************7267
+        %br/
+        = @user.name
+      .buy__box__address__right
+        %p 変更する
+    .buy__box__content
+      %p この商品はゆうゆうメルカリ便を利用しているため、
+      %p アプリからのみ購入できます。
+    .buy__box__bottom
+      %p 購入する
