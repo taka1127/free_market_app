@@ -26,7 +26,7 @@ describe ProductsController, type: :controller do
       expect(assigns(:ladies_product)[0]).to eq ladies_product
     end
 
-    it "renders the :index template？" do
+    it "renders the :index template" do
       get :index
       expect(response).to render_template :index
     end
@@ -42,6 +42,14 @@ describe ProductsController, type: :controller do
       params[:product][:name] = "ナイキシューズ"
       patch :update, params: params
       expect(@product.reload.name).not_to eq "ターサージール6"
+    end
+  end
+
+  describe 'GET #search' do
+    it "complete search action" do
+      Product.search(params[:product][:keyword]) = "美品"
+      get :search
+      expect(response).to render_template :search
     end
   end
 end
