@@ -77,4 +77,4 @@ gem 'fog-aws'
 gem 'mini_magick'
 gem "font-awesome-sass"
 gem 'pry-rails'
-
+gem 'gretel'
