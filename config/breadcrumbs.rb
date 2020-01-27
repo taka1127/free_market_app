@@ -8,7 +8,7 @@ crumb :user do
 end
 
 crumb :logout do
-  link "ログアウト", logout_users_path
+  link "ログアウト", logout_mypage_index_path
   parent :user
 end
 
