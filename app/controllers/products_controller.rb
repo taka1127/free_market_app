@@ -49,7 +49,6 @@ class ProductsController < ApplicationController
 
   def confirm
     @card = current_user.card
-    # @sold = @product.sold
     @product.update_attribute('sold', "売り切れました")
     Payjp.api_key = "sk_test_96f14e0e07de7024eedd09ec"
     Payjp::Charge.create(

@@ -1,6 +1,5 @@
 class CardsController < ApplicationController
   require 'payjp'
-  # before_action :set_card
 
   # 後ほど登録したクレジットの表示画面を作成します。
   def index
@@ -29,13 +28,4 @@ class CardsController < ApplicationController
     end
   end
 
-  # private
-
-  # def set_card
-  #   @card = Card.where(user_id: current_user.id).first if Card.where(user_id: current_user.id).present?
-  # end
-
-  # def card_params
-  #   params.require(:card).permit(user_id: current_user.id, customer_id: customer.id, card_id: customer.default_card)
-  # end
 end
