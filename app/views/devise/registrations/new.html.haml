@@ -36,14 +36,25 @@
     = f.date_field :birthday
 
   .field
-    = f.label :name
+    = f.label :first_name
     %br/
-    = f.text_field :name
+    = f.text_field :first_name
 
   .field
-    = f.label :name_kana
+    = f.label :last_name
     %br/
-    = f.text_field :name_kana
+    = f.text_field :last_name
+
+
+  .field
+    = f.label :first_name_kana
+    %br/
+    = f.text_field :first_name_kana
+
+  .field
+    = f.label :last_name_kana
+    %br/
+    = f.text_field :last_name_kana
 
 
   .actions
