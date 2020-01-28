@@ -1,6 +1,9 @@
 -#-----------本人確認ページ----------------------------
 .main
   = render "shared/header"
+  .breadcrumbs
+    - breadcrumb :register
+    = breadcrumbs pretext: "",separator: " &rsaquo; ", class: "breadcrumbs-list"
   .main__container
     = render 'users/side_bar' 
     .main__container__r-container
