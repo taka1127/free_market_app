@@ -3,8 +3,6 @@ class ProductsController < ApplicationController
   before_action :set_product,         only: [:show, :edit, :update, :destroy, :buy]
   before_action :ensure_correct_user, only: [:edit, :update, :destroy]
 
-  require 'payjp'
-
   def index
     @products = Product.all
     @ladies_product = Product.index(category:"レディース")
@@ -52,12 +50,13 @@ class ProductsController < ApplicationController
   end
 
   def confirm
+    @card = current_user.card
     @sold = Product.find(params[:product_id])
     @sold.update_attribute('sold', "売り切れました")
     Payjp.api_key = "sk_test_96f14e0e07de7024eedd09ec"
     Payjp::Charge.create(
-      amount:  3500, # 決済する値段
-      card: params['payjp-token'], # フォームを送信すると作成・送信されてくるトークン
+      amount:  @sold.price , # 決済する値段
+      customer: @card.customer_id, # フォームを送信すると作成・送信されてくるトークン
       currency: 'jpy'
     )
   end
