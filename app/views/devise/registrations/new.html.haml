@@ -5,16 +5,20 @@
     = f.label :email
     %br/
     = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em= t('devise.shared.minimum_password_length', count: @minimum_password_length)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
+  - if @sns_id.present?
+    = hidden_field_tag :sns_auth, true
+  - else
+    .field
+      = f.label :password
+      - if @minimum_password_length
+        %em
+          (#{@minimum_password_length} characters minimum)
+      %br/
+      = f.password_field :password, autocomplete: "new-password"
+    .field
+      = f.label :password_confirmation
+      %br/
+      = f.password_field :password_confirmation, autocomplete: "new-password"
 
   .field
     = f.label :nickname
@@ -32,23 +36,27 @@
     = f.date_field :birthday
 
   .field
-    = f.label :name
+    = f.label :first_name
     %br/
-    = f.text_field :name
+    = f.text_field :first_name
 
   .field
-    = f.label :name_kana
+    = f.label :last_name
     %br/
-    = f.text_field :name_kana
+    = f.text_field :last_name
+
+
+  .field
+    = f.label :first_name_kana
+    %br/
+    = f.text_field :first_name_kana
+
+  .field
+    = f.label :last_name_kana
+    %br/
+    = f.text_field :last_name_kana
 
 
   .actions
     = f.submit t('.sign_up')
     = render "devise/shared/links"
-=render "users/new-user-top"
--# =render "users/signin"
-=render "users/session1"
-=render "users/session2"
-=render "users/session3"
-=render "users/session4"
-=render "users/session5"
