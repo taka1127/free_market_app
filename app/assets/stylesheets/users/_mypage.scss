@@ -7,19 +7,14 @@
   width: 100%;
   height: 100%;
   &__container{
-    // margin: 40px auto 0 ;
-    
-    // display: flex;
-    // justify-content: center;
     &__content{
       cursor: pointer;
-      width: 600px;
+      width: 700px;
       &__user{
         height: 200px;
         background-image:image-url('24d7ce1e93b90c1e49dcf21d2e079a42_w.jpg');
         background-size:  cover;
         padding: 20px;
-        border: solid 0.5px gray;
         &__erea{
           top:50px;
           text-align: center;
@@ -65,8 +60,16 @@
         }
       }
       &__index{
-        border: solid 1px;
         height: 300px;
+        width: 700px;
+        margin-bottom: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        &__header{
+          height: 70px;
+          line-height: 70px;
+          background-color: white;
+          padding-left: 20px;
+        }
         ul{
           border: 0;
           background-color: #eee;
@@ -84,6 +87,7 @@
                 color: #333;
                 font-size: 16px;
                 line-height: 72px;
+                text-decoration: none;
               }
             }
           }
@@ -91,85 +95,33 @@
             background: #fff !important;
             border-top: 2px solid #ea352d !important;
           }
-          &__message{
-            // border: solid 1px;
-            // .mypage-panel.is-show{
-            //   display: block;
-            // }
-          }
-          .mypage.panel{
-            
-            ul{
-              border: 0;
-              background-color: #eee;
-              display: none;
-              li{
-                display: none;
-              }
-              li.is-show{
-                display: none;
+        }
+        ul{
+          border: 0;
+          width: 100%;
+          li{
+            .text{
+              height: 200px;
+              width: 700px;
+              background-color: white;
+              text-align: center;
+              color: rgb(182, 181, 181);
+              padding: 20px;
+              .img{
+                display: block;
+                margin: 0 auto;
+                p{
+                  display: block;
+                }
               }
             }
           }
+          li.is-show,li.is-show2{
+            display: none;
+            background-color: white;
+          }
         }
       }
-      // &__message{
-      //   padding-top: 100px;
-      //   width: 700px;
-      //   height: 300px;
-      //   text-align: center;
-      //   border: solid 0.5px gray;
-      //   background-color: white;
-      //   &__nomessage{
-      //     width: 120px;
-      //     margin: 0 auto;
-      //     color: #333;
-      //     opacity: 0.6;
-      //     font-family: Arial, Helvetica, sans-serif;
-      //     font-weight: bold;
-      //     text-align: center;
-      //     :active{
-      //       display:block;
-      //     }
-      //     p{
-      //       display: block;
-      //     }
-      //   }
-      // }
-      // &__bottom{
-      //   height:56px;
-      //   padding: 16px;
-      //   margin: 40px 0 0;
-      //   border: solid 0.5px gray;
-      //   background-color: white;
-      //   font-family: Arial, Helvetica, sans-serif;
-      // }
-      // &__purchased{
-      //   &__now-trade{
-      //     width: 50%;
-      //     height: 72px;
-      //     text-align: center;
-      //     font-size: 22px;
-      //     line-height: 72px;
-      //     border: solid 0.5px gray;
-      //     background-color: white;
-      //     float: left;
-      //     border-top:solid 2px red;
-      //     font-family: Arial, Helvetica, sans-serif;
-      //   }
-      //   &__past-trade{
-      //     width: 50%;
-      //     height: 72px;
-      //     text-align: center;
-      //     font-size: 22px;
-      //     line-height: 72px;
-      //     border: solid 0.5px gray;
-      //     background-color: white;
-      //     float: right;
-      //     border-top:solid 2px red;
-      //     font-family: Arial, Helvetica, sans-serif;
-      //   }
-      // // }
     }
   }
 }

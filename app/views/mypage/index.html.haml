@@ -35,76 +35,34 @@
                 やることリスト
         %ul.main__container__content__index__text        
           %li.main__container__content__index__text__message.mypage-panel.is-show
-            .main__container__content__index__text__message__text
-              現在、お知らせはありません
-            .main__container__content__index__text__message__text
-              現在、お知らせはありません
-            .main__container__content__index__text__message__text
-              現在、お知らせはありません
+            .main__container__content__index__text__message.text
+              =image_tag "logo_gray.svg",size: "100x100",class:"img"
+              %p 現在、やることリストはありません
           %li.main__container__content__index__text__message.mypage-panel
-            .main__container__content__index__text__message__text
-              現在、やることリストはありません
-            .main__container__content__index__text__message__text
-              現在、やることリストはありません
-            .main__container__content__index__text__message__text
-              現在、やることリストはありません
+            .main__container__content__index__text__message.text
+              =image_tag "logo_gray.svg",size: "100x100",class:"img"
+              %p 現在、お知らせはありません
 
-      -# %section.mypage-content__r-content__index
-      -#   %ul.mypage-content__r-content__index__tab.flex
-      -#     %li.mypage-tab.is-active
-      -#       %h3.bold
-      -#         = link_to "", class: "" do
-      -#           お知らせ
-      -#     %li.mypage-tab
-      -#       %h3.bold
-      -#         = link_to "", class: "" do
-      -#           やることリスト
-      -#   .mypage-content__r-content__index__content.mypage-panel.is-show
-      -#     = render partial: 'notification_panel'
-      -#   .mypage-content__r-content__index__content.mypage-panel
-      -#     = render partial: 'todo_panel'
-
-      -# %section.mypage-content__r-content__index.purchased-index.m-top40
-      -#         %h2.purchased-index__title.bold 購入した商品
-      -#         %ul.mypage-content__r-content__index__tab.flex
-      -#           %li.mypage-tab2.is-active2
-      -#             %h3.bold
-      -#               = link_to "", class: "" do
-      -#                 取引中
-      -#           %li.mypage-tab2
-      -#             %h3.bold
-      -#               = link_to "", class: "" do
-      -#                 過去の取引
-      -#         .mypage-content__r-content__index__content.mypage-panel2.is-show2
-      -#           %ul.purchase-lists
-      -#             - @purchase_products.each do |product| 
-      -#               = render partial: 'purchase_panel', locals: { product: product }
-      -#             %li.more-list
-      -#               = link_to "", class: " " do
-      -#                 一覧を見る
-      -#         .mypage-content__r-content__index__content.mypage-panel2
-      -#           %ul.purchase-lists
-      -#             - @purchased_products.each do |product| 
-      -#               = render partial: 'purchased_panel', locals: { product: product }
-      -#             %li.more-list
-      -#               = link_to "", class: " " do
-      -#                 一覧を見る          
-      -# %section.main__container__content__index
-      -#   %ul.main__container__content__index__tabs.flex
-      -#     %li.mypage-tab2.is-active2
-      -#       %h3.bold
-      -#         = link_to "", class:"" do
-      -#           お知らせ
-      -#     %li.mypage-tab
-      -#       %h3.bold
-      -#         = link_to "", class:"" do
-      -#           やることリスト
-      -#   .main__container__content__index__message.mypage-panel.is-show2
-      -#     =image_tag "logo_gray.svg" 
-      -#   %p 現在、お知らせはありません
-      -#   .main__container__content__index__message.mypage-panel
-      -#     =image_tag "logo_gray.svg"
-      -#   %p 現在、やることリストはありません
-          
+      %section.main__container__content__index
+        .main__container__content__index__header
+          購入した商品
+        %ul.main__container__content__index__tabs
+          %li.mypage-tab2.is-active2
+            %h3.bold
+              = link_to "", class:"" do
+                取引中
+          %li.mypage-tab2
+            %h3.bold
+              = link_to "", class:"" do
+                過去の取引
+        %ul.main__container__content__index__text        
+          %li.main__container__content__index__text__message.mypage-panel2.is-show2
+            .main__container__content__index__text__message.text
+              =image_tag "logo_gray.svg",size: "100x100",class:"img"
+              %p 過去の取引はありません
+          %li.main__container__content__index__text__message.mypage-panel2
+            .main__container__content__index__text__message.text
+              =image_tag "logo_gray.svg",size: "100x100",class:"img"
+              %p 取引中の商品がありません
   .main__footer
     = render "shared/footer"
