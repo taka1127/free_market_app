@@ -5,7 +5,7 @@
       購入内容の確認
     .buy__box__detail
       .buy__box__detail__image
-        = image_tag @images[0].image
+        = image_tag @product.images.first.image
       .buy__box__detail__title
         = @product.name
         %br/
@@ -33,7 +33,6 @@
       .buy__box__address__right
         %p 変更する
     .buy__box__how
-      .buy__box__how__left
-        = form_tag(confirm_product_path, method: :post) do
-          :plain
-            <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_0d5e9e81d2537186181eeef0"></script>
+      = link_to confirm_product_path, method: :post do
+        .buy__box__how__left
+          購入する

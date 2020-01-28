@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :access_registration, except: [:index, :show, :search]
-  before_action :set_product,         only: [:show, :edit, :update, :destroy, :buy]
+  before_action :set_product,         only: [:show, :edit, :update, :destroy, :buy, :confirm]
   before_action :ensure_correct_user, only: [:edit, :update, :destroy]
 
   def index
@@ -44,18 +44,16 @@ class ProductsController < ApplicationController
   end
 
   def buy
-    @product = Product.includes(:images).find(params[:product_id])
-    @image = Image.find(params[:product_id])
     @user = @product.user
   end
 
   def confirm
     @card = current_user.card
-    @sold = Product.find(params[:product_id])
-    @sold.update_attribute('sold', "売り切れました")
+    # @sold = @product.sold
+    @product.update_attribute('sold', "売り切れました")
     Payjp.api_key = "sk_test_96f14e0e07de7024eedd09ec"
     Payjp::Charge.create(
-      amount:  @sold.price , # 決済する値段
+      amount:  @product.price , # 決済する値段
       customer: @card.customer_id, # フォームを送信すると作成・送信されてくるトークン
       currency: 'jpy'
     )
@@ -98,7 +96,7 @@ class ProductsController < ApplicationController
   end
 
   def set_product
-    @product = Product.find(params[:id])
+    @product = Product.includes(:images).find(params[:id])
   end
 
 end

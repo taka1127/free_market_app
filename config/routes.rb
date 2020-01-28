@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root "products#index"
-  resources :products do
-    get 'buy', to: 'products#buy'
-    post 'confirm', to: 'products#confirm'
-  end
+
   resources :users, only: [:show]
   resources :signup, only: [:index,:create] do
     collection do
