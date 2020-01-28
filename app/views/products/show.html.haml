@@ -83,7 +83,7 @@
             この商品を削除する
       - else
         .show__item__buy__bottom
-          = link_to product_buy_path(@product), method: :get do
+          = link_to buy_product_path(@product), method: :get do
             購入画面に進む
       .show__item__buy__notes
         = simple_format(@product.content)
