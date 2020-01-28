@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :access_registration, except: [:index, :show, :search]
-  before_action :set_product,         only: [:show, :edit, :update, :destroy]
+  before_action :set_product,         only: [:show, :edit, :update, :destroy, :buy]
   before_action :ensure_correct_user, only: [:edit, :update, :destroy]
 
   def index
@@ -17,7 +17,6 @@ class ProductsController < ApplicationController
 
 
   def buy
-    @product = Product.find(params[:id])
     @images = @product.images
     @user = @product.user
   end
