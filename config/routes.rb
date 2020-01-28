@@ -16,10 +16,8 @@ Rails.application.routes.draw do
       get 'session5' 
     end
   end
-  resources :products do
-    get 'buy', to: 'products#buy'
-    post 'confirm', to: 'products#confirm'
-  end
+  resources :cards , only: [:new, :index, :create, :destroy]
+  
   #マイページ
   resources :users, only: [:index] do
     member do

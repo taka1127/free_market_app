@@ -27,12 +27,6 @@ class MypageController < ApplicationController
     end
   end
 
-  def card
-  end
-
-  def confirm
-  end
-
   def logout
     
   end
