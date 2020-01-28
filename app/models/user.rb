@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_many :goods
   has_many :products
   has_many :comments
-  has_many :sns_credential
+  has_many :sns_credential, dependent: :destroy
   has_one :address, dependent: :destroy
 
   def self.from_omniauth(auth)
