@@ -41,3 +41,10 @@ $(document).on('turbolinks:load', ()=> {
     if ($('.js-file').length == 0) $('#image-box').append(buildFileField(fileIndex[0]));
   });
 });
+
+$(document).on('turbolinks:load', ()=> {
+  $('#product_price').keyup(function() {
+    // var input = $(this).val
+    console.log("hello");
+  })
+});

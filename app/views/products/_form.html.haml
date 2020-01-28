@@ -72,8 +72,12 @@
                 %span 必須
               .right 
                 = f.number_field :price
-            %li 販売手数料(10%)
-            %li 販売利益
+            %li.flex
+              販売手数料(10%)
+              .tax 
+            %li.flex 
+              販売利益
+              .profit 
       .products-new__contents__other.section
         %p
           = link_to '#' do
