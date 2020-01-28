@@ -1,11 +1,12 @@
 class ProductsController < ApplicationController
-  before_action :access_registration, except: [:index, :show]
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :access_registration, except: [:index, :show, :search]
+  before_action :set_product,         only: [:show, :edit, :update, :destroy, :buy]
   before_action :ensure_correct_user, only: [:edit, :update, :destroy]
 
   require 'payjp'
 
   def index
+    @products = Product.all
     @ladies_product = Product.index(category:"レディース")
     @mens_product = Product.index(category:"メンズ")
     @e_product =  Product.index(category:"家電・スマホ・カメラ")
@@ -16,6 +17,11 @@ class ProductsController < ApplicationController
     @nike_product = Product.index(brand_name:"ナイキ")
   end
 
+  def buy
+    @images = @product.images
+    @user = @product.user
+  end
+
   def new
     @product = Product.new
     @product.images.new
@@ -23,15 +29,15 @@ class ProductsController < ApplicationController
   
   def create
     @product = Product.new(product_params)
-    if @product.save
+    if @product.images.present? && @product.save
       redirect_to root_path
     else
-      render :new
+      redirect_to new_product_path
     end
   end
 
   def show
-    @images = Image.where(product_id: params[:id])
+    @images = @product.images
     @comment = Comment.new
   end
   
@@ -58,7 +64,7 @@ class ProductsController < ApplicationController
 
   def update
     @images = @product.images
-    if @product.update(product_params)
+    if @product.images.present? && @product.update(product_params)
       redirect_to product_path(@product.id)
     else
       render :edit
@@ -71,6 +77,10 @@ class ProductsController < ApplicationController
     else
       render user_path(@product.user_id)
     end
+  end
+
+  def search
+    @products = Product.search(params[:product][:keyword]) 
   end
 
   private

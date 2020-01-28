@@ -18,6 +18,15 @@ Rails.application.routes.draw do
   end
   resources :cards , only: [:new, :index, :create, :destroy]
   
+  resources :products do
+    member do
+      get 'buy', to: 'products#buy'
+      post 'confirm', to: 'products#confirm'
+    end
+    collection do
+      get 'search'
+    end
+  end
   #マイページ
   resources :users, only: [:index] do
     member do

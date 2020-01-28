@@ -10,4 +10,11 @@ class Product < ApplicationRecord
   has_many :comments
   has_many :goods
   accepts_nested_attributes_for :images, allow_destroy: true
+  attr_accessor :keyword
+
+
+  def self.search(search)
+    return Product.all unless search
+    Product.where('name LIKE(?)', "%#{search}%")
+  end
 end
