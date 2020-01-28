@@ -2,7 +2,7 @@
   .sign-up-session4__header
     =render "users/sessions-header"
   .sign-up-session4__body
-    = form_for @user, url: card_mypage_index_path, method: :post, html: {class: 'forth-main-wrapper__box'} do |f|
+    = form_for new_card_path, method: :post, html: {class: 'forth-main-wrapper__box'} do |f|
       .sign-up-session4__body__head
         支払い方法
       .sign-up-session4__body__contents

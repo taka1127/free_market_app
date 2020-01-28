@@ -1,4 +1,4 @@
-class CardController < ApplicationController
+class CardsController < ApplicationController
   require 'payjp'
   before_action :set_card
 
@@ -6,17 +6,8 @@ class CardController < ApplicationController
   def index
   end
 
-  def comfirm
-  end
-
-
   # クレジットカード情報入力画面
   def new
-    if @card
-      redirect_to card_path unless @card
-    else
-      render 'mypages/create_card'
-    end
   end
 
   # 登録画面で入力した情報をDBに保存
