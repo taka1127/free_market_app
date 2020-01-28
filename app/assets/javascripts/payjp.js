@@ -11,7 +11,7 @@ $(function(){
       exp_year: document.getElementById("exp_year").value,
       cvc: document.getElementById("cvc").value
     };
-    if (card.number == "", card.exp_month == "1", card.exp_year == "2019", card.cvc == "") {
+    if (card.number == "", card.exp_month == "1", card.exp_year == "2020", card.cvc == "") {
       alert("カード情報が入力されていません。"); // 送られた値がデフォルト値だった場合
     } else { // デフォルト値以外の値が送られてきた場合
       Payjp.createToken(card, function(status, response) {  // トークンを生成

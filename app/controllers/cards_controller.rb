@@ -12,7 +12,7 @@ class CardsController < ApplicationController
 
   # 登録画面で入力した情報をDBに保存
   def create
-    Payjp.api_key = "秘密鍵(sk_~)"
+    Payjp.api_key = "sk_test_96f14e0e07de7024eedd09ec"
     if params['payjp-token'].blank?
       render 'mypages/create_card'
     else
@@ -22,11 +22,11 @@ class CardsController < ApplicationController
         metadata: {user_id: current_user.id} # 記述しなくても大丈夫です
       )
       @card = Card.new(user_id: current_user.id, customer_id: customer.id, card_id: customer.default_card)
-      if @card.save
-        redirect_to cards_path
-      else
-        render 'mypages/create_card'
-      end
+      # if @card.save
+      #   redirect_to roots_path
+      # else
+      #   render 'mypages/create_card'
+      # end
     end
   end
 

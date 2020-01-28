@@ -16,7 +16,7 @@ Rails.application.routes.draw do
       get 'session5' 
     end
   end
-  resources :cards , only: [:new, :index, :create, :destroy]
+  resources :cards
   
   resources :products do
     member do
