@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   private
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [ :email, :password, :nickname, :tel, :birthday, :name_kana, :name])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [ :email, :password, :nickname, :tel, :birthday, :first_name_kana, :last_name_kana, :first_name, :last_name])
   end
 
   def production?
