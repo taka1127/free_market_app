@@ -33,6 +33,7 @@ Rails.application.routes.draw do
           patch 'profile_edit'
           get 'payment'
           get 'register'
+          patch 'register_edit'
           get 'logout'
           get 'card'
           post 'confirm'
