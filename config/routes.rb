@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     member do
       get 'buy', to: 'products#buy'
       post 'confirm', to: 'products#confirm'
+      
     end
     collection do
       get 'search'
