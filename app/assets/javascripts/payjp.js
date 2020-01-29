@@ -15,7 +15,6 @@ $(function(){
       alert("カード情報が入力されていません。"); // 送られた値がデフォルト値だった場合
     } else { // デフォルト値以外の値が送られてきた場合
       Payjp.createToken(card, function(status, response) {  // トークンを生成
-        console.log(response)
         if (status === 200) {
           console.log(1)
           $("#card_number").removeAttr("name");

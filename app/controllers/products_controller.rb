@@ -50,7 +50,7 @@ class ProductsController < ApplicationController
   def confirm
     @card = current_user.card
     @product.update_attribute('sold', "売り切れました")
-    Payjp.api_key = "sk_test_96f14e0e07de7024eedd09ec"
+    Payjp.api_key = ENV['payjp_key_secret']
     Payjp::Charge.create(
       amount:  @product.price , # 決済する値段
       customer: @card.customer_id, # フォームを送信すると作成・送信されてくるトークン
