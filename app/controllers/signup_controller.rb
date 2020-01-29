@@ -35,7 +35,7 @@ class SignupController < ApplicationController
     session[:city] = address_params[:city]
     session[:house_number] = address_params[:house_number]
     session[:building] = address_params[:building]
-    session[:tel] = address_params[:tel]
+    session[:building_tel] = address_params[:building_tel]
     @address = Address.new
   end
 
@@ -67,7 +67,7 @@ class SignupController < ApplicationController
       city: session[:city], 
       house_number: session[:house_number], 
       building: session[:building],
-      tel: session[:tel],
+      building_tel: session[:building_tel],
       user_id: @user.id
     )
 
@@ -76,7 +76,8 @@ class SignupController < ApplicationController
       session[:id] = @user.id
       redirect_to session5_signup_index_path
     else
-      redirect_to root_path
+      flash[:notice] = '登録ができませんでした。再度新規登録をお願い致します。'
+      redirect_to user_top_signup_index_path
     end
   end
 
@@ -94,6 +95,6 @@ class SignupController < ApplicationController
   end
 
   def address_params
-    params.require(:user).require(:addresses).permit(:postal_code, :prefecture, :city, :house_number, :building, :tel )
+    params.require(:user).require(:addresses).permit(:postal_code, :prefecture, :city, :house_number, :building, :building_tel )
   end
 end
