@@ -5,11 +5,11 @@
       = @product.name
     .show__item__detail
       .show__item__detail__photo
-        = image_tag @images[0].image , size: "300x300"
+        = image_tag @images[0].image , size: "300x300",id:"main-photo"
         .show__item__detail__photo__group1
           .show__item__detail__photo1
             - @images.each do |i|
-              = image_tag i.image, size: "60x60"
+              = image_tag i.image, size: "60x60", class:"mini-photo"
       %table.show__item__detail__table{:border => "1",}
         %tr
           %th.show__item__detail__table__a 

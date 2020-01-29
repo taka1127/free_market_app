@@ -13,3 +13,18 @@ crumb :logout do
   parent :user
 end
 
+crumb :profile do
+  link "プロフィール", profile_mypage_index_path
+  parent :user
+end
+
+crumb :payment do
+  link "支払い方法", payment_mypage_index_path
+  parent :user
+end
+
+crumb :register do
+  link "本人情報の登録", register_mypage_index_path
+  parent :user
+end
+
