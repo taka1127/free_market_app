@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :access_registration, except: [:index, :show, :search]
-  before_action :set_product,         only: [:show, :edit, :update, :destroy, :buy]
+  before_action :set_product,         only: [:show, :edit, :update, :destroy, :buy, :confirm]
   before_action :ensure_correct_user, only: [:edit, :update, :destroy]
 
   def index
@@ -14,7 +14,6 @@ class ProductsController < ApplicationController
     @supreme_product = Product.index(brand_name:"シュプリーム")
     @nike_product = Product.index(brand_name:"ナイキ")
   end
-
 
   def buy
     @images = @product.images
@@ -42,6 +41,21 @@ class ProductsController < ApplicationController
   
   def edit
     @images = @product.images
+  end
+
+  def buy
+    @user = @product.user
+  end
+
+  def confirm
+    @card = current_user.card
+    @product.update_attribute('sold', "売り切れました")
+    Payjp.api_key = ENV['payjp_key_secret']
+    Payjp::Charge.create(
+      amount:  @product.price , # 決済する値段
+      customer: @card.customer_id, # フォームを送信すると作成・送信されてくるトークン
+      currency: 'jpy'
+    )
   end
 
   def update
@@ -77,11 +91,11 @@ class ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:name, :content, :status, :s_prefecture, :s_charge, :s_method, :s_date, :price, :category, :brand_name, images_attributes: [:image, :_destroy, :id]).merge(user_id: current_user.id)
+    params.require(:product).permit(:name, :content, :status, :s_prefecture, :s_charge, :s_method, :s_date, :price, :category, :brand_name, :sold, images_attributes: [:image, :_destroy, :id]).merge(user_id: current_user.id)
   end
 
   def set_product
-    @product = Product.find(params[:id])
+    @product = Product.includes(:images).find(params[:id])
   end
 
 end

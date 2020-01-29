@@ -82,7 +82,12 @@
           = link_to product_path, method: :delete do
             この商品を削除する
       - else
-        .show__item__buy__bottom
+        .show__item__buy__iii
+      - if @product.sold.present?
+        .show__item__buy__confirm
+          = @product.sold
+      - else
+        .show__item__buy__btm
           = link_to buy_product_path(@product), method: :get do
             購入画面に進む
       .show__item__buy__notes

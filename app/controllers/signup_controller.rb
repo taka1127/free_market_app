@@ -1,4 +1,5 @@
 class SignupController < ApplicationController
+
   def user_top
   end
 
@@ -83,6 +84,9 @@ class SignupController < ApplicationController
     sign_in User.find(session[:id]) unless user_signed_in?
   end
 
+
+
+
   private
   # 許可するキーを設定
   def user_params
@@ -92,5 +96,4 @@ class SignupController < ApplicationController
   def address_params
     params.require(:user).require(:addresses).permit(:postal_code, :prefecture, :city, :house_number, :building, :tel )
   end
-
 end

@@ -1,7 +1,7 @@
 .buy{
   background-color: #f5f5f5;
   width: 100vw;
-  height: 1200px;
+  height: 900px;
   padding: 50px 200px 50px 200px;
   &__title{
     width: 100%;
@@ -12,7 +12,7 @@
     background-color: #fff;
     margin: 0 auto;
     width: 700px;
-    height: 950px;
+    height: 700px;
     font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
     &__title{
       background-color: white;
@@ -71,15 +71,7 @@
       text-align: center;
       display: flex;
       background-color: white;
-      &__left{
-        padding-left: 180px;
-        padding-top: 20px;
-      }
-      &__right{
-        padding-left: 100px;
-        padding-top: 20px;
-        color: blue;
-      }
+      padding: 50px 300px;
     }
     &__address{
       height: 160px;
@@ -109,13 +101,12 @@
     }
     &__bottom{
       height: 60px;
-      width: 400px;
+      width: 100px;
       background-color: $color_red;
       color: white;
       margin: 0 auto;
       text-align: center;
       line-height: 60px;
-      margin-top: 40px;
     }
   }
 }

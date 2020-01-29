@@ -4,8 +4,6 @@ Rails.application.routes.draw do
   registrations: 'users/registrations'
 }
   root "products#index"
-
-
   resources :signup, only: [:index,:create] do
     collection do
       get 'user_top'
@@ -16,16 +14,16 @@ Rails.application.routes.draw do
       get 'session5' 
     end
   end
+  resources :cards
   resources :products do
     member do
       get 'buy', to: 'products#buy'
-      post 'confirm', to: 'products#confirm'
+      post 'confirm', to: 'products#confirm'   
     end
     collection do
       get 'search'
     end
   end
-  #マイページ
   resources :users, only: [:index] do
     member do
       resources :mypage, only: [:index] do
@@ -36,6 +34,8 @@ Rails.application.routes.draw do
           get 'payment'
           get 'register'
           get 'logout'
+          get 'card'
+          post 'confirm'
         end
       end
     end
