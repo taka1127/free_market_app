@@ -2,7 +2,7 @@ $(document).on('turbolinks:load', ()=> {
   var inputForm = document.getElementById("token_submit");
   inputForm.addEventListener('click', function(e){  // 追加するボタンが押されたらイベント発火
     e.preventDefault();  // ボタンを一旦無効化
-    Payjp.setPublicKey("payjp_key_secret");
+    Payjp.setPublicKey("pk_test_0d5e9e81d2537186181eeef0");
     var card = {  // 入力されたカード情報を取得
       number: document.getElementById("card_number").value,
       exp_month: document.getElementById("exp_month").value,
