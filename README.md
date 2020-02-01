@@ -3,12 +3,14 @@
 ## Userテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
-|name_kana|string|null: false|
+|first_name|string|null: false|
+|last_name|string|null: false|
+|first_name_kana|string|null: false|
+|last_name_kana|string|null: false|
 |nickname|string|null: false|
 |email|string|null: false, unique: true|
 |password|string|null: false|
-|tel|integer|null: false|
+|tel|string|null: false|
 |birthday|date|null: false|
 |self-introduction|text||
 |point|integer|default: 0|
@@ -23,11 +25,12 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
-|postal_code|integer|null: false|
+|postal_code|string|null: false|
 |prefecture|integer|null: false|
 |city|string|null: false|
 |house_number|string|null: false|
 |building|string||
+|building_tel|string||
 ### Association
   belongs_to :user
   
